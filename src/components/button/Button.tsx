@@ -14,8 +14,8 @@ const StyledButton = styled.button<ButtonProps>`
 			? '9px 30px 11px'
 			: '14px 30px 16px'};
 	opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-	${(props) => props.height?'height: ' + props.height:''}
-	${(props) => props.width?'width: ' + props.width:''}
+	${(props) => (props.height ? 'height: ' + props.height : '')}
+	${(props) => (props.width ? 'width: ' + props.width : '')}
 	&:hover {
 		background-color: ${(props) => (props.primary ? '#55bd90' : '#6bedb5')};
 	}
@@ -40,7 +40,7 @@ const Button: FC<ButtonProps> = ({
 }) => {
 	return (
 		<StyledButton
-			className='ty-button'
+			className="ty-button"
 			type="button"
 			onClick={onClick}
 			primary={primary}

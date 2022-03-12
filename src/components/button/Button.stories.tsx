@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 
 import Button from './Button';
 import { ButtonProps } from './Button.types';
-import '../../style/index.scss'
+import '../../style/index.scss';
 
 export default {
 	title: 'Tayeh/Button',
