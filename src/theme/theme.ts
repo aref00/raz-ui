@@ -37,5 +37,5 @@ export const theme = {
 	},
 	font: {
 		family: 'iransans',
-	}
-}
+	},
+};

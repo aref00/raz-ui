@@ -1,59 +1,59 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
-import Button  from './Button';
-import {ButtonProps} from "./Button.types"
+import Button from './Button';
+import { ButtonProps } from './Button.types';
+import '../../style/index.scss'
 
 export default {
-  title: 'Tayeh/Button',
-  component: Button,
-  argTypes: {
-  },
+	title: 'Tayeh/Button',
+	component: Button,
+	argTypes: {},
 } as Meta<typeof Button>;
 
 const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
-  disabled: false,
-  children: <span>test</span>,
+	primary: true,
+	disabled: false,
+	children: <span>test</span>,
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  primary: false,
-  disabled: false,
-  text: "Secondary",
+	primary: false,
+	disabled: false,
+	text: 'Secondary',
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  primary: false,
-  disabled: true,
-  text: 'Disabled',
+	primary: false,
+	disabled: true,
+	text: 'Disabled',
 };
 
 export const Small = Template.bind({});
 Small.args = {
-  primary: true,
-  disabled: false,
-  size:"small",
-  text: 'Small',
+	primary: true,
+	disabled: false,
+	size: 'small',
+	text: 'Small',
 };
 
 export const Medium = Template.bind({});
 Medium.args = {
-  primary: true,
-  disabled: false,
-  size:"medium",
-  text: 'Medium',
+	primary: true,
+	disabled: false,
+	size: 'medium',
+	text: 'Medium',
 };
 
 export const Large = Template.bind({});
 Large.args = {
-  primary: true,
-  disabled: false,
-  size:"large",
-  text: 'Large',
+	primary: true,
+	disabled: false,
+	size: 'large',
+	text: 'Large',
 };
