@@ -1,6 +1,8 @@
 export const theme = {
 	colors: {
 		light: {
+			contrast_front: '#FFFFFF', //white
+			contrast_back: '#404040', //black
 			primary: '#4895EF',
 			secondary: '#888CA7',
 			bg: '#F7F9FB',
@@ -10,14 +12,15 @@ export const theme = {
 			text3: '#9BA0B6',
 			text4: '#A0AFB4',
 			border: '#E8ECED',
-			black: '#404040',
 			header: '#161718',
 			icon: '#D5DADE',
-			red: '#FD3F67', //danger
-			yellow: '#FCD300', //warning
-			green: '#20CE66', //success
+			danger: '#FD3F67', //red
+			warning: '#FCD300', //yellow
+			success: '#20CE66', //green
 		},
 		dark: {
+			contrast1: '#FFFFFF', //white
+			contrast2: '#404040', //black
 			primary: '#4895EF',
 			secondary: '#888CA7',
 			bg: '#F7F9FB',
@@ -27,12 +30,11 @@ export const theme = {
 			text3: '#9BA0B6',
 			text4: '#A0AFB4',
 			border: '#E8ECED',
-			black: '#404040',
 			header: '#161718',
 			icon: '#D5DADE',
-			red: '#FD3F67', //danger
-			yellow: '#FCD300', //warning
-			green: '#20CE66', //success
+			danger: '#FD3F67', //red
+			warning: '#FCD300', //yellow
+			success: '#20CE66', //green
 		},
 	},
 	font: {

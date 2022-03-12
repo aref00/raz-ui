@@ -1,11 +1,14 @@
 import { MouseEventHandler } from 'react';
 import { Theme } from '../../theme/theme.types';
 export interface ButtonProps {
-	primary?: boolean;
 	disabled?: boolean;
-	size?: 'small' | 'medium' | 'large';
 	height?: string;
 	width?: string;
 	theme?: Theme;
+	color?: string;
+	outlineColor?: string;
+	layout?: 'simple'|'outline'|'clear';
+	label?: string;
+	tyClass?: string;
 	onClick?: MouseEventHandler<HTMLButtonElement>;
 }

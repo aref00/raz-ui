@@ -1,9 +1,9 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
+import '../../style/index.scss';
 import Button from './Button';
 import { ButtonProps } from './Button.types';
-import '../../style/index.scss';
 
 export default {
 	title: 'Tayeh/Button',
@@ -15,23 +15,22 @@ const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-	primary: true,
 	disabled: false,
-	children: <span>test</span>,
+	children: <span>test</span>
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-	primary: false,
+	color: 'secondary',
 	disabled: false,
-	text: 'Secondary',
+	label: 'Secondary Button',
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
 	primary: false,
 	disabled: true,
-	text: 'Disabled',
+	label: 'Disabled',
 };
 
 export const Small = Template.bind({});
@@ -39,7 +38,8 @@ Small.args = {
 	primary: true,
 	disabled: false,
 	size: 'small',
-	text: 'Small',
+	label: 'Small',
+	tyClass: 'fs-10 px-2 py-1'
 };
 
 export const Medium = Template.bind({});
@@ -47,7 +47,8 @@ Medium.args = {
 	primary: true,
 	disabled: false,
 	size: 'medium',
-	text: 'Medium',
+	label: 'Medium',
+	tyClass: 'fs-12 px-3 py-2'
 };
 
 export const Large = Template.bind({});
@@ -55,5 +56,16 @@ Large.args = {
 	primary: true,
 	disabled: false,
 	size: 'large',
-	text: 'Large',
+	label: 'Large',
+	tyClass: 'fs-16 px-5 py-3'
+};
+
+export const Outline = Template.bind({});
+Outline.args = {
+	primary: true,
+	disabled: false,
+	layout: 'outline',
+	size: 'large',
+	label: 'Large',
+	width: '100px',
 };
