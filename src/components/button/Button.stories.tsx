@@ -66,6 +66,16 @@ Outline.args = {
 	disabled: false,
 	layout: 'outline',
 	size: 'large',
-	label: 'Large',
+	label: 'Outline',
+	width: '100px',
+};
+
+export const Clear = Template.bind({});
+Clear.args = {
+	primary: true,
+	disabled: false,
+	layout: 'clear',
+	size: 'large',
+	label: 'Clear',
 	width: '100px',
 };

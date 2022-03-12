@@ -21,7 +21,7 @@ const Button: FC<ButtonProps> = ({
 }) => {
 	return (
 		<button
-			className={`inline-block ty-button px-4 py-2 ${typeCss(layout, color, outlineColor)} ${disabled?'disabled':''} ${tyClass}`}
+			className={`inline-block ty-button px-4 py-2 ${typeCss(layout, color, outlineColor)} ${disabled?'disabled':''} ${tyClass||''}`}
 			type="button"
 			onClick={onClick}
 			disabled={disabled}

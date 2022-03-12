@@ -47,6 +47,9 @@ $colors: (
 			&.ty-bg-#{$name} {
 				background-color: lighten($color, 5%);
 			}
+			&.ty-color-#{$name} {
+				color: lighten($text-color, 5%);
+			}
 		}
 	}
 	&:active {
@@ -54,10 +57,8 @@ $colors: (
 			&.ty-bg-#{$name} {
 				background-color: lighten($color, 10%);
 			}
-		}
-		@each $name, $color, $oposite, $text-color in $colors {
 			&.ty-bg-#{$name} {
-				background-color: lighten($color, 10%);
+				color: lighten($text-color, 10%);
 			}
 			&.outline.ty-color-#{$name} {
 				outline-color: lighten($color, 5%);
