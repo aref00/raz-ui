@@ -1,0 +1,10 @@
+.ty-border {
+	border: 1px solid $border;
+	display: inline-block;
+}
+
+@for $size from 1 to 20 {
+	.bw-#{$size} {
+		border-width: #{$size}px;
+	}
+}

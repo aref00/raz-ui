@@ -1,0 +1,76 @@
+.ty-flex {
+	display: flex;
+	&.ty-flex-col {
+		flex-direction: column;
+	}
+	&.ty-flex-col-reversed {
+		flex-direction: column-reverse;
+	}
+	&.ty-flex-row {
+		flex-direction: row;
+	}
+	&.ty-flex-row-reversed {
+		flex-direction: row-reverse;
+	}
+	&.align-items-start {
+		align-items: flex-start;
+	}
+	&.align-items-end {
+		align-items: flex-end;
+	}
+	&.align-items-center {
+		align-items: center;
+	}
+	&.align-items-baseline {
+		align-items: baseline;
+	}
+	&.align-items-stretch {
+		align-items: stretch;
+	}
+}
+.ty-flex-wrap {
+	flex-wrap: wrap;
+}
+.ty-justify-center {
+	justify-content: center;
+}
+.ty-space-between {
+	justify-content: space-between;
+}
+.ty-space-around {
+	justify-content: space-around;
+}
+.ty-space-evenly {
+	justify-content: space-evenly;
+}
+.ty-border-right {
+	border-right: 1px solid $border;
+}
+.ty-border-left {
+	border-left: 1px solid $border;
+}
+.ty-border-top {
+	border-top: 1px solid $border;
+}
+.ty-border-bottom {
+	border-bottom: 1px solid $border;
+}
+.inline {
+	display: inline;
+}
+.inline-block {
+	display: inline-block;
+}
+.ty-destroy {
+	display: none;
+}
+.ty-hide {
+	opacity: 0;
+}
+.ty-relative {
+	position: relative;
+}
+
+.ty-sticky {
+	position: sticky;
+}

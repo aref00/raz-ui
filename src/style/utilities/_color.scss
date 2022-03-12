@@ -1,0 +1,105 @@
+$colors: (
+	"primary" $primary $light $light,
+	"success" $success $light $light,
+	"dark" $dark $light $light,
+	"danger" $danger $light $light,
+	"warning" $warning $light $light,
+	"notify" $notify $light $light,
+	"background" $background $dark $light,
+	"light" $light $light $dark,
+	"shadow" $shadow $dark $dark,
+	"border" $border $dark $dark,
+	"table-header" $table-header $dark $light,
+	"gray" $gray $dark $light,
+	"dark-gray" $dark-gray $dark $light,
+	"white" $white $light $dark,
+	"blue" $blue $light $light,
+	"faded-orange" $faded-orange,
+);
+
+@each $name, $color, $oposite, $text-color in $colors {
+	.ty-color-#{$name} {
+		color: $color;
+	}
+	.ty-outline-#{$name} {
+		outline: $color auto 1px;
+	}
+	.ty-outline-#{$name}.ty-hoverable:not(.disable):hover {
+		background-color: $color;
+		color: $oposite;
+	}
+	.ty-bg-#{$name} {
+		background-color: $color;
+		color: $text-color;
+	}
+	.ty-border-color-#{$name} {
+		border-color: $color !important;
+	}
+}
+
+.ty-bg-unset {
+	background-color: unset;
+	color: $dark;
+}
+
+//button colors
+.ty-button:not(.disabled) {
+	&:hover {
+		@each $name, $color, $oposite, $text-color in $colors {
+			&.ty-bg-#{$name} {
+				background-color: lighten($color, 5%);
+			}
+		}
+	}
+	&:active {
+		@each $name, $color, $oposite, $text-color in $colors {
+			&.ty-bg-#{$name} {
+				background-color: lighten($color, 10%);
+			}
+		}
+		@each $name, $color, $oposite, $text-color in $colors {
+			&.ty-bg-#{$name} {
+				background-color: lighten($color, 10%);
+			}
+			&.outline.ty-color-#{$name} {
+				outline-color: lighten($color, 5%);
+				background-color: lighten($color, 5%);
+			}
+		}
+	}
+}
+
+.disabled {
+	@each $name, $color, $oposite, $text-color in $colors {
+		&.ty-color-#{$name} {
+			color: $color;
+			opacity: 0.5;
+		}
+		&.ty-outline-#{$name} {
+			outline: $color auto 1px;
+			opacity: 0.5;
+		}
+		&.ty-outline-#{$name}.ty-hoverable:not(.disable):hover {
+			background-color: $color;
+			color: $oposite;
+			opacity: 0.5;
+		}
+		&.ty-bg-#{$name} {
+			background-color: $color;
+			color: $text-color;
+			opacity: 0.5;
+		}
+		&.ty-border-color-#{$name} {
+			border-color: $color;
+			opacity: 0.5;
+		}
+	}
+}
+
+$i: 0;
+@while $i < 1 {
+	.ty-opacity-#{$i*100} {
+		opacity: #{$i};
+	}
+  $i: $i + 0.05;
+}

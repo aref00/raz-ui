@@ -1,0 +1,90 @@
+@import "../var.scss";
+
+@for $size from 2 to 80 {
+	.fs-#{$size} {
+		font-size: #{$size}px;
+	}
+}
+
+@each $name, $width in $grid-breakpoints {
+	@media (min-width: $width)	{
+		@for $size from 2 to 48 {
+			.fs-#{$name}-#{$size} {
+				font-size: #{$size}px;
+			}
+		}
+	}
+}
+
+@for $weight from 1 to 10 {
+	.fw-#{$weight*100} {
+		font-weight: #{$weight*100};
+		font-variation-settings: "wght" #{$weight*100};
+	}
+}
+.fw-lighter {
+	font-weight: lighter;
+	font-variation-settings: "wght" 100;
+}
+.fw-bolder {
+	font-weight: bolder;
+	font-variation-settings: "wght" 900;
+}
+
+.of-hidden {
+	overflow: hidden;
+}
+
+.ofx-hidden {
+	overflow-x: hidden;
+}
+
+.ofy-hidden {
+	overflow-y: hidden;
+}
+.of-scroll {
+	overflow: scroll;
+}
+.ofx-scroll {
+	overflow-x: scroll;
+}
+
+.ofy-scroll {
+	overflow-y: scroll;
+}
+.of-auto {
+	overflow: auto;
+}
+.ofx-auto {
+	overflow-x: auto;
+}
+.ofy-auto {
+	overflow-y: auto;
+}
+.of-text-clip {
+	overflow: hidden;
+	text-overflow: clip;
+}
+.of-text-ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.break-word {
+	white-space: nowrap;
+	word-wrap: break-word;
+}
+.normal-word {
+	word-wrap: normal;
+}
+.white-space-nowrap {
+	white-space: nowrap;
+}
+.white-space-pre-wrap {
+	white-space: pre-wrap;
+}
+.full-width {
+	width: 100%;
+}
+.half-width {
+	width: 50%;
+}

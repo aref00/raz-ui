@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'ty-icon';
+  src: url('https://static.ty-sb1.tayeh.ir/tayeh-panel/assets/fonts/ty-icon/ty-icon.eot?50297747');
+  src: url('https://static.ty-sb1.tayeh.ir/tayeh-panel/assets/fonts/ty-icon/ty-icon.eot?50297747#iefix') format('embedded-opentype'),
+    url('https://static.ty-sb1.tayeh.ir/tayeh-panel/assets/fonts/ty-icon/ty-icon.woff2?50297747') format('woff2'),
+    url('https://static.ty-sb1.tayeh.ir/tayeh-panel/assets/fonts/ty-icon/ty-icon.woff?50297747') format('woff'),
+    url('https://static.ty-sb1.tayeh.ir/tayeh-panel/assets/fonts/ty-icon/ty-icon.ttf?50297747') format('truetype'),
+    url('https://static.ty-sb1.tayeh.ir/tayeh-panel/assets/fonts/ty-icon/ty-icon.svg?50297747#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* You can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ty-icon {
+  font-family: 'ty-icon' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ty-icon.ty-icon-small {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+
+.ty-icon-arrow-drop-down:before { content: '\e800'; } /* '' */
+.ty-icon-package:before { content: '\e801'; } /* '' */
+.ty-icon-cart-outline:before { content: '\e802'; } /* '' */
+.ty-icon-chart:before { content: '\e803'; } /* '' */
+.ty-icon-delete:before { content: '\e804'; } /* '' */
+.ty-icon-edit:before { content: '\e805'; } /* '' */
+.ty-icon-exit:before { content: '\e806'; } /* '' */
+.ty-icon-inventory:before { content: '\e807'; } /* '' */
+.ty-icon-arrow-right:before { content: '\e809'; } /* '' */
+.ty-icon-search:before { content: '\e80a'; } /* '' */
+.ty-icon-setting:before { content: '\e80b'; } /* '' */
+.ty-icon-smile:before { content: '\e80c'; } /* '' */
+.ty-icon-sort:before { content: '\e80d'; } /* '' */
+.ty-icon-camera-outline:before { content: '\e80e'; } /* '' */
+.ty-icon-shirt:before { content: '\e80f'; } /* '' */
+.ty-icon-wheelbarrow-ouline:before { content: '\e810'; } /* '' */
+.ty-icon-call-outline:before { content: '\e811'; } /* '' */
+.ty-icon-image-outline:before { content: '\e812'; } /* '' */
+.ty-icon-plus-circle:before { content: '\e813'; } /* '' */
+.ty-icon-delete-outline:before { content: '\e814'; } /* '' */
+.ty-icon-sad:before { content: '\e815'; } /* '' */
+.ty-icon-check-mark-circle:before { content: '\e816'; } /* '' */
+.ty-icon-locked-outline:before { content: '\e817'; } /* '' */
+.ty-icon-gift-outline:before { content: '\e818'; } /* '' */
+.ty-icon-bag-outline:before { content: '\e819'; } /* '' */
+.ty-icon-like:before { content: '\e81a'; } /* '' */
+.ty-icon-frame:before { content: '\e81b'; } /* '' */
+.ty-icon-bank-card:before { content: '\e81c'; } /* '' */
+.ty-icon-star-outline:before { content: '\e81d'; } /* '' */
+.ty-icon-truck-outline:before { content: '\e81e'; } /* '' */
+.ty-icon-pin-on-map:before { content: '\e81f'; } /* '' */
+.ty-icon-bookmark-outline:before { content: '\e820'; } /* '' */
+.ty-icon-time:before { content: '\e821'; } /* '' */
+.ty-icon-zoom-in:before { content: '\e822'; } /* '' */
+.ty-icon-minus-circle:before { content: '\e823'; } /* '' */
+.ty-icon-close-circle:before { content: '\e824'; } /* '' */
+.ty-icon-edit-circle:before { content: '\e825'; } /* '' */
+.ty-icon-speaker-outline:before { content: '\e827'; } /* '' */
+.ty-icon-apps:before { content: '\e828'; } /* '' */
+.ty-icon-exit-app:before { content: '\e829'; } /* '' */
+.ty-icon-message:before { content: '\e82a'; } /* '' */
+.ty-icon-notification:before { content: '\e82b'; } /* '' */
+.ty-icon-premium:before { content: '\e82c'; } /* '' */
+.ty-icon-shop:before { content: '\e82d'; } /* '' */
+.ty-icon-stack:before { content: '\e82e'; } /* '' */
+.ty-icon-ticket-off:before { content: '\e82f'; } /* '' */
+.ty-icon-trend:before { content: '\e830'; } /* '' */
+.ty-icon-user:before { content: '\e831'; } /* '' */
+.ty-icon-plus:before { content: '\e832'; } /* '' */
+.ty-icon-arrow-down:before { content: '\e833'; } /* '' */
+.ty-icon-arrow-left:before { content: '\e834'; } /* '' */
+.ty-icon-dislike:before { content: '\e835'; } /* '' */
+.ty-icon-arrow-up:before { content: '\e836'; } /* '' */
+.ty-icon-minus:before { content: '\e837'; } /* '' */
+.ty-icon-push-pin:before { content: '\e838'; } /* '' */
+.ty-icon-close:before { content: '\e839'; } /* '' */
+.ty-icon-photo:before { content: '\e83a'; } /* '' */
+.ty-icon-heart-outline:before { content: '\e83b'; } /* '' */
+.ty-icon-heart:before { content: '\e83c'; } /* '' */
+.ty-icon-arrow-drop-up:before { content: '\e83d'; } /* '' */
+.ty-icon-arrow-down-left:before { content: '\e83e'; } /* '' */
+.ty-icon-arrow-up-right:before { content: '\e83f'; } /* '' */
+.ty-icon-camera:before { content: '\e840'; } /* '' */
+.ty-icon-eye-open:before { content: '\e841'; } /* '' */
+.ty-icon-tag:before { content: '\e842'; } /* '' */
+.ty-icon-add-photo:before { content: '\e843'; } /* '' */
+.ty-icon-warning-circle:before { content: '\e844'; } /* '' */
+.ty-icon-cart:before { content: '\e845'; } /* '' */
+.ty-icon-share:before { content: '\e846'; } /* '' */
+.ty-icon-arrow-left-tail:before { content: '\e847'; } /* '' */
+.ty-icon-barcode:before { content: '\e848'; } /* '' */
+.ty-icon-eye-close:before { content: '\e849'; } /* '' */
+.ty-icon-call:before { content: '\e84b'; } /* '' */
+.ty-icon-visibility:before { content: '\e84c'; } /* '' */
+.ty-icon-dollar-circle:before { content: '\e84e'; } /* '' */
