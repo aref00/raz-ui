@@ -33,17 +33,21 @@ $colors: (
 	.ty-border-color-#{$name} {
 		border-color: $color !important;
 	}
+	.ty-hover-outline-#{$name}:active, .ty-hover-outline-#{$name}:hover, .ty-hover-outline-#{$name}:focus-within {
+		outline: $color auto 1px;
+	}
+	// .ty-shadow-#{$name} {
+	// 	box-shadow: 0.5px 3px 10px 0 $color;
+	// }
+}
+
+.ty-shadow {
+	box-shadow: 0px 4px 8px 0px $shadow;
 }
 
 .ty-bg-unset {
 	background-color: unset;
 	color: $dark;
-}
-
-@each $name, $color, $oposite, $text-color in $colors {
-	.ty-hover-outline-#{$name}:active, .ty-hover-outline-#{$name}:hover, .ty-hover-outline-#{$name}:focus-within {
-		outline: $color auto 1px;
-	}
 }
 //button colors
 .ty-button:not(.disabled) {

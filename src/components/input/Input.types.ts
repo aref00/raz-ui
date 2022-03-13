@@ -1,5 +1,6 @@
 import { ChangeEventHandler, KeyboardEventHandler, FocusEventHandler } from 'react';
-type Color = 'primary'|'secondary'|'success'|'warning'|'border'|'dark'|'light'|string;
+import { Color } from '../types';
+
 export interface InputProps {
 	value?: string|number;
 	name?: string;
