@@ -59,6 +59,8 @@ BorderBottom.args = {
 export const Textarea = Template.bind({});
 Textarea.args = {
 	tag: 'textarea',
+	radius: 15,
+	clear: true,
 	inputClass: 'ty-bg-light',
 	placeholder: 'Input Placeholder',
 };

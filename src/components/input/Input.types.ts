@@ -9,6 +9,7 @@ export interface InputProps {
 	dir?: string;
 	clear?: boolean;
 	borderBottom?: boolean;
+	radius?: number;
 	// outline?: boolean;
 	height?: string;
 	width?: string;

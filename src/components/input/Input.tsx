@@ -11,6 +11,7 @@ const Input: FC<InputProps> = ({
 	borderBottom,
 	outlineColor,
 	tyClass,
+	radius,
 	dir,
 	error,
 	suffix,
@@ -24,17 +25,17 @@ const Input: FC<InputProps> = ({
 	const [showPassword, setShowPassword] = useState(false);
 	tyClass = tyClass || '';
 	dir = dir || 'rtl';
+	let wrapper_class = `ty-input-wrapper ty-flex align-items-center ty-justify-center border-radius-${radius||5} \
+${disabled?'':'ty-hover-outline-primary'} ${clear?'--border-clear':borderBottom?'--border-bottom':''} \
+${disabled?'disabled':''} ${error?'ty-color-danger ty-border-color-danger':''} ${inputClass||''}`;
+
 	return (
 		<div dir={dir} className={`ty-input ${tyClass}`}>
 			{
 				label&&
 				<p className={`fs-12 fs-sm-14 ty-input-label mb-1 ${error?'ty-color-danger':''}`}>{label}<span className="ty-color-danger">{props.required?'*':''}</span></p>
 			}
-			<div role='none' className={`ty-input-wrapper ty-flex align-items-center ty-justify-center
-			${disabled?'':'ty-hover-outline-primary'}
-			${clear?'--border-clear':borderBottom?'--border-bottom':''}
-			${disabled?'disabled':''}
-			${error?'ty-color-danger ty-border-color-danger':''} ${inputClass||''}`}>
+			<div role='none' className={wrapper_class}>
 				<InputTag
 					aria-label={label||props.placeholder}
 					role='textbox'
