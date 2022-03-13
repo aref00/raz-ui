@@ -16,6 +16,7 @@ const Template: Story<CardProps> = (args) => <Card {...args} />;
 export const Color = Template.bind({});
 Color.args = {
 	color: 'primary',
+	radius: 10,
 	tyClass: 'p-2',
 	children: 'Card Content',
 };
