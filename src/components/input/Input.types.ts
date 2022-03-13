@@ -1,0 +1,37 @@
+import { ChangeEventHandler, KeyboardEventHandler, FocusEventHandler } from 'react';
+type Color = 'primary'|'secondary'|'success'|'warning'|'border'|'dark'|'light'|string;
+export interface InputProps {
+	value?: string|number;
+	name?: string;
+	placeholder?: string;
+	label?: string;
+	dir?: string;
+	clear?: boolean;
+	borderBottom?: boolean;
+	outline?: boolean;
+	height?: string;
+	width?: string;
+	minLength?: number;
+	maxLength?: number;
+	min?: number;
+	max?: number;
+	step?: number;
+	row?: number;
+	col?: number;
+	required?: boolean;
+	error?: string;
+	autocomplete?: 'on'|'off';
+	disabled?: boolean;
+	// color?: Color;
+	// placeholderColor?: Color;
+	outlineColor?: Color;
+	tyClass?: string;
+	// tag?: 'input'|'textarea';
+	suffix?: React.ReactNode;
+	type?: React.HTMLInputTypeAttribute;
+	onChange?: ChangeEventHandler<HTMLInputElement>;
+	onKeyUp?: KeyboardEventHandler<HTMLInputElement>;
+	onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
+	onFocus?: FocusEventHandler<HTMLInputElement>;
+	onBlur?: FocusEventHandler<HTMLInputElement>;
+}

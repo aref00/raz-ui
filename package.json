@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
+	"test:cov": "jest --coverage",
     "clean": "rm -rf lib",
     "prebuild": "npm run clean && tsc",
     "postbuild": "node-sass src/style/index.scss -o lib/style/",
@@ -12,6 +13,7 @@
     "prepare": "npm run build",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
     "lint": "eslint",
+    "cov": "cov",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "storybook": "start-storybook -p 6006 --no-manager-cache",
