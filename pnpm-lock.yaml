@@ -17,6 +17,7 @@ specifiers:
   '@types/jest': ^27.4.1
   '@types/react': ^17.0.40
   babel-cli: ^6.26.0
+  babel-jest: ^27.5.1
   babel-loader: ^8.2.3
   babel-plugin-transform-scss: ^1.1.0
   eslint: ^8.11.0
@@ -51,6 +52,7 @@ devDependencies:
   '@types/jest': 27.4.1
   '@types/react': 17.0.40
   babel-cli: 6.26.0
+  babel-jest: 27.5.1_@babel+core@7.17.5
   babel-loader: 8.2.3_@babel+core@7.17.5
   babel-plugin-transform-scss: 1.1.0_node-sass@7.0.1+sass@1.49.9
   eslint: 8.11.0
@@ -63,7 +65,7 @@ devDependencies:
   rimraf: 3.0.2
   sass: 1.49.9
   sass-loader: 12.6.0_node-sass@7.0.1+sass@1.49.9
-  ts-jest: 27.1.3_c53d1ca518b3b945a0cb74482cae0a36
+  ts-jest: 27.1.3_e0fe88243f0076a0bcfcaf16c62c6e3c
   ts-node: 10.7.0_typescript@4.6.2
   typed-css-modules: 0.7.0
   typescript: 4.6.2
@@ -12508,7 +12510,7 @@ packages:
     engines: {node: '>=6.10'}
     dev: true
 
-  /ts-jest/27.1.3_c53d1ca518b3b945a0cb74482cae0a36:
+  /ts-jest/27.1.3_e0fe88243f0076a0bcfcaf16c62c6e3c:
     resolution: {integrity: sha512-6Nlura7s6uM9BVUAoqLH7JHyMXjz8gluryjpPXxr3IxZdAXnU6FhjvVLHFtfd1vsE1p8zD1OJfskkc0jhTSnkA==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     hasBin: true
@@ -12531,6 +12533,7 @@ packages:
     dependencies:
       '@babel/core': 7.17.5
       '@types/jest': 27.4.1
+      babel-jest: 27.5.1_@babel+core@7.17.5
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
       jest: 27.5.1_ts-node@10.7.0

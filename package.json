@@ -14,7 +14,7 @@
     "lint": "eslint",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 --no-manager-cache",
     "build-storybook": "build-storybook",
     "package": "npm run test && npm run build && npm publish --public"
   },
@@ -51,6 +51,7 @@
     "@types/jest": "^27.4.1",
     "@types/react": "^17.0.40",
     "babel-cli": "^6.26.0",
+    "babel-jest": "^27.5.1",
     "babel-loader": "^8.2.3",
     "babel-plugin-transform-scss": "^1.1.0",
     "eslint": "^8.11.0",

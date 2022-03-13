@@ -15,6 +15,7 @@ const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
+	color: 'primary',
 	disabled: false,
 	children: <span>test</span>
 };
@@ -28,14 +29,12 @@ Secondary.args = {
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-	primary: false,
 	disabled: true,
 	label: 'Disabled',
 };
 
 export const Small = Template.bind({});
 Small.args = {
-	primary: true,
 	disabled: false,
 	size: 'small',
 	label: 'Small',
@@ -44,7 +43,6 @@ Small.args = {
 
 export const Medium = Template.bind({});
 Medium.args = {
-	primary: true,
 	disabled: false,
 	size: 'medium',
 	label: 'Medium',
@@ -53,7 +51,6 @@ Medium.args = {
 
 export const Large = Template.bind({});
 Large.args = {
-	primary: true,
 	disabled: false,
 	size: 'large',
 	label: 'Large',
@@ -62,7 +59,6 @@ Large.args = {
 
 export const Outline = Template.bind({});
 Outline.args = {
-	primary: true,
 	disabled: false,
 	layout: 'outline',
 	size: 'large',
@@ -72,10 +68,8 @@ Outline.args = {
 
 export const Clear = Template.bind({});
 Clear.args = {
-	primary: true,
 	disabled: false,
 	layout: 'clear',
 	size: 'large',
-	label: 'Clear',
-	width: '100px',
+	label: 'Clear'
 };
