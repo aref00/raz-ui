@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC, useState } from 'react';
+import React, { ChangeEvent, FC, FocusEvent, FormEvent, useState } from 'react';
 import { CurrencyInputProps } from './CurrencyInput.types';
 import '../../style/components/input.scss';
 import Input from '../input/Input';
@@ -11,6 +11,7 @@ function format(valString?: string|number) {
 
 const CurrencyInput: FC<CurrencyInputProps> = ({
 	value,
+	onBlur,
 	onChange,
 	...props
 }) => {
@@ -18,19 +19,31 @@ const CurrencyInput: FC<CurrencyInputProps> = ({
 		if (props.max && +value > props.max) value = props.max;
 		if (props.min && +value < props.min) value = props.min;
 	}
-	const [content, setContent] = useState(value||props.min||0);
 	const [inputValue, setInputValue] = useState(format(value));
+	const [content, setContent] = useState(+(value||'0'));
+	onBlur  = onBlur || function () {};
+
 	function handleChange (event: ChangeEvent<HTMLInputElement>) {
 		let v = +(event.target as HTMLInputElement).value.replace(/[^0-9.]/g, "");
-		if (props.min && v < props.min) v = props.min;
-		if (props.max && v > props.max) v = props.max;
 		event.target.value = '' + v;
-		setContent(v);
 		setInputValue(format(v));
+		setContent(+v);
 		onChange(event)
 	}
+
+	function handleBlur (e: FocusEvent<HTMLInputElement>) {
+		let v = +content;
+		if (props.min && v < props.min) v = props.min;
+		if (props.max && v > props.max) v = props.max;		
+		setInputValue(format(v));
+		setContent(+v);
+		const event = {target: {value: v}};
+		onChange(event as any);
+		onBlur!(e);
+	}
+
 	return (
-		<Input value={inputValue} onChange={handleChange} {...props}/>
+		<Input value={inputValue} onChange={handleChange} onBlur={handleBlur} {...props}/>
 	);
 };
 

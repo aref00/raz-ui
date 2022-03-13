@@ -16,5 +16,18 @@ const Template: Story<CurrencyInputProps> = (args) => <CurrencyInput {...args} /
 export const Label = Template.bind({});
 Label.args = {
 	label: 'Label',
-	placeholder: 'CurrencyInput Placeholder',
+	placeholder: 'Placeholder',
+};
+
+export const Suffix = Template.bind({});
+Suffix.args = {
+	suffix: 'suffix',
+	placeholder: 'Placeholder',
+};
+
+export const Bound = Template.bind({});
+Bound.args = {
+	min: 10,
+	max: 20,
+	placeholder: 'Placeholder',
 };

@@ -1,4 +1,4 @@
-import { ChangeEventHandler, KeyboardEventHandler, FocusEventHandler } from 'react';
+import { ChangeEventHandler, KeyboardEventHandler, FocusEventHandler, FormEventHandler } from 'react';
 import { Color } from '../types';
 
 export interface CurrencyInputProps {
@@ -30,4 +30,5 @@ export interface CurrencyInputProps {
 	onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
 	onFocus?: FocusEventHandler<HTMLInputElement>;
 	onBlur?: FocusEventHandler<HTMLInputElement>;
+	onSubmit?: FormEventHandler<HTMLInputElement>;
 }

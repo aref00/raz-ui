@@ -38,4 +38,5 @@ export interface InputProps {
 	onKeyDown?: KeyboardEventHandler<HTMLInputElement|HTMLTextAreaElement>;
 	onFocus?: FocusEventHandler<HTMLInputElement|HTMLTextAreaElement>;
 	onBlur?: FocusEventHandler<HTMLInputElement|HTMLTextAreaElement>;
+	onSubmit?: FormEventHandler<HTMLInputElement|HTMLTextAreaElement>;
 }
