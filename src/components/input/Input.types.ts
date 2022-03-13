@@ -8,7 +8,7 @@ export interface InputProps {
 	dir?: string;
 	clear?: boolean;
 	borderBottom?: boolean;
-	outline?: boolean;
+	// outline?: boolean;
 	height?: string;
 	width?: string;
 	minLength?: number;
@@ -16,8 +16,8 @@ export interface InputProps {
 	min?: number;
 	max?: number;
 	step?: number;
-	row?: number;
-	col?: number;
+	rows?: number;
+	cols?: number;
 	required?: boolean;
 	error?: string;
 	autocomplete?: 'on'|'off';
@@ -26,12 +26,13 @@ export interface InputProps {
 	// placeholderColor?: Color;
 	outlineColor?: Color;
 	tyClass?: string;
-	// tag?: 'input'|'textarea';
+	inputClass?: string;
+	tag?: 'input'|'textarea';
 	suffix?: React.ReactNode;
 	type?: React.HTMLInputTypeAttribute;
-	onChange?: ChangeEventHandler<HTMLInputElement>;
-	onKeyUp?: KeyboardEventHandler<HTMLInputElement>;
-	onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
-	onFocus?: FocusEventHandler<HTMLInputElement>;
-	onBlur?: FocusEventHandler<HTMLInputElement>;
+	onChange?: ChangeEventHandler<HTMLInputElement|HTMLTextAreaElement>;
+	onKeyUp?: KeyboardEventHandler<HTMLInputElement|HTMLTextAreaElement>;
+	onKeyDown?: KeyboardEventHandler<HTMLInputElement|HTMLTextAreaElement>;
+	onFocus?: FocusEventHandler<HTMLInputElement|HTMLTextAreaElement>;
+	onBlur?: FocusEventHandler<HTMLInputElement|HTMLTextAreaElement>;
 }

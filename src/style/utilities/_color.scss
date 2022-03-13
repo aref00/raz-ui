@@ -40,6 +40,11 @@ $colors: (
 	color: $dark;
 }
 
+@each $name, $color, $oposite, $text-color in $colors {
+	.ty-hover-outline-#{$name}:active, .ty-hover-outline-#{$name}:hover, .ty-hover-outline-#{$name}:focus-within {
+		outline: $color auto 1px;
+	}
+}
 //button colors
 .ty-button:not(.disabled) {
 	&:hover {
@@ -55,13 +60,16 @@ $colors: (
 			}
 		}
 	}
-	&:active {
+	&:active, &:focus {
 		@each $name, $color, $oposite, $text-color in $colors {
 			&.ty-bg-#{$name} {
 				background-color: lighten($color, 10%);
 			}
 			&.ty-color-#{$name}, &.ty-border-color-#{$name} {
 				opacity: 0.7;
+			}
+			&.ty-hover-outline-#{$name} {
+				outline: $color auto 1px;
 			}
 		}
 	}

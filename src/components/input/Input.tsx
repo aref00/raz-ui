@@ -3,14 +3,12 @@ import { InputProps } from './Input.types';
 import '../../style/components/input.scss';
 
 const Input: FC<InputProps> = ({
-	value,
 	children,
 	label,
 	width,
 	height,
 	clear,
 	borderBottom,
-	outline,
 	outlineColor,
 	tyClass,
 	dir,
@@ -18,32 +16,36 @@ const Input: FC<InputProps> = ({
 	suffix,
 	type,
 	disabled,
+	tag,
+	inputClass,
 	...props
 }) => {
-	const InputTag: keyof JSX.IntrinsicElements = 'input';
+	const InputTag: keyof JSX.IntrinsicElements = tag || 'input';
 	const [showPassword, setShowPassword] = useState(false);
 	tyClass = tyClass || '';
+	dir = dir || 'rtl';
 	return (
 		<div dir={dir} className={`ty-input ${tyClass}`}>
 			{
 				label&&
 				<p className={`fs-12 fs-sm-14 ty-input-label mb-1 ${error?'ty-color-danger':''}`}>{label}<span className="ty-color-danger">{props.required?'*':''}</span></p>
 			}
-			<div role='none' className={`ty-input-wrapper
+			<div role='none' className={`ty-input-wrapper ty-flex align-items-center ty-justify-center
+			${disabled?'':'ty-hover-outline-primary'}
 			${clear?'--border-clear':borderBottom?'--border-bottom':''}
-			${outline?'ty-input-focus':''}
 			${disabled?'disabled':''}
-			${error?'ty-color-danger ty-border-color-danger': ''}`}>
+			${error?'ty-color-danger ty-border-color-danger':''} ${inputClass||''}`}>
 				<InputTag
 					aria-label={label||props.placeholder}
 					role='textbox'
 					dir={dir}
-					className={`inline-block ty-input px-4 py-2`}
+					className={`inline-block ty-input px-3 py-2 ${inputClass||''}`}
 					style={{width, height}}
-					type={type=='password'&&showPassword?'text':type}
+					type={type=='password'?showPassword?'text':type:''}
 					disabled={disabled}
-					{...props}/>
-				<div className={`suffix ${dir==='ltr'?'suffix--ltr':''}`}>
+					{...props}
+					/>
+				<div className={`ty-flex ty-justify-center items-align-center ${dir==='ltr'?'suffix--ltr':''}`}>
 					{
 						suffix
 					}
