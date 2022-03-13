@@ -1,4 +1,4 @@
-import { ChangeEventHandler, KeyboardEventHandler, FocusEventHandler } from 'react';
+import { ChangeEventHandler, KeyboardEventHandler, FocusEventHandler, FormEventHandler } from 'react';
 import { Color } from '../types';
 
 export interface InputProps {
@@ -33,6 +33,7 @@ export interface InputProps {
 	suffix?: React.ReactNode;
 	type?: React.HTMLInputTypeAttribute;
 	onChange?: ChangeEventHandler<HTMLInputElement|HTMLTextAreaElement>;
+	onInput?: FormEventHandler<HTMLInputElement|HTMLTextAreaElement>;
 	onKeyUp?: KeyboardEventHandler<HTMLInputElement|HTMLTextAreaElement>;
 	onKeyDown?: KeyboardEventHandler<HTMLInputElement|HTMLTextAreaElement>;
 	onFocus?: FocusEventHandler<HTMLInputElement|HTMLTextAreaElement>;
