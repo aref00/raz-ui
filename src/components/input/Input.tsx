@@ -19,6 +19,7 @@ const Input: FC<InputProps> = ({
 	disabled,
 	tag,
 	inputClass,
+	passRef,
 	...props
 }) => {
 	const InputTag: keyof JSX.IntrinsicElements = tag || 'input';
@@ -37,6 +38,7 @@ ${disabled?'disabled':''} ${error?'ty-color-danger ty-border-color-danger':''} $
 			}
 			<div role='none' className={wrapper_class}>
 				<InputTag
+					ref={(node: any) => {if(passRef) passRef(node)}}
 					aria-label={label||props.placeholder}
 					role='textbox'
 					dir={dir}

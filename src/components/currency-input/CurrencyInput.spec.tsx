@@ -26,12 +26,14 @@ describe('Running Test for Tayeh Input', () => {
 		let value = null;
 		const fn = jest.fn().mockImplementation((e: ChangeEvent<HTMLInputElement>) => {
 			value = e.target.value;
-			expect(value).toBe('2000');
+			expect(value).toBe(2000);
 		})
 		render(<CurrencyInput onChange={fn} value="1000" placeholder='Tayeh CurrencyInput'/>);
 		const node = screen.getByPlaceholderText('Tayeh CurrencyInput');
 		expect(node?.getAttribute('value')).toBe('1,000');
+		fireEvent.input(node, {target: {value: '2,000'}});
 		fireEvent.change(node, {target: {value: '2,000'}});
+		fireEvent.submit(node, {target: {value: '2,000'}});
 		expect(fn).toBeCalled();
 		expect(node?.getAttribute('value')).toBe('2,000');
 	});
@@ -42,8 +44,9 @@ describe('Running Test for Tayeh Input', () => {
 		const node = screen.getByPlaceholderText('Tayeh CurrencyInput');
 		expect(node?.getAttribute('value')).toBe('20');
 		fireEvent.change(node, {target: {value: '100'}});
+		fireEvent.submit(node, {target: {value: null}});
 		expect(fn).toBeCalled();
-		expect(node).toHaveValue('20');
+		expect(node.getAttribute('value')).toBe('20');
 	});
 
 	test('Check CurrencyInput Min', async () => {
@@ -51,9 +54,10 @@ describe('Running Test for Tayeh Input', () => {
 		render(<CurrencyInput onChange={fn} min={10} value="0" placeholder='Tayeh CurrencyInput'/>);
 		const node = screen.getByPlaceholderText('Tayeh CurrencyInput');
 		expect(node?.getAttribute('value')).toBe('10');
-		fireEvent.change(node, {target: {value: '0'}});
+		fireEvent.change(node, {target: {value: '1'}});
+		fireEvent.submit(node, {target: {value: null}});
 		expect(fn).toBeCalled();
-		expect(node).toHaveValue('10');
+		expect(node.getAttribute('value')).toBe('10');
 	});
 
 	test('Check CurrencyInput null change', async () => {
@@ -61,6 +65,7 @@ describe('Running Test for Tayeh Input', () => {
 		render(<CurrencyInput onChange={() => fn} value="10" placeholder='Tayeh CurrencyInput'/>);
 		const node = screen.getByPlaceholderText('Tayeh CurrencyInput');
 		fireEvent.change(node, {target: {value: null}});
+		fireEvent.submit(node, {target: {value: null}});
 		expect(node).toHaveValue('')
 	});
 });

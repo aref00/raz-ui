@@ -25,7 +25,7 @@ export interface CurrencyInputProps {
 	tyClass?: string;
 	inputClass?: string;
 	suffix?: React.ReactNode;
-	onChange: ChangeEventHandler<HTMLInputElement>;
+	onChange: ChangeEventHandler;
 	onKeyUp?: KeyboardEventHandler<HTMLInputElement>;
 	onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
 	onFocus?: FocusEventHandler<HTMLInputElement>;

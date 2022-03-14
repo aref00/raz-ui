@@ -11,7 +11,6 @@ function format(valString?: string|number) {
 
 const CurrencyInput: FC<CurrencyInputProps> = ({
 	value,
-	onBlur,
 	onChange,
 	...props
 }) => {
@@ -21,29 +20,35 @@ const CurrencyInput: FC<CurrencyInputProps> = ({
 	}
 	const [inputValue, setInputValue] = useState(format(value));
 	const [content, setContent] = useState(+(value||'0'));
-	onBlur  = onBlur || function () {};
 
-	function handleChange (event: ChangeEvent<HTMLInputElement>) {
-		let v = +(event.target as HTMLInputElement).value.replace(/[^0-9.]/g, "");
-		event.target.value = '' + v;
+	function handleInput (e: Event) {
+		let v = +(e.target as HTMLInputElement).value.replace(/[^0-9.]/g, "");
+		(e.target as HTMLInputElement).value = '' + v;
 		setInputValue(format(v));
 		setContent(+v);
-		onChange(event)
+		const event = {target: {value: v}};
+		onChange(event as any)
 	}
 
-	function handleBlur (e: FocusEvent<HTMLInputElement>) {
-		let v = +content;
+	function handleChange (e: Event) {
+		let v = +(e.target as HTMLInputElement).value.replace(/[^0-9.]/g, "");
 		if (props.min && v < props.min) v = props.min;
 		if (props.max && v > props.max) v = props.max;		
 		setInputValue(format(v));
 		setContent(+v);
 		const event = {target: {value: v}};
 		onChange(event as any);
-		onBlur!(e);
 	}
 
+	function registerCallbacks (element: HTMLInputElement | null) {
+        if (element) {
+            element.onchange = handleChange;
+            element.oninput = handleInput;
+        }
+    };
+
 	return (
-		<Input value={inputValue} onChange={handleChange} onBlur={handleBlur} {...props}/>
+		<Input passRef={registerCallbacks} defaultValue={inputValue} {...props}/>
 	);
 };
 

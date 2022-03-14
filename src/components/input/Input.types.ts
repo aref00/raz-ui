@@ -3,6 +3,7 @@ import { Color } from '../types';
 
 export interface InputProps {
 	value?: string|number;
+	defaultValue?: string|number;
 	name?: string;
 	placeholder?: string;
 	label?: string;
@@ -24,6 +25,7 @@ export interface InputProps {
 	error?: string;
 	autocomplete?: 'on'|'off';
 	disabled?: boolean;
+	passRef?: any;
 	// color?: Color;
 	// placeholderColor?: Color;
 	outlineColor?: Color;

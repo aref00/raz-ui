@@ -1,0 +1,12 @@
+.ty-radio-button {
+	.ty-radio-toggle {
+		border-width: 1.6px;
+		box-sizing: border-box;
+		border-radius: 100%;
+		overflow: hidden;
+		span {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
