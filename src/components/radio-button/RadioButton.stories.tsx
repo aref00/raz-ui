@@ -15,14 +15,13 @@ const Template: Story<RadioButtonProps> = (args) => <RadioButton {...args} />;
 
 export const Color = Template.bind({});
 Color.args = {
-	color: 'primary',
-	radius: 10,
-	tyClass: 'p-2',
-	children: 'RadioButton Content',
+	activeColor: 'danger',
+	options: [{value: 'test', label: 'test'}, {value: 'test-2', label: 'test-2'}],
+	value: 'test',
 };
 
-export const Padding = Template.bind({});
-Padding.args = {
-	tyClass: 'p-5',
-	children: 'RadioButton Content',
+export const Style = Template.bind({});
+Style.args = {
+	options: [{value: 'test', label: 'test'}, {value: 'test-2', label: 'test-2'}],
+	tyClass: 'py-3 px-2'
 };
