@@ -20,8 +20,8 @@ describe('Running Test for Tayeh Avatar', () => {
 	});
 
 	test('Check Avatar Width/Height', () => {
-		render(<Avatar title='test' width='100px'>Avatar Content</Avatar>);
+		render(<Avatar title='test' width='100px' maxWidth='100%'>Avatar Content</Avatar>);
 		const node = screen.getByTitle('test');
-		expect(node).toHaveStyle({width: '100px', height: '200px'})
+		expect(node).toHaveStyle({width: '100px', maxWidth: '100%'})
 	})
 });
