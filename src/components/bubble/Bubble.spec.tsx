@@ -24,7 +24,7 @@ describe('Running Test for Tayeh Bubble', () => {
 		const node = screen.getByRole('dialog');
 		expect(node?.className).toContain('border-radius-10');
 		expect(node?.className).toContain('ty-bg-primary');
-		expect(node?.className).toContain('ty-bubble-left');
+		expect(node?.className).toContain('ty-bubble-end');
 	})
 
 	test('Check Bubble Color', () => {
@@ -42,8 +42,8 @@ describe('Running Test for Tayeh Bubble', () => {
 	})
 
 	test('Check Bubble Side', () => {
-		render(<Bubble isRight>Bubble Content</Bubble>);
+		render(<Bubble isMe>Bubble Content</Bubble>);
 		const node = screen.getByRole('dialog');
-		expect(node).toHaveClass('ty-bubble-right')
+		expect(node).toHaveClass('ty-bubble-start')
 	})
 });

@@ -1,10 +1,11 @@
 .ty-bubble {
+	overflow: hidden;
 	max-width: 100%;
 	word-wrap: break-word;
-	.ty-bubble-right {
-		border-bottom-right-radius: 0;
+	&.ty-bubble-start {
+		border-end-start-radius: 0;
 	}
-	.ty-bubble-left {
-		border-bottom-left-radius: 0;
+	&.ty-bubble-end {
+		border-end-end-radius: 0;
 	}
 }

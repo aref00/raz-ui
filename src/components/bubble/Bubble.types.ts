@@ -6,6 +6,6 @@ export interface BubbleProps {
 	replyColor?: Color;
 	replyTo?: React.ReactNode;
 	footer?: React.ReactNode;
-	isRight?: boolean;
+	isMe?: boolean;
 	tyClass?: string;
 }

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { BubbleProps } from './Bubble.types';
-import '../../style/components/card.scss';
+import '../../style/components/bubble.scss';
 
 const Bubble: FC<BubbleProps> = ({
 	color,
@@ -8,16 +8,17 @@ const Bubble: FC<BubbleProps> = ({
 	radius,
 	replyTo,
 	footer,
-	isRight,
+	isMe,
 	tyClass,
 	children,
 }) => {
 	color = color || 'primary';
 	replyColor = replyColor || 'secondary';
 	tyClass = tyClass || '';
+	const side = isMe?'start':'end';
 	return (
-		<div>
-			<div role='dialog' className={`ty-bubble text-justify border-radius-${radius||10} ty-bg-${color} ${isRight?'ty-bubble-right':'ty-bubble-left'} ${tyClass}`}>
+		<div className={`ty-flex ty-flex-col align-items-${side}`}>
+			<div role='dialog' className={`ty-bubble text-justify border-radius-${radius||10} ty-bg-${color} ty-bubble-${side} ${tyClass}`}>
 				{
 					replyTo&&<div className={`full-width ty-bg-${replyColor}`}>
 						{replyTo}
