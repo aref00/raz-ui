@@ -1,21 +1,40 @@
-$colors: (
-	"primary" $primary $contrast-primary $contrast-primary,
-	"secondary" $secondary $contrast-primary $contrast-primary,
-	"primary-light" $primary-light $contrast-primary $contrast-primary,
-	"success" $success $light $light,
-	"dark" $dark $light $light,
-	"danger" $danger $light $light,
-	"warning" $warning $light $light,
-	"light" $light $light $dark,
-	"shadow" $shadow $dark $dark,
-	"border" $border $dark $dark,
-	"contrast-primary" $contrast-primary $contrast-secondary $contrast-secondary,
-	"contrast-secondary" $contrast-secondary $contrast-primary $contrast-primary,
-	"text-primary" $text-primary $text-secondary $text-secondary,
-	"text-secondary" $text-secondary $text-primary $text-primary,
-);
 
-@each $name, $color, $oposite, $text-color in $colors {
+$colors: (
+"primary"				$primary 				$contrast-primary 	,
+"secondary" 			$secondary 				$contrast-primary 	,
+"primary-light" 		$primary-light 			$contrast-primary 	,
+"success" 				$success $light 		$light 				,
+"dark" 					$dark $light 			$light 				,
+"danger" 				$danger $light 			$light 				,
+"warning" 				$warning $light 		$light 				,
+"light" 				$light $light 			$dark 				,
+"shadow" 				$shadow $dark 			$dark 				,
+"border" 				$border $dark 			$dark 				,
+"contrast-primary" 		$contrast-primary 		$contrast-secondary ,
+"contrast-secondary" 	$contrast-secondary 	$contrast-primary 	,
+"text-primary" 			$text-primary 			$text-secondary 	,
+"text-secondary"		$text-secondary 		$text-primary 		,
+);
+.dark-theme {
+	$dark-colors: (
+	"primary"				$dark-primary 				$dark-contrast-primary 	,
+	"secondary" 			$dark-secondary 			$dark-contrast-primary 	,
+	"primary-light" 		$dark-primary-light 		$dark-contrast-primary 	,
+	"success" 				$dark-success $light 		$dark-light 			,
+	"dark" 					$dark-dark $light 			$dark-light 			,
+	"danger" 				$dark-danger $light 		$dark-light 			,
+	"warning" 				$dark-warning $light 		$dark-light 			,
+	"light" 				$dark-light $light 			$dark-dark 				,
+	"shadow" 				$dark-shadow $dark 			$dark-dark 				,
+	"border" 				$dark-border $dark 			$dark-dark 				,
+	"contrast-primary" 		$dark-contrast-primary 		$dark-contrast-secondary ,
+	"contrast-secondary" 	$dark-contrast-secondary 	$dark-contrast-primary 	,
+	"text-primary" 			$dark-text-primary 			$dark-text-secondary 	,
+	"text-secondary"		$dark-text-secondary 		$dark-text-primary 		,
+);
+}
+
+@each $name, $color, $oposite, $text-color, $dark in $colors {
 	.ty-color-#{$name} {
 		color: $color;
 	}
@@ -61,6 +80,17 @@ $colors: (
 			}
 			&::placeholder, ::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder {
 				opacity: 0.5;	
+			}
+			.dark-theme {
+				&.ty-bg-#{$name} {
+					background-color: lighten($color, 5%);
+				}
+				&.ty-color-#{$name}, &.ty-border-color-#{$name} {
+					opacity: 0.9;
+				}
+				&::placeholder, ::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder {
+					opacity: 0.5;	
+				}
 			}
 		}
 	}
