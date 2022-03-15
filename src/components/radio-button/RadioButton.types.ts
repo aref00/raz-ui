@@ -1,10 +1,4 @@
-import { Color } from '../types';
-type Option = {
-	label: any,
-	value: any,
-}
-
-
+import { Color, Option } from '../types';
 
 export interface RadioButtonProps {
 	options: Option[];

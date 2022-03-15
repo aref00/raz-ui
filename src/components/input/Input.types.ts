@@ -34,6 +34,7 @@ export interface InputProps {
 	tag?: 'input'|'textarea';
 	suffix?: React.ReactNode;
 	type?: React.HTMLInputTypeAttribute;
+	autoFocus?: boolean;
 	onChange?: ChangeEventHandler<HTMLInputElement|HTMLTextAreaElement>;
 	onInput?: FormEventHandler<HTMLInputElement|HTMLTextAreaElement>;
 	onKeyUp?: KeyboardEventHandler<HTMLInputElement|HTMLTextAreaElement>;

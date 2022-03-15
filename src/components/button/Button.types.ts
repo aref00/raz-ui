@@ -1,4 +1,4 @@
-import { MouseEventHandler } from 'react';
+import { AriaRole, MouseEventHandler } from 'react';
 export interface ButtonProps {
 	disabled?: boolean;
 	height?: string;
@@ -6,7 +6,7 @@ export interface ButtonProps {
 	color?: string;
 	outlineColor?: string;
 	layout?: 'simple'|'outline'|'clear';
-	label?: string;
+	role?: AriaRole;
 	tyClass?: string;
 	onClick?: MouseEventHandler<HTMLButtonElement>;
 }

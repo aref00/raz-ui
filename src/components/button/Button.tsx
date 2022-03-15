@@ -9,7 +9,6 @@ function typeCss( type?: 'simple'|'outline'|'clear', color = 'primary', outlineC
 const Button: FC<ButtonProps> = ({
 	disabled,
 	children,
-	label,
 	width,
 	height,
 	layout,
@@ -21,14 +20,14 @@ const Button: FC<ButtonProps> = ({
 }) => {
 	return (
 		<button
-			className={`inline-block ty-button px-4 py-2 ${typeCss(layout, color, outlineColor)} ${disabled?'disabled':''} ${tyClass||''}`}
+			className={`inline-block ty-button ${typeCss(layout, color, outlineColor)} ${disabled?'disabled':''} ${tyClass||''}`}
 			style={{width, height}}
 			type="button"
 			onClick={onClick}
 			disabled={disabled}
 			{...props}
 		>
-			{label}{children}
+			{children}
 		</button>
 	);
 };
