@@ -19,6 +19,12 @@ describe('Running Test for Tayeh Avatar', () => {
 	  container.remove();
 	});
 
+	test('Check Avatar Defaults', () => {
+		render(<Avatar title='test'>Avatar Content</Avatar>);
+		const node = screen.getByTitle('test');
+		expect(node).toHaveStyle({width: '45px'})
+	})
+
 	test('Check Avatar Width/Height', () => {
 		render(<Avatar title='test' width='100px' maxWidth='100%'>Avatar Content</Avatar>);
 		const node = screen.getByTitle('test');
