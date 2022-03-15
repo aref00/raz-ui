@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 import { fireEvent, render, screen } from '@testing-library/react';
 import '../../style/index.scss';
 import Select from './Select';
+import { handleInputChange, handleSelect } from './Select.utils';
 import { unmountComponentAtNode } from "react-dom";
 
 describe('Running Test for Tayeh Select', () => {
@@ -116,5 +117,18 @@ describe('Running Test for Tayeh Select', () => {
 		expect(node).toHaveFocus();
 		fireEvent.keyDown(node, {key: 'e'});
 		expect(node).toHaveFocus();
+	})
+
+	test('Check handleInputChange Util', () => {
+		const base = handleInputChange('test')
+		const res1 = base([{label: 'test-2', value: 'test-2'}])({} as any, () => {})(() => {});
+		const res2 = base([{label: 'not-2', value: 'test-2'}])({} as any, () => {})(() => {});
+		expect(res1).toBeUndefined();
+		expect(res2).toBeUndefined();
+	})
+	test('Check handleSelect Util', () => {
+		const base = handleSelect({preventDefault: () => {}} as any)
+		const res = base({label: null, value: null})([])({} as any, () => {})(() => {})
+		expect(res).toBeUndefined();
 	})
 });

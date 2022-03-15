@@ -24,14 +24,14 @@ export function change (ctrl: Option|null) {
 			return function (setState: React.Dispatch<State>) {
 				setState({
 					...state,
-					value: o?.value,
-					inputValue: o?.label||'',
+					value: o.value,
+					inputValue: o.label||'',
 					filteredOptions: options,
 					open: false
 
 				})
 				return function (onChange: (value: string|number) => void) {
-					onChange(o?.value);
+					onChange(o.value);
 					return empty();
 				}
 			}
@@ -52,13 +52,13 @@ export function handleKeyDown (e: KeyboardEvent<HTMLInputElement>) {
 
 export function handleInputChange (value: string) {
 	return function (options: Option[]) {
-		const o = options?.find((o) => o.label==value||o.value==value);
+		const o = options.find((o) => o.label==value||o.value==value);
 		const filteredOptions = options.filter(o => (''+o.label).includes(value)||(''+o.value).includes(value));
 		return function (state: State, setState: React.Dispatch<State>) {
 			setState({
 				...state,
 				value: o?.value,
-				inputValue: value||'',
+				inputValue: value,
 				filteredOptions,
 
 			})
@@ -81,7 +81,7 @@ export function handleSelect (e: MouseEvent) {
 					open: false
 				})
 				return function (onChange: (value: any) => void) {
-					onChange(o?.value);
+					onChange(o.value);
 				}
 			}
 		}
