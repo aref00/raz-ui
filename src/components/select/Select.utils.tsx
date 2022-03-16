@@ -26,7 +26,7 @@ export function change (ctrl: Option|null) {
 					...state,
 					value: o.value,
 					inputValue: o.label||'',
-					filteredOptions: options,
+					// filteredOptions: options,
 					open: false
 
 				})

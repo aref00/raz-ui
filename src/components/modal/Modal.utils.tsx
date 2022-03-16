@@ -5,6 +5,7 @@ type State = {
 }
 
 export function clickHandler (event: MouseEvent) {
+	event.stopPropagation();
 	event.preventDefault();
 	return function (beforeClose: () => boolean) {
 		const visible = !beforeClose();

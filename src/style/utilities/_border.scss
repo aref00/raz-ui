@@ -1,4 +1,4 @@
-@for $radius from 2 to 20 {
+@for $radius from 0 to 20 {
 	.border-radius-#{$radius} {
 		border-radius: #{$radius}px;
 	}

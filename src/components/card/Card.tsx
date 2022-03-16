@@ -10,7 +10,7 @@ const Card: FC<CardProps> = ({
 	...props
 }) => {
 	return (
-		<div className={`ty-card ty-shadow-shadow border-radius-${radius||15}
+		<div tabIndex={0} className={`ty-card ty-shadow border-radius-${radius||15}
 			ty-bg-${color||'contrast-primary'} ${tyClass||''}`} {...props}>
 			{children}
 		</div>

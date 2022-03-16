@@ -6,10 +6,10 @@
 	bottom: 0;
 	right: 0;
 	display: flex;
-	opacity: 0.5;
-	// background-color: rgba(0, 0, 0, 0.5);
-	// background-color: #22222531;
+	background-color: rgba(0, 0, 0, 0.75);
+	background-color: #000000bf;
 	justify-content: center;
+	backdrop-filter: blur(2px);
 	&.scrollable {
 		overflow: auto;
 	}
@@ -22,6 +22,7 @@
 	// box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
 	overflow: auto;
 	max-height: 100%;
+	box-shadow: none !important;
 
 	&.fullscreen {
 		width: 100% !important;

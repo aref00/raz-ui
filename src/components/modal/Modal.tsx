@@ -27,9 +27,10 @@ const Modal: FC<ModalProps> = ({
 	onChange,
 	...props
 }) => {
+	const letExit = typeof canExit == 'boolean' ? canExit : true
 	const mounted = useRef(false);
 	const [state, setState] = useState({visible: visible||false});
-	const beforeClose = props.beforeClose ? props.beforeClose : () => true;
+	const beforeClose = props.beforeClose ? props.beforeClose : () => letExit;
 
 	useEffect(() => {
 		if (onChange &&  mounted.current) {
@@ -43,15 +44,15 @@ const Modal: FC<ModalProps> = ({
 	tyClass = tyClass || '';
 	return state.visible?
 	(
-		<div tabIndex={0} className={`ty-modal-mask ${state.visible?'':'ty-destroy'} ty-bg-${color||'dark'} ${transparent?'scrollable':''}`}
+		<div tabIndex={0} className={`ty-modal-mask ${transparent?'scrollable':''}`}
 		onClick={(e) => clickHandler(e)(beforeClose)(state)(setState)}>
-				<Card radius={radius} color={color} tyClass={`ty-modal-container my-auto ${fullscreen?'fullscreen':''}
+				<Card color={color} radius={radius} tyClass={`ty-modal-container my-auto ${fullscreen?'fullscreen':''}
 					${transparent?'transparent':''} ${tyClass}`} onClick={clickHandler}>
 					<div className="ty-flex ty-space-between">
   	    	  		{header}
 					{title}
-					<div className='mr-auto'><Button color='dark'><i className='ty-icon ty-icon-close'
-						onClick={(e) => clickHandler(e)(beforeClose)(state)(setState)}/>close</Button></div>
+					{letExit&&<div className='mr-auto'><Button layout='clear' color='dark' tyClass='p-2'><i className='ty-icon ty-icon-close fs-10 fs-sm-12'
+						onClick={(e) => clickHandler(e)(beforeClose)(state)(setState)}><span style={{fontSize: 0}}>close</span></i></Button></div>}
         			</div>
 					<div className='ty-modal-body'>
         			  {children}
