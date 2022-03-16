@@ -6,8 +6,9 @@
 	bottom: 0;
 	right: 0;
 	display: flex;
-	background-color: rgba(0, 0, 0, 0.5);
-	background-color: #22222531;
+	opacity: 0.5;
+	// background-color: rgba(0, 0, 0, 0.5);
+	// background-color: #22222531;
 	justify-content: center;
 	&.scrollable {
 		overflow: auto;
@@ -15,11 +16,10 @@
   }
   
   .ty-modal-container {
-	margin: 0px auto;
-	padding: 10px 16px;
-	background-color: $white;
-	border-radius: 2px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+	// margin: 0px auto;
+	// padding: 10px 16px;
+	// border-radius: 4px;
+	// box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
 	overflow: auto;
 	max-height: 100%;
 
@@ -34,10 +34,10 @@
 	}
   }
   
-  .ty-modal-body {
-	margin: 20px 0;
-  }
+//   .ty-modal-body {
+// 	margin: 20px 0;
+//   }
 
-  .ty-modal-footer {
-	  margin-top: 16px;
-  }
+//   .ty-modal-footer {
+// 	  margin-top: 16px;
+//   }
