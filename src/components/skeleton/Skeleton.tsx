@@ -11,7 +11,7 @@ const Skeleton: FC<SkeletonProps> = ({
 	children,
 }) => {
 	return (
-		<section className={`ty-skeleton border-radius-${radius||15} ty-bg-${color||'gray'} ${tyClass}`} style={{width, height}}>
+		<section className={`ty-skeleton border-radius-${radius||15} ty-bg-${color||'light'} ${tyClass}`} style={{width, height}}>
   		  {children}
   		</section>
 	);
