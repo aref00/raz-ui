@@ -9,7 +9,7 @@ const Card: FC<CardProps> = ({
 	children,
 }) => {
 	return (
-		<div className={`ty-card ty-shadow border-radius-${radius||15}
+		<div className={`ty-card ty-shadow-shadow border-radius-${radius||15}
 			ty-bg-${color||'contrast-primary'} ${tyClass}`}>
 			{children}
 		</div>

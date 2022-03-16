@@ -22,3 +22,14 @@ $button-border-radius: 5px;
 .ty-button.disabled {
 	cursor: default;
 }
+.ty-button:not(.disabled) {
+	&:focus {
+		opacity: 0.95;
+	}
+	&:hover {
+		opacity: 0.9;
+	}
+	&:active {
+		opacity: 0.7;
+	}
+}

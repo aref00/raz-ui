@@ -44,16 +44,20 @@
 	justify-content: space-evenly;
 }
 .ty-border-right {
-	border-right: 1px solid $border;
+	border-right-style: solid;
+	border-right-width: 1px;
 }
 .ty-border-left {
-	border-left: 1px solid $border;
+	border-left-style: solid;
+	border-left-width: 1px;
 }
 .ty-border-top {
-	border-top: 1px solid $border;
+	border-top-style: solid;
+	border-top-width: 1px;
 }
 .ty-border-bottom {
-	border-bottom: 1px solid $border;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
 }
 .inline {
 	display: inline;

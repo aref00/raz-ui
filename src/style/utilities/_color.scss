@@ -1,139 +1,85 @@
+:not(.dark-theme) {
+	$colors: (
+		"primary"	#4895EF	#FFFFFF,
+		"secondary"	#536EEF	#FFFFFF,
+		"success"	#20ce66	#FFFFFF,
+		"warning"	#FCD300	#F7F9FB,
+		"danger"	#FD3F67	#F7F9FB,
+		"contrast-primary"	#FFF	#404040,
+		"contrast-secondary"	#404040	#FFFFFF,
+		"text"	#434343	#292D32,
+		"gray"	#A0AFB4	#434343,
+		"santa-gray"	#9BA0B6	#9BA0B6,
+		"shadow"	rgba(240,242,246,0.8)	#292D32,
+		"dark"	#292D32	#F7F9FB,
+		"light"	#F7F9FB	#292D32,
+		"border"	#E8ECED	#292D32,
+		"transparent"	transparent	#292D32,
+	);
 
-$colors: (
-"primary"				$primary 				$contrast-primary 	,
-"secondary" 			$secondary 				$contrast-primary 	,
-"primary-light" 		$primary-light 			$contrast-primary 	,
-"success" 				$success $light 		$light 				,
-"dark" 					$dark $light 			$light 				,
-"danger" 				$danger $light 			$light 				,
-"warning" 				$warning $light 		$light 				,
-"light" 				$light $light 			$dark 				,
-"shadow" 				$shadow $dark 			$dark 				,
-"border" 				$border $dark 			$dark 				,
-"contrast-primary" 		$contrast-primary 		$contrast-secondary ,
-"contrast-secondary" 	$contrast-secondary 	$contrast-primary 	,
-"text-primary" 			$text-primary 			$text-secondary 	,
-"text-secondary"		$text-secondary 		$text-primary 		,
-);
+	@each $name, $color, $oposite in $colors {
+		.ty-color-#{$name} {
+			color: $color;
+		}
+		.ty-outline-#{$name}, .ty-hover-outline-#{$name}:active, .ty-hover-outline-#{$name}:hover, .ty-hover-outline-#{$name}:focus-within {
+			outline: $color auto 1px;
+		}
+		.ty-bg-#{$name}, .ty-outline-#{$name}.ty-hoverable:not(.disable):hover {
+			background-color: $color;
+			color: $oposite;
+		}
+		.ty-border-color-#{$name} {
+			border-color: $color !important;
+		}
+	}
+	.ty-shadow {
+		box-shadow: 0px 4px 8px rgba(240,242,246,0.8);
+	}
+}
+
+
+// dark theme
 .dark-theme {
-	$dark-colors: (
-	"primary"				$dark-primary 				$dark-contrast-primary 	,
-	"secondary" 			$dark-secondary 			$dark-contrast-primary 	,
-	"primary-light" 		$dark-primary-light 		$dark-contrast-primary 	,
-	"success" 				$dark-success $light 		$dark-light 			,
-	"dark" 					$dark-dark $light 			$dark-light 			,
-	"danger" 				$dark-danger $light 		$dark-light 			,
-	"warning" 				$dark-warning $light 		$dark-light 			,
-	"light" 				$dark-light $light 			$dark-dark 				,
-	"shadow" 				$dark-shadow $dark 			$dark-dark 				,
-	"border" 				$dark-border $dark 			$dark-dark 				,
-	"contrast-primary" 		$dark-contrast-primary 		$dark-contrast-secondary ,
-	"contrast-secondary" 	$dark-contrast-secondary 	$dark-contrast-primary 	,
-	"text-primary" 			$dark-text-primary 			$dark-text-secondary 	,
-	"text-secondary"		$dark-text-secondary 		$dark-text-primary 		,
-);
-}
-
-@each $name, $color, $oposite, $text-color, $dark in $colors {
-	.ty-color-#{$name} {
-		color: $color;
-	}
-	.ty-outline-#{$name} {
-		outline: $color auto 1px;
-	}
-	.ty-outline-#{$name}.ty-hoverable:not(.disable):hover {
-		background-color: $color;
-		color: $oposite;
-	}
-	.ty-bg-#{$name} {
-		background-color: $color;
-		color: $text-color;
-	}
-	.ty-border-color-#{$name} {
-		border-color: $color !important;
-	}
-	.ty-hover-outline-#{$name}:active, .ty-hover-outline-#{$name}:hover, .ty-hover-outline-#{$name}:focus-within {
-		outline: $color auto 1px;
-	}
-	// .ty-shadow-#{$name} {
-	// 	box-shadow: 0.5px 3px 10px 0 $color;
-	// }
-}
-
-.ty-shadow {
-	box-shadow: 0px 4px 8px 0px $shadow;
-}
-
-.ty-bg-unset {
-	background-color: unset;
-	color: $dark;
-}
-//button colors
-.ty-button:not(.disabled) {
-	&:hover {
-		@each $name, $color, $oposite, $text-color in $colors {
-			&.ty-bg-#{$name} {
-				background-color: lighten($color, 5%);
-			}
-			&.ty-color-#{$name}, &.ty-border-color-#{$name} {
-				opacity: 0.9;
-			}
-			&::placeholder, ::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder {
-				opacity: 0.5;	
-			}
-			.dark-theme {
-				&.ty-bg-#{$name} {
-					background-color: lighten($color, 5%);
-				}
-				&.ty-color-#{$name}, &.ty-border-color-#{$name} {
-					opacity: 0.9;
-				}
-				&::placeholder, ::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder {
-					opacity: 0.5;	
-				}
-			}
+	$colors: (
+		"primary"	#3772FF	#FFFFFF,
+		"secondary"	#B0C4FF	#404040,
+		"success"	#20ce66	#20ce66,
+		"warning"	#FCD300	#F7F9FB,
+		"danger"	#FD3F67	#F7F9FB,
+		"contrast-primary"	#232631	#404040,
+		"contrast-secondary"	#FFF	#FFFFFF,
+		"text"	#FFF	#232631,
+		"gray"	#99A8BC	#434343,
+		"santa-gray"	#9BA0B6	#9BA0B6,
+		"shadow"	rgba(0,0,0,0.1)	#292D32,
+		"dark"	#000	#FFF,
+		"light"	#141A1F	#FFF,
+		"border"	#E8ECED	#FFF,
+		"transparent"	transparent	#FFF,
+	);
+	@each $name, $color, $oposite in $colors {
+		.ty-color-#{$name} {
+			color: $color;
+		}
+		.ty-outline-#{$name}, .ty-hover-outline-#{$name}:active, .ty-hover-outline-#{$name}:hover, .ty-hover-outline-#{$name}:focus-within {
+			outline: $color auto 1px;
+		}
+		.ty-bg-#{$name}, .ty-outline-#{$name}.ty-hoverable:not(.disable):hover {
+			background-color: $color;
+			color: $oposite;
+		}
+		.ty-border-color-#{$name} {
+			border-color: $color !important;
 		}
 	}
-	&:active, &:focus {
-		@each $name, $color, $oposite, $text-color in $colors {
-			&.ty-bg-#{$name} {
-				background-color: lighten($color, 10%);
-			}
-			&.ty-color-#{$name}, &.ty-border-color-#{$name} {
-				opacity: 0.7;
-			}
-			&.ty-hover-outline-#{$name} {
-				outline: $color auto 1px;
-			}
-		}
+	.ty-shadow {
+		box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+		// box-shadow: 0.5px 3px 10px 0 rgba(0,0,0,0.1);
 	}
 }
 
 .disabled {
-	@each $name, $color, $oposite, $text-color in $colors {
-		&.ty-color-#{$name} {
-			color: $color;
-			opacity: 0.5;
-		}
-		&.ty-outline-#{$name} {
-			outline: $color auto 1px;
-			opacity: 0.5;
-		}
-		&.ty-outline-#{$name}.ty-hoverable:not(.disable):hover {
-			background-color: $color;
-			color: $oposite;
-			opacity: 0.5;
-		}
-		&.ty-bg-#{$name} {
-			background-color: $color;
-			color: $text-color;
-			opacity: 0.5;
-		}
-		&.ty-border-color-#{$name} {
-			border-color: $color;
-			opacity: 0.5;
-		}
-	}
+	opacity: 0.5;
 }
 
 $i: 0;
@@ -141,5 +87,5 @@ $i: 0;
 	.ty-opacity-#{$i*100} {
 		opacity: #{$i};
 	}
-  $i: $i + 0.05;
+  $i: $i + 0.1;
 }

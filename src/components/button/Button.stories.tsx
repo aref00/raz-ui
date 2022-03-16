@@ -24,20 +24,20 @@ export const Secondary = Template.bind({});
 Secondary.args = {
 	color: 'secondary',
 	disabled: false,
-	label: 'Secondary Button',
+	children: 'Secondary Button',
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
 	disabled: true,
-	label: 'Disabled',
+	children: 'Disabled',
 };
 
 export const Small = Template.bind({});
 Small.args = {
 	disabled: false,
 	size: 'small',
-	label: 'Small',
+	children: 'Small',
 	tyClass: 'fs-10 px-2 py-1'
 };
 
@@ -45,7 +45,7 @@ export const Medium = Template.bind({});
 Medium.args = {
 	disabled: false,
 	size: 'medium',
-	label: 'Medium',
+	children: 'Medium',
 	tyClass: 'fs-12 px-3 py-2'
 };
 
@@ -53,7 +53,7 @@ export const Large = Template.bind({});
 Large.args = {
 	disabled: false,
 	size: 'large',
-	label: 'Large',
+	children: 'Large',
 	tyClass: 'fs-16 px-5 py-3'
 };
 
@@ -62,7 +62,7 @@ Outline.args = {
 	disabled: false,
 	layout: 'outline',
 	size: 'large',
-	label: 'Outline',
+	children: 'Outline',
 	width: '100px',
 };
 
@@ -71,5 +71,5 @@ Clear.args = {
 	disabled: false,
 	layout: 'clear',
 	size: 'large',
-	label: 'Clear'
+	children: 'Clear'
 };

@@ -42,7 +42,7 @@ const Select: FC<SelectProps> = ({
 				value={state.inputValue} outlineColor={color} clear={clear} {...props} disabled={disabled}
 				onFocus={() => setState({...state, open: true})} onBlur={() => change(null)(options)(state)(setState)(onChange)}></Input>
 			</div>
-			<div className='ty-select__dropdown ty-shadow' style={{width, minHeight: height}}>
+			<div className='ty-select__dropdown ty-shadow-shadow' style={{width, minHeight: height}}>
 				{
 					state.filteredOptions.map((o, i) => (
 						<Button role='option' key={i} onClick={(e) => handleSelect(e)(o)(options)(state, setState)(onChange)}
