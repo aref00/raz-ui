@@ -25,7 +25,6 @@ describe('Running Test for Tayeh Modal', () => {
 		const card = node?.parentElement;
 		const mask = card?.parentElement;
 		expect(node).toHaveClass('ty-modal-body');
-		expect(mask).toHaveClass('ty-bg-dark');
 	})
 
 	test('Check Modal Visibility', () => {
