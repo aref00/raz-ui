@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { RatingProps } from './Rating.types';
 import '../../style/components/card.scss';
 // import Button from '../button/Button';
@@ -15,13 +15,17 @@ const Rating: FC<RatingProps> = ({
 	max,
 	children,
 }) => {
+	const [state, setState] = useState({value});
 	const stars = generateStars({
 		disabled,
 		activeColor: activeColor || 'rating',
 		defaultColor: defaultColor || 'border',
 		max: max || 5,
 		onChange: (value) => {
-			if (onChange && !disabled && !readonly) onChange(value);
+			if (!disabled && !readonly) {
+				setState({value});
+				if (onChange) onChange(value);
+			}
 		},
 	});
 	return (
@@ -30,7 +34,7 @@ const Rating: FC<RatingProps> = ({
 				disabled ? 'ty-opacity-50' : ''
 			}`}
 		>
-			{stars(value || 0)}
+			{stars(state.value || 0)}
 			{children}
 		</div>
 	);

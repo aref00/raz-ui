@@ -12,6 +12,15 @@ export default {
 } as Meta<typeof Input>;
 
 const Template: Story<InputProps> = (args) => <Input {...args} />;
+const DarkTemplate: Story<InputProps> = (args) =>
+<div className='dark-theme'>
+	<div className='ty-bg-light p-4' style={{width: '500px', height: '500px'}}>
+		<div className='mb-4'>
+			<Input {...args} />
+		</div>
+		<Input {...args} tag="textarea"/>
+	</div>
+</div>
 
 export const Label = Template.bind({});
 Label.args = {
@@ -62,5 +71,11 @@ Textarea.args = {
 	radius: 15,
 	clear: true,
 	inputClass: 'ty-bg-light',
+	placeholder: 'Input Placeholder',
+};
+
+export const DarkTheme = DarkTemplate.bind({});
+DarkTheme.args = {
+	label: 'Label',
 	placeholder: 'Input Placeholder',
 };

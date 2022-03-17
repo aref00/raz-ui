@@ -29,7 +29,7 @@ function generateStar(star: Star) {
 			layout="clear"
 		>
 			<i
-				className={`ty-icon ty-icon-star-outline ty-color-${star.color} ty-opacity-${star.opacity}`}
+				className={`ty-icon ty-icon-star ty-color-${star.color} ty-opacity-${star.opacity}`}
 			>
 				<span className="fs-0">{star.value}</span>
 			</i>
