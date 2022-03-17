@@ -28,7 +28,7 @@ const Rating: FC<RatingProps> = ({
 		}
 	})
 	return (
-		<div className={`ty-flex ty-gap-1 ${tyClass} ${disabled?'ty-opacity-40':''}`}>
+		<div className={`ty-flex ty-gap-1 ${tyClass} ${disabled?'ty-opacity-50':''}`}>
 			{
 				stars(value||0)
 			}

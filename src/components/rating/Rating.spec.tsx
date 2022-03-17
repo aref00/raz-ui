@@ -40,7 +40,7 @@ describe('Running Test for Tayeh Rating', () => {
 		const node3 = screen.getByText('3')?.parentElement;
 		const node4 = screen.getByText('4')?.parentElement;
 		expect(node2).toHaveClass('ty-color-primary');
-		expect(node3).toHaveClass('ty-color-primary ty-opacity-50');
+		expect(node3).toHaveClass('ty-color-primary ty-opacity-70');
 		expect(node4).toHaveClass('ty-color-gray');
 	})
 
@@ -49,7 +49,7 @@ describe('Running Test for Tayeh Rating', () => {
 		const button = screen.getByText('2')?.parentElement?.parentElement;
 		const parent = screen.getByText('3')?.parentElement?.parentElement?.parentElement;
 		expect(button).toHaveClass('disabled');
-		expect(parent).toHaveClass('ty-opacity-40');
+		expect(parent).toHaveClass('ty-opacity-50');
 	})
 
 	test('Check Rating Disabled', () => {

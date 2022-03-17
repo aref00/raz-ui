@@ -27,6 +27,18 @@ Value.args = {
 	value: 3.5
 };
 
+export const Disabled = Template.bind({});
+Disabled.args = {
+	disabled: true,
+	value: 2.5
+};
+
+export const Readonly = Template.bind({});
+Readonly.args = {
+	readonly: true,
+	value: 2.5
+};
+
 export const Color = Template.bind({});
 Color.args = {
 	activeColor: 'primary',

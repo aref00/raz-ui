@@ -46,7 +46,7 @@ export function generateStars (config: GeneratorConfig) {
 			rows.push(generateStar({
 				disabled,
 				color: active ? activeColor : defaultColor,
-				opacity: semiActive ? 50 : 100,
+				opacity: semiActive ? 70 : 100,
 				value: current,
 				onChange
 			}))
