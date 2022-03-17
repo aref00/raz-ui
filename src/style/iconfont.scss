@@ -45,6 +45,9 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  span {
+	  font-size: 0;
+  }
 }
 
 .ty-icon.ty-icon-small {

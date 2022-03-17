@@ -21,7 +21,7 @@ type GeneratorConfig = {
 function generateStar (star: Star) {
 	return (
 		<Button onClick={(e) => {star.onChange(star.value)}} disabled={star.disabled} key={star.value} layout='clear'>
-			<i className={`ty-icon ty-icon-star ty-color-${star.color} ty-opacity-${star.opacity}`}>
+			<i className={`ty-icon ty-icon-star-outline ty-color-${star.color} ty-opacity-${star.opacity}`}>
 				<span className='fs-0'>{star.value}</span>
 			</i>
 		</Button>
@@ -42,11 +42,11 @@ export function generateStars (config: GeneratorConfig) {
 			const last = i;
 			const current = i + 1;
 			const active = value > last;
-			const semiActive = active && value !== current;
+			const semiActive = active && value < current;
 			rows.push(generateStar({
 				disabled,
 				color: active ? activeColor : defaultColor,
-				opacity: semiActive ? 80 : 100,
+				opacity: semiActive ? 50 : 100,
 				value: current,
 				onChange
 			}))

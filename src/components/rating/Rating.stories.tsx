@@ -2,27 +2,39 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
-import { CardProps } from './Card.types';
-import Card from './Card';
+import { RatingProps } from './Rating.types';
+import Rating from './Rating';
 
 export default {
-	title: 'Tayeh/Card',
-	component: Card,
+	title: 'Tayeh/Rating',
+	component: Rating,
 	argTypes: {},
-} as Meta<typeof Card>;
+} as Meta<typeof Rating>;
 
-const Template: Story<CardProps> = (args) => <Card {...args} />;
+const Template: Story<RatingProps> = (args) => <Rating {...args} />;
+const DarkTemplate: Story<RatingProps> = (args) =>
+<div className='dark-theme'>
+	<div className='ty-bg-light' style={{width: '100%', height: '500px'}}><Rating {...args} /></div>
+</div>;
+
+export const Default = Template.bind({});
+Default.args = {
+	tyClass: 'p-2'
+};
+
+export const Value = Template.bind({});
+Value.args = {
+	value: 3.5
+};
 
 export const Color = Template.bind({});
 Color.args = {
-	color: 'primary',
-	radius: 10,
-	tyClass: 'p-2',
-	children: 'Card Content',
+	activeColor: 'primary',
+	defaultColor: 'light',
+	value: 3.5
 };
 
-export const Padding = Template.bind({});
-Padding.args = {
-	tyClass: 'p-5',
-	children: 'Card Content',
+export const DarkTheme = DarkTemplate.bind({});
+DarkTheme.args = {
+	value: 2.5
 };
