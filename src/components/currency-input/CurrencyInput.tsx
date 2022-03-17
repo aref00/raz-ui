@@ -21,7 +21,7 @@ const CurrencyInput: FC<CurrencyInputProps> = ({
 	const [inputValue, setInputValue] = useState(format(value));
 	const [content, setContent] = useState(+(value || '0'));
 
-	function handleInput(e: Event) {
+	function handleInput(e: ChangeEvent<HTMLInputElement>) {
 		let v = +(e.target as HTMLInputElement).value.replace(/[^0-9.]/g, '');
 		(e.target as HTMLInputElement).value = '' + v;
 		setInputValue(format(v));
@@ -31,6 +31,8 @@ const CurrencyInput: FC<CurrencyInputProps> = ({
 	}
 
 	function handleChange(e: Event) {
+		console.log('handling');
+		
 		let v = +(e.target as HTMLInputElement).value.replace(/[^0-9.]/g, '');
 		if (props.min && v < props.min) v = props.min;
 		if (props.max && v > props.max) v = props.max;
@@ -43,12 +45,11 @@ const CurrencyInput: FC<CurrencyInputProps> = ({
 	function registerCallbacks(element: HTMLInputElement | null) {
 		if (element) {
 			element.onchange = handleChange;
-			element.oninput = handleInput;
 		}
 	}
 
 	return (
-		<Input passRef={registerCallbacks} defaultValue={inputValue} {...props} />
+		<Input passRef={registerCallbacks} value={inputValue} onChange={handleInput} {...props} />
 	);
 };
 
