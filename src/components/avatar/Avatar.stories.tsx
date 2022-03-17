@@ -16,7 +16,7 @@ const Template: Story<AvatarProps> = (args) => <Avatar {...args} />;
 export const Img = Template.bind({});
 Img.args = {
 	children: (
-		<img src="https://previews.123rf.com/images/deagreez/deagreez1901/deagreez190101764/116219075-close-up-foto-portret-van-vrij-aantrekkelijke-positieve-vrolijke-charmante-grimassen-plezier-tijd-gr.jpg" />
+		<img src="https://static.ty-sb1.tayeh.ir/public-images/c67088f8-946f-48d8-935e-e0d3538107c4.jpg" />
 	),
 };
 
