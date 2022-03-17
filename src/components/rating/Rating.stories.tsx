@@ -12,41 +12,44 @@ export default {
 } as Meta<typeof Rating>;
 
 const Template: Story<RatingProps> = (args) => <Rating {...args} />;
-const DarkTemplate: Story<RatingProps> = (args) =>
-<div className='dark-theme'>
-	<div className='ty-bg-light' style={{width: '100%', height: '500px'}}><Rating {...args} /></div>
-</div>;
+const DarkTemplate: Story<RatingProps> = (args) => (
+	<div className="dark-theme">
+		<div className="ty-bg-light" style={{ width: '100%', height: '500px' }}>
+			<Rating {...args} />
+		</div>
+	</div>
+);
 
 export const Default = Template.bind({});
 Default.args = {
-	tyClass: 'p-2'
+	tyClass: 'p-2',
 };
 
 export const Value = Template.bind({});
 Value.args = {
-	value: 3.5
+	value: 3.5,
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
 	disabled: true,
-	value: 2.5
+	value: 2.5,
 };
 
 export const Readonly = Template.bind({});
 Readonly.args = {
 	readonly: true,
-	value: 2.5
+	value: 2.5,
 };
 
 export const Color = Template.bind({});
 Color.args = {
 	activeColor: 'primary',
 	defaultColor: 'light',
-	value: 3.5
+	value: 3.5,
 };
 
 export const DarkTheme = DarkTemplate.bind({});
 DarkTheme.args = {
-	value: 2.5
+	value: 2.5,
 };

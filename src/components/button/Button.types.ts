@@ -5,7 +5,7 @@ export interface ButtonProps {
 	width?: string;
 	color?: string;
 	outlineColor?: string;
-	layout?: 'simple'|'outline'|'clear';
+	layout?: 'simple' | 'outline' | 'clear';
 	role?: AriaRole;
 	tyClass?: string;
 	onClick?: MouseEventHandler<HTMLButtonElement>;

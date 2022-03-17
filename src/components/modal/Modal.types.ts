@@ -19,6 +19,6 @@ export interface ModalProps {
 	header?: ReactNode;
 	footer?: ReactNode;
 	beforeClose?: () => boolean;
-	onChange?: (visible: boolean) => void
+	onChange?: (visible: boolean) => void;
 	tyClass?: string;
 }

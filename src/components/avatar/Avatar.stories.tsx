@@ -15,7 +15,9 @@ const Template: Story<AvatarProps> = (args) => <Avatar {...args} />;
 
 export const Img = Template.bind({});
 Img.args = {
-	children: <img src='https://previews.123rf.com/images/deagreez/deagreez1901/deagreez190101764/116219075-close-up-foto-portret-van-vrij-aantrekkelijke-positieve-vrolijke-charmante-grimassen-plezier-tijd-gr.jpg'/>,
+	children: (
+		<img src="https://previews.123rf.com/images/deagreez/deagreez1901/deagreez190101764/116219075-close-up-foto-portret-van-vrij-aantrekkelijke-positieve-vrolijke-charmante-grimassen-plezier-tijd-gr.jpg" />
+	),
 };
 
 export const Text = Template.bind({});

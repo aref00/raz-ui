@@ -16,12 +16,18 @@ const Template: Story<RadioButtonProps> = (args) => <RadioButton {...args} />;
 export const Color = Template.bind({});
 Color.args = {
 	activeColor: 'danger',
-	options: [{value: 'test', label: 'test'}, {value: 'test-2', label: 'test-2'}],
+	options: [
+		{ value: 'test', label: 'test' },
+		{ value: 'test-2', label: 'test-2' },
+	],
 	value: 'test',
 };
 
 export const Style = Template.bind({});
 Style.args = {
-	options: [{value: 'test', label: 'test'}, {value: 'test-2', label: 'test-2'}],
-	tyClass: 'py-3 px-2'
+	options: [
+		{ value: 'test', label: 'test' },
+		{ value: 'test-2', label: 'test-2' },
+	],
+	tyClass: 'py-3 px-2',
 };

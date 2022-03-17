@@ -1,8 +1,13 @@
-import { ChangeEventHandler, KeyboardEventHandler, FocusEventHandler, FormEventHandler } from 'react';
+import {
+	ChangeEventHandler,
+	KeyboardEventHandler,
+	FocusEventHandler,
+	FormEventHandler,
+} from 'react';
 import { Color } from '../types';
 
 export interface CurrencyInputProps {
-	value?: number|string;
+	value?: number | string;
 	name?: string;
 	placeholder?: string;
 	label?: string;

@@ -15,24 +15,21 @@ const Bubble: FC<BubbleProps> = ({
 	color = color || 'primary';
 	replyColor = replyColor || 'secondary';
 	tyClass = tyClass || '';
-	const side = isMe?'start':'end';
+	const side = isMe ? 'start' : 'end';
 	return (
 		<div className={`ty-flex ty-flex-col align-items-${side}`}>
-			<div role='dialog' className={`ty-bubble text-justify border-radius-${radius||10} ty-bg-${color} ty-bubble-${side} ${tyClass}`}>
-				{
-					replyTo&&<div className={`full-width ty-bg-${replyColor}`}>
-						{replyTo}
-					</div>
-				}
-				<div>
-					{children}
-				</div>
+			<div
+				role="dialog"
+				className={`ty-bubble text-justify border-radius-${
+					radius || 10
+				} ty-bg-${color} ty-bubble-${side} ${tyClass}`}
+			>
+				{replyTo && (
+					<div className={`full-width ty-bg-${replyColor}`}>{replyTo}</div>
+				)}
+				<div>{children}</div>
 			</div>
-			{
-				footer&&<div>
-					{footer}
-				</div>
-			}
+			{footer && <div>{footer}</div>}
 		</div>
 	);
 };

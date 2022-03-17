@@ -12,5 +12,5 @@ export interface SelectProps {
 	tyClass?: string;
 	label?: string;
 	placeholder?: string;
-	onChange: (value: string|number) => void;
+	onChange: (value: string | number) => void;
 }

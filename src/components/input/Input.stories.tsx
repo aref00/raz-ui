@@ -22,7 +22,7 @@ Label.args = {
 export const Suffix = Template.bind({});
 Suffix.args = {
 	label: 'Label',
-	suffix: <i className='px-2'>x</i>,
+	suffix: <i className="px-2">x</i>,
 	placeholder: 'Input Placeholder',
 };
 
@@ -38,7 +38,7 @@ FontSize.args = {
 	label: 'Label',
 	tyClass: 'fs-16 fw-600',
 	inputClass: 'fs-18 fw-800',
-	suffix: <i className='fs-8 fw-100 pl-3'>search</i>,
+	suffix: <i className="fs-8 fw-100 pl-3">search</i>,
 	placeholder: 'Input Placeholder',
 };
 
@@ -46,7 +46,7 @@ export const Clear = Template.bind({});
 Clear.args = {
 	clear: true,
 	inputClass: 'fs-18 fw-800 ty-bg-light',
-	suffix: <i className='fs-8 fw-100 pl-3'>search</i>,
+	suffix: <i className="fs-8 fw-100 pl-3">search</i>,
 	placeholder: 'Input Placeholder',
 };
 

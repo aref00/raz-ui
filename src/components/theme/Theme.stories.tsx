@@ -8,19 +8,29 @@ export default {
 	argTypes: {},
 };
 
-const Template: Story = (args) => <div {...args}><div className='ty-color-light'>Content</div>
-<div className='ty-bg-contrast-primary' style={{width: '100px', height: '100px'}}>with bg</div>
-<div className='ty-bg-light' style={{width: '100px', height: '100px'}}>with bg</div>
-</div>;
+const Template: Story = (args) => (
+	<div {...args}>
+		<div className="ty-color-light">Content</div>
+		<div
+			className="ty-bg-contrast-primary"
+			style={{ width: '100px', height: '100px' }}
+		>
+			with bg
+		</div>
+		<div className="ty-bg-light" style={{ width: '100px', height: '100px' }}>
+			with bg
+		</div>
+	</div>
+);
 
 export const Light = Template.bind({});
 Light.args = {
 	dir: 'rtl',
-	className: 'light-theme'
+	className: 'light-theme',
 };
 
 export const Dark = Template.bind({});
 Dark.args = {
 	dir: 'rtl',
-	className: 'dark-theme as'
+	className: 'dark-theme as',
 };
