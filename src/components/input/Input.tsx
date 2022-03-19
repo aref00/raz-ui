@@ -28,11 +28,11 @@ const Input: FC<InputProps> = ({
 		radius || 5
 	} \
 ${disabled ? '' : `ty-hover-outline-${outlineColor || 'primary'}`} ${
-		clear ? '--border-clear' : borderBottom ? '--border-bottom' : ''
-	} \
+	clear ? '--border-clear' : borderBottom ? '--border-bottom' : ''
+} \
 ${disabled ? 'disabled' : ''} ${
-		error ? 'ty-color-danger ty-border-color-danger' : ''
-	} ${inputClass || ''}`;
+	error ? 'ty-color-danger ty-border-color-danger' : ''
+} ${inputClass || ''}`;
 
 	return (
 		<div className={`ty-input ${tyClass}`}>

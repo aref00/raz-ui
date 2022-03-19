@@ -9,5 +9,7 @@ export interface ButtonProps {
 	role?: AriaRole;
 	radius?: number;
 	tyClass?: string;
+	'aria-selected'?: 'true'|'false';
+	'aria-controls'?: string;
 	onClick?: MouseEventHandler<HTMLButtonElement>;
 }

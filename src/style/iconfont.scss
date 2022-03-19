@@ -41,13 +41,15 @@
 
 .ty-icon {
   font-family: 'ty-icon' !important;
-  font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   span {
 	  font-size: 0;
   }
+}
+.ty-icon::before {
+	font-size: inherit;
 }
 
 .ty-icon-activity:before { content: '\e800'; } /* '' */
