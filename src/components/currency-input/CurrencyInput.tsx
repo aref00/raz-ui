@@ -1,11 +1,11 @@
-import React, { ChangeEvent, FC, FocusEvent, FormEvent, useState } from 'react';
+import React, { ChangeEvent, FC, useState } from 'react';
 import { CurrencyInputProps } from './CurrencyInput.types';
 import '../../style/components/input.scss';
 import Input from '../input/Input';
 
 function format(valString?: string | number) {
 	if (!valString) return '';
-	let val = valString.toString();
+	const val = valString.toString();
 	return val.replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
 }
 
@@ -19,27 +19,25 @@ const CurrencyInput: FC<CurrencyInputProps> = ({
 		if (props.min && +value < props.min) value = props.min;
 	}
 	const [inputValue, setInputValue] = useState(format(value));
-	const [content, setContent] = useState(+(value || '0'));
+	// const [, setContent] = useState(+(value || '0'));
 
 	function handleInput(e: ChangeEvent<HTMLInputElement>) {
-		let v = +(e.target as HTMLInputElement).value.replace(/[^0-9.]/g, '');
+		const v = +(e.target as HTMLInputElement).value.replace(/[^0-9.]/g, '');
 		(e.target as HTMLInputElement).value = '' + v;
 		setInputValue(format(v));
-		setContent(+v);
+		// setContent(+v);
 		const event = { target: { value: v } };
-		onChange(event as any);
+		onChange(event as unknown as React.ChangeEvent);
 	}
 
 	function handleChange(e: Event) {
-		console.log('handling');
-		
 		let v = +(e.target as HTMLInputElement).value.replace(/[^0-9.]/g, '');
 		if (props.min && v < props.min) v = props.min;
 		if (props.max && v > props.max) v = props.max;
 		setInputValue(format(v));
-		setContent(+v);
+		// setContent(+v);
 		const event = { target: { value: v } };
-		onChange(event as any);
+		onChange(event as unknown as React.ChangeEvent);
 	}
 
 	function registerCallbacks(element: HTMLInputElement | null) {
@@ -49,7 +47,12 @@ const CurrencyInput: FC<CurrencyInputProps> = ({
 	}
 
 	return (
-		<Input passRef={registerCallbacks} value={inputValue} onChange={handleInput} {...props} />
+		<Input
+			passRef={registerCallbacks}
+			value={inputValue}
+			onChange={handleInput}
+			{...props}
+		/>
 	);
 };
 

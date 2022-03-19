@@ -62,10 +62,9 @@ const Modal: FC<ModalProps> = ({
 						<div className="mr-auto">
 							<Button layout="clear" color="dark" tyClass="p-2">
 								<i
-									className="ty-icon ty-icon-close fs-10 fs-sm-12"
-									onClick={(e) => clickHandler(e)(beforeClose)(state)(setState)}
-								>
-									<span style={{ fontSize: 0 }}>close</span>
+									className="ty-icon ty-icon-close-circle-outline fs-10 fs-sm-12"
+									onClick={(e) => clickHandler(e)(beforeClose)(state)(setState)}>
+									<span>close</span>
 								</i>
 							</Button>
 						</div>

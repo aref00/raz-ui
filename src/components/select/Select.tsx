@@ -57,9 +57,9 @@ const Select: FC<SelectProps> = ({
 					passRef={setInput}
 					width={width}
 					height={height}
-					suffix={getSuffix(() => setState({ ...state, open: !state.open }))}
+					suffix={getSuffix(() => setState({ ...state, open: !state.open }))(state.open)}
 					onKeyDown={(e: KeyboardEvent<HTMLInputElement>) =>
-						handleKeyDown(e)(options)(state)(setState)(onChange)
+						handleKeyDown(e)(state)(setState)(onChange)
 					}
 					onChange={(e: ChangeEvent<HTMLInputElement>) =>
 						handleInputChange(e.target.value)(options)(state, setState)(
@@ -72,7 +72,7 @@ const Select: FC<SelectProps> = ({
 					{...props}
 					disabled={disabled}
 					onFocus={() => setState({ ...state, open: true })}
-					onBlur={() => change(null)(options)(state)(setState)(onChange)}
+					onBlur={() => change(null)(state)(setState)(onChange)}
 				></Input>
 			</div>
 			<div

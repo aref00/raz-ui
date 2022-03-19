@@ -9,10 +9,11 @@ const Card: FC<CardProps> = ({
 	children,
 	...props
 }) => {
+	radius = typeof radius === 'number'? radius : 15;
 	return (
 		<div
 			tabIndex={0}
-			className={`ty-card ty-shadow border-radius-${radius || 15}
+			className={`ty-card ty-shadow border-radius-${radius}
 			ty-bg-${color || 'contrast-primary'} ${tyClass || ''}`}
 			{...props}
 		>

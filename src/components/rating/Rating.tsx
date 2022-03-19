@@ -15,7 +15,7 @@ const Rating: FC<RatingProps> = ({
 	max,
 	children,
 }) => {
-	const [state, setState] = useState({value});
+	const [state, setState] = useState({ value });
 	const stars = generateStars({
 		disabled,
 		activeColor: activeColor || 'rating',
@@ -23,7 +23,7 @@ const Rating: FC<RatingProps> = ({
 		max: max || 5,
 		onChange: (value) => {
 			if (!disabled && !readonly) {
-				setState({value});
+				setState({ value });
 				if (onChange) onChange(value);
 			}
 		},

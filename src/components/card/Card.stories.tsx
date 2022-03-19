@@ -15,7 +15,7 @@ export default {
 const Template: Story<CardProps> = (args) => (
 	<Card {...args}>
 		<div>Card Content</div>
-		<Button children="Button" />
+		<Button>Button</Button>
 	</Card>
 );
 const DarkTemplate: Story<CardProps> = (args) => (
@@ -26,7 +26,7 @@ const DarkTemplate: Story<CardProps> = (args) => (
 		>
 			<Card {...args}>
 				<div className="ty-color-text">Card Content</div>
-				<Button children="Button" />
+				<Button>Button</Button>
 			</Card>
 		</div>
 	</div>

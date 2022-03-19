@@ -21,7 +21,7 @@ type GeneratorConfig = {
 function generateStar(star: Star) {
 	return (
 		<Button
-			onClick={(e) => {
+			onClick={() => {
 				star.onChange(star.value);
 			}}
 			disabled={star.disabled}

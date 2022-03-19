@@ -14,31 +14,35 @@ function empty() {
 }
 
 export function getSuffix(onClick: () => void) {
-	return (
-		<Button role="switch" onClick={onClick} layout="clear" width="32px">
-			<i role="img" className="ty-icon fs-12 px-2"></i>
-		</Button>
-	);
+	let className = 'ty-icon fs-12 px-2 ty-icon-';
+	return function icon (open: boolean) {
+		className += open ? 'arrow-up' : 'arrow-down';
+		return (
+			<Button role="switch" onClick={onClick} layout="clear" width="32px">
+				<i role="img" className={className}></i>
+			</Button>
+		);
+	};
 }
 export function change(ctrl: Option | null) {
-	return function (options: Option[]) {
-		return function (state: State) {
-			const o = ctrl || state.filteredOptions[0] || { label: '', value: null };
-			return function (setState: React.Dispatch<State>) {
-				setState({
-					...state,
-					value: o.value,
-					inputValue: o.label || '',
-					// filteredOptions: options,
-					open: false,
-				});
-				return function (onChange: (value: string | number) => void) {
-					onChange(o.value);
-					return empty();
-				};
+	// return function (options: Option[]) {
+	return function (state: State) {
+		const o = ctrl || state.filteredOptions[0] || { label: '', value: null };
+		return function (setState: React.Dispatch<State>) {
+			setState({
+				...state,
+				value: o.value,
+				inputValue: o.label || '',
+				// filteredOptions: options,
+				open: false,
+			});
+			return function (onChange: (value: string | number) => void) {
+				onChange(o.value);
+				return empty();
 			};
 		};
 	};
+	// };
 }
 export function handleKeyDown(e: KeyboardEvent<HTMLInputElement>) {
 	if (e.key === 'Escape') {
@@ -83,7 +87,7 @@ export function handleSelect(e: MouseEvent) {
 					filteredOptions: options,
 					open: false,
 				});
-				return function (onChange: (value: any) => void) {
+				return function (onChange: (value: string) => void) {
 					onChange(o.value);
 				};
 			};

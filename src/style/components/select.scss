@@ -1,22 +1,22 @@
 .ty-select {
 	position: relative;
 	display: inline-block;
-	i::before {
-		content: '\e833';
-	}
+	// i::before {
+	// 	content: '\e869';
+	// }
   }
 
   .ty-select:focus-within {
 	  .ty-select__dropdown {
 		display: block;
 	  }
-	  i::before {
-		content: '\e836';
-	  }
+	//   i::before {
+	// 	content: '\e864';
+	//   }
   }
-  .dropdown-icon::before{
-	content: '\e800';
-}
+//   .dropdown-icon::before{
+// 	content: '\e864';
+// }
   .ty-select__dropdown {
 	  display: none;
 	border-bottom-left-radius: 4px;

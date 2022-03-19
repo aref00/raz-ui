@@ -18,8 +18,9 @@ Options.args = {
 	options: [
 		{ label: 'test', value: 'test' },
 		{ label: 'test-2', value: 'test-2' },
+		{ label: 'test-3', value: 'test-3' },
 	],
-	children: 'Select Content',
+	placeholder: 'Select Content',
 };
 
 export const Label = Template.bind({});
@@ -29,7 +30,7 @@ Label.args = {
 		{ label: 'test', value: 'test' },
 		{ label: 'test-2', value: 'test-2' },
 	],
-	children: 'Select Content',
+	placeholder: 'Select Content',
 };
 
 export const Clear = Template.bind({});
@@ -39,7 +40,7 @@ Clear.args = {
 		{ label: 'test', value: 'test' },
 		{ label: 'test-2', value: 'test-2' },
 	],
-	children: 'Select Content',
+	placeholder: 'Select Content',
 };
 
 export const Size = Template.bind({});
@@ -50,7 +51,7 @@ Size.args = {
 		{ label: 'test', value: 'test' },
 		{ label: 'test-2', value: 'test-2' },
 	],
-	children: 'Select Content',
+	placeholder: 'Select Content',
 };
 
 export const Color = Template.bind({});
@@ -60,7 +61,7 @@ Color.args = {
 		{ label: 'test', value: 'test' },
 		{ label: 'test-2', value: 'test-2' },
 	],
-	children: 'Select Content',
+	placeholder: 'Select Content',
 };
 
 export const AutoFocus = Template.bind({});
@@ -70,5 +71,5 @@ AutoFocus.args = {
 		{ label: 'test', value: 'test' },
 		{ label: 'test-2', value: 'test-2' },
 	],
-	children: 'Select Content',
+	placeholder: 'Select Content',
 };

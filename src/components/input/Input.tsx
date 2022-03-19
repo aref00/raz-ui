@@ -3,13 +3,11 @@ import { InputProps } from './Input.types';
 import '../../style/components/input.scss';
 
 const Input: FC<InputProps> = ({
-	children,
 	label,
 	width,
 	height,
 	clear,
 	borderBottom,
-	outlineColor,
 	tyClass,
 	radius,
 	dir,
@@ -18,6 +16,7 @@ const Input: FC<InputProps> = ({
 	type,
 	disabled,
 	tag,
+	outlineColor,
 	inputClass,
 	passRef,
 	...props
@@ -25,15 +24,15 @@ const Input: FC<InputProps> = ({
 	const InputTag: keyof JSX.IntrinsicElements = tag || 'input';
 	const [showPassword, setShowPassword] = useState(false);
 	tyClass = tyClass || '';
-	let wrapper_class = `ty-input-wrapper ty-flex align-items-center ty-justify-center border-radius-${
+	const wrapper_class = `ty-input-wrapper ty-flex align-items-center ty-justify-center border-radius-${
 		radius || 5
 	} \
-${disabled ? '' : 'ty-hover-outline-primary'} ${
-		clear ? '--border-clear' : borderBottom ? '--border-bottom' : ''
-	} \
+${disabled ? '' : `ty-hover-outline-${outlineColor||'primary'}`} ${
+	clear ? '--border-clear' : borderBottom ? '--border-bottom' : ''
+} \
 ${disabled ? 'disabled' : ''} ${
-		error ? 'ty-color-danger ty-border-color-danger' : ''
-	} ${inputClass || ''}`;
+	error ? 'ty-color-danger ty-border-color-danger' : ''
+} ${inputClass || ''}`;
 
 	return (
 		<div className={`ty-input ${tyClass}`}>
@@ -50,6 +49,7 @@ ${disabled ? 'disabled' : ''} ${
 			<div role="none" className={wrapper_class} style={{ width, height }}>
 				<InputTag
 					tabIndex={0}
+					// eslint-disable-next-line @typescript-eslint/no-explicit-any
 					ref={(node: any) => {
 						if (passRef) passRef(node);
 					}}
@@ -78,8 +78,8 @@ ${disabled ? 'disabled' : ''} ${
 							<i
 								className={`ty-icon px-1 ${
 									showPassword
-										? 'ty-icon-visibility ty-color-primary'
-										: 'ty-icon-eye-close ty-color-border'
+										? 'ty-icon-eye ty-color-primary'
+										: 'ty-icon-eye-slash ty-color-border'
 								}`}
 							/>
 						</div>

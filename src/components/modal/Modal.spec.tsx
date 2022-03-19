@@ -22,8 +22,6 @@ describe('Running Test for Tayeh Modal', () => {
 	test('Check Modal Defaults', () => {
 		render(<Modal visible>Modal Content</Modal>);
 		const node = screen.getByText('Modal Content');
-		const card = node?.parentElement;
-		const mask = card?.parentElement;
 		expect(node).toHaveClass('ty-modal-body');
 	});
 
@@ -32,7 +30,9 @@ describe('Running Test for Tayeh Modal', () => {
 		let node;
 		try {
 			node = screen.getByText('Modal Content');
-		} catch {}
+		} catch {
+			node = undefined;
+		}
 		expect(node).toBeUndefined();
 		render(<Modal visible>Modal Content</Modal>);
 		node = screen.getByText('Modal Content');

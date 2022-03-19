@@ -15,7 +15,7 @@ export default {
 const Template: Story<ModalProps> = (args) => (
 	<div>
 		Content behind modal
-		<Card color="dark" tyClass="px-2 py-4" children="content of card" />
+		<Card color="dark" tyClass="px-2 py-4">content of card</Card>
 		<Modal {...args} />
 	</div>
 );

@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import '@testing-library/jest-dom';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import '../../style/index.scss';
 import CurrencyInput from './CurrencyInput';
 import { unmountComponentAtNode } from 'react-dom';
@@ -21,7 +21,7 @@ describe('Running Test for Tayeh Input', () => {
 	test('Check CurrencyInput Disabled', () => {
 		render(
 			<CurrencyInput
-				onChange={() => {}}
+				onChange={() => null}
 				disabled
 				placeholder="Tayeh CurrencyInput"
 			/>,

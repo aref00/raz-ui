@@ -17,7 +17,7 @@ const RadioButton: FC<RadioButtonProps> = ({
 	props.activeColor = props.activeColor || 'primary';
 	const activeColor = `ty-bg-${props.activeColor}`;
 	const borderColor = `ty-border-color-${props.activeColor}`;
-	function handleChange(value: any) {
+	function handleChange(value: string) {
 		onChange(value);
 		setCurrentValue(value);
 	}

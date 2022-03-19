@@ -83,12 +83,11 @@ Clear.args = {
 export const Icon = Template.bind({});
 Icon.args = {
 	disabled: false,
-	tyClass: 'ty-icon ty-icon-cart',
+	tyClass: 'ty-icon ty-icon-share',
 	layout: 'clear',
-	children: 'Cart',
 };
 
-export const DarkTheme = Template.bind({});
+export const DarkTheme = DarkTemplate.bind({});
 DarkTheme.args = [
 	{
 		children: 'Button Content',
