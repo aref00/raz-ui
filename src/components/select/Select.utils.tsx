@@ -15,7 +15,7 @@ function empty() {
 
 export function getSuffix(onClick: () => void) {
 	let className = 'ty-icon fs-12 px-2 ty-icon-';
-	return function icon (open: boolean) {
+	return function icon(open: boolean) {
 		className += open ? 'arrow-up' : 'arrow-down';
 		return (
 			<Button role="switch" onClick={onClick} layout="clear" width="32px">

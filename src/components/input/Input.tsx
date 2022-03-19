@@ -27,12 +27,12 @@ const Input: FC<InputProps> = ({
 	const wrapper_class = `ty-input-wrapper ty-flex align-items-center ty-justify-center border-radius-${
 		radius || 5
 	} \
-${disabled ? '' : `ty-hover-outline-${outlineColor||'primary'}`} ${
-	clear ? '--border-clear' : borderBottom ? '--border-bottom' : ''
-} \
+${disabled ? '' : `ty-hover-outline-${outlineColor || 'primary'}`} ${
+		clear ? '--border-clear' : borderBottom ? '--border-bottom' : ''
+	} \
 ${disabled ? 'disabled' : ''} ${
-	error ? 'ty-color-danger ty-border-color-danger' : ''
-} ${inputClass || ''}`;
+		error ? 'ty-color-danger ty-border-color-danger' : ''
+	} ${inputClass || ''}`;
 
 	return (
 		<div className={`ty-input ${tyClass}`}>

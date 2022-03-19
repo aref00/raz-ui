@@ -189,11 +189,11 @@ describe('Running Test for Tayeh Select', () => {
 	test('Check handleInputChange Util', () => {
 		const base = handleInputChange('test');
 		const res1 = base([{ label: 'test-2', value: 'test-2' }])(
-			{filteredOptions: [], inputValue: 'test', open: true, value: undefined},
+			{ filteredOptions: [], inputValue: 'test', open: true, value: undefined },
 			() => null,
 		)(() => null);
 		const res2 = base([{ label: 'not-2', value: 'test-2' }])(
-			{filteredOptions: [], inputValue: 'test', open: true, value: undefined},
+			{ filteredOptions: [], inputValue: 'test', open: true, value: undefined },
 			() => null,
 		)(() => null);
 		expect(res1).toBeUndefined();
@@ -201,9 +201,10 @@ describe('Running Test for Tayeh Select', () => {
 	});
 	test('Check handleSelect Util', () => {
 		const base = handleSelect({ preventDefault: () => null } as MouseEvent);
-		const res = base({ label: null, value: null })([])({filteredOptions: [], inputValue: null, open: false, value: null}, () => null)(
+		const res = base({ label: null, value: null })([])(
+			{ filteredOptions: [], inputValue: null, open: false, value: null },
 			() => null,
-		);
+		)(() => null);
 		expect(res).toBeUndefined();
 	});
 });

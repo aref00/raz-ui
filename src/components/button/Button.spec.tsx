@@ -23,28 +23,28 @@ describe('Running Test for Tayeh Button', () => {
 		expect(screen.getByRole('button', { name: 'Tayeh button' })).toBeDisabled();
 	});
 	test('Check Button Label', () => {
-		render(<Button >Tayeh button</Button>);
+		render(<Button>Tayeh button</Button>);
 		expect(screen.getByRole('button', { name: 'Tayeh button' })).toBeDefined();
 	});
 	test('Check Button Clear', () => {
-		render(<Button layout="clear" >Tayeh button</Button>);
+		render(<Button layout="clear">Tayeh button</Button>);
 		const node = screen.queryByRole('button', { name: 'Tayeh button' });
 		expect(node?.className).toContain('clear');
 	});
 	test('Check Button Outline', () => {
-		render(<Button layout="outline" >Tayeh button</Button>);
+		render(<Button layout="outline">Tayeh button</Button>);
 		const node = screen.queryByRole('button', { name: 'Tayeh button' });
 		expect(node?.className).toContain('outline');
 	});
 	test('Check Button TyClass', () => {
-		render(<Button tyClass="test-class" >Tayeh button</Button>);
+		render(<Button tyClass="test-class">Tayeh button</Button>);
 		const node = screen.queryByRole('button', { name: 'Tayeh button' });
 		expect(node?.className).toContain('test-class');
 	});
 
 	test('Check Button with onClick', () => {
 		const spy = jest.fn();
-		render(<Button onClick={spy} >Tayeh button</Button>);
+		render(<Button onClick={spy}>Tayeh button</Button>);
 		const node = screen.queryByRole('button', { name: 'Tayeh button' });
 		node?.click();
 		expect(spy).toBeCalled();

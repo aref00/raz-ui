@@ -57,7 +57,9 @@ const Select: FC<SelectProps> = ({
 					passRef={setInput}
 					width={width}
 					height={height}
-					suffix={getSuffix(() => setState({ ...state, open: !state.open }))(state.open)}
+					suffix={getSuffix(() => setState({ ...state, open: !state.open }))(
+						state.open,
+					)}
 					onKeyDown={(e: KeyboardEvent<HTMLInputElement>) =>
 						handleKeyDown(e)(state)(setState)(onChange)
 					}

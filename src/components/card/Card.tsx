@@ -9,7 +9,7 @@ const Card: FC<CardProps> = ({
 	children,
 	...props
 }) => {
-	radius = typeof radius === 'number'? radius : 15;
+	radius = typeof radius === 'number' ? radius : 15;
 	return (
 		<div
 			tabIndex={0}

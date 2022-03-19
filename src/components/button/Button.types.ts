@@ -7,7 +7,7 @@ export interface ButtonProps {
 	outlineColor?: string;
 	layout?: 'simple' | 'outline' | 'clear';
 	role?: AriaRole;
-	radius?: number,
+	radius?: number;
 	tyClass?: string;
 	onClick?: MouseEventHandler<HTMLButtonElement>;
 }
