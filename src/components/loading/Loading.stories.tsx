@@ -14,13 +14,20 @@ export default {
 
 const Template: Story<LoadingProps> = (args) => (
 	<div>
-		<div>Loading Content</div>
-		<Button>Button</Button>
-		<Loading {...args} show/>
+		<Loading {...args}>
+			<div>Loading Content</div>
+			<Button>Button</Button>
+		</Loading>
 	</div>
 );
 
 export const Default = Template.bind({});
 Default.args = {
-	tyClass: 'p-4',
+	show: true
+};
+
+export const Fullscreen = Template.bind({});
+Fullscreen.args = {
+	show: true,
+	fullscreen: true
 };
