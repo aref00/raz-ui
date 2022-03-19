@@ -1,4 +1,8 @@
 .ty-tabs {
+	ul {
+		margin: 0;
+		padding: 0;
+	}
 	.ty-tabs-list {
 		list-style: none;
 		.ty-tab-item-link {
@@ -20,6 +24,17 @@
 	.ty-tab-border {
 		height: 4px;
 		width: 100%;
-		max-width: 100px;
+		> div {
+			position: absolute;
+        	bottom: 0;
+        	top: 0;
+        	transition: right 200ms ease-in-out;
+			> div {
+				// width: 10%;
+				// min-width: px;
+				// max-width: 40px;
+				height: 100%;
+			}
+		}
 	}
 }

@@ -1,10 +1,12 @@
 import { Color, Tab } from '../types';
 
 export interface TabProps {
-	defaultActive?: string;
+	active?: string;
 	tabs: Tab[];
-	color?: Color;
+	borderColor?: Color;
+	borderWidth?: string;
+	defaultColor?: Color;
+	activeColor?: Color;
 	tyClass?: string;
-	tyTabClass?: string;
 	onChange: (id?: string) => void;
 }

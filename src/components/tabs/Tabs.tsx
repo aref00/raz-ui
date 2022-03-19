@@ -1,31 +1,42 @@
 import React, { FC, useState } from 'react';
 import { TabProps } from './Tabs.types';
 import '../../style/components/tabs.scss';
-import { generateTabs } from './Tabs.utils';
+import { generateTabs, tabOptions } from './Tabs.utils';
 
 const Tab: FC<TabProps> = ({
-	defaultActive,
+	active,
 	tabs,
-	color,
+	borderWidth,
+	borderColor,
+	defaultColor,
+	activeColor,
 	tyClass,
-	tyTabClass,
 	onChange
 }) => {
 	const [state, setState] = useState({
-		active: defaultActive
+		active
 	});
+	const getStyle = tabOptions(tabs);
 	return (
-		<div className='ty-tabs'>
-			<ul role='tablist' className={`ty-tabs-list ty-flex ty-space-between ofx-auto ofy-hidden ${tyClass||''}`}>
+		<div className='ty-tabs' dir='rtl'>
+			<ul role='tablist' className='ty-tabs-list ty-flex ty-space-around ofx-auto ofy-hidden'>
 				{generateTabs({
 					active: state.active,
-					color: color || 'primary',
-					class: tyTabClass||'',
+					defaultColor: defaultColor || 'text-primary',
+					activeColor: activeColor || 'text-primary',
+					class: tyClass||'',
 					onChange,
 					setState,
 					tabs
 				})}
 			</ul>
+			<div className='ty-tab-border ty-relative mt-1'>
+				{
+					state.active&&<div style={getStyle(state.active)} className='full-height ty-flex ty-justify-center'>
+						<div style={{width: borderWidth||'40px'}} className={`border-radius-5 ty-bg-${borderColor||'primary'}`}/>
+					</div>
+				}
+			</div>
 		</div>
 	);
 };
