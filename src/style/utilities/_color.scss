@@ -20,6 +20,7 @@
 	@each $name, $color, $oposite in $colors {
 		.ty-color-#{$name} {
 			color: $color;
+			stroke: $color;
 		}
 		.ty-outline-#{$name}, .ty-hover-outline-#{$name}:active, .ty-hover-outline-#{$name}:hover, .ty-hover-outline-#{$name}:focus-within {
 			outline: $color auto 1px;
