@@ -26,10 +26,23 @@ describe('Running Test for Tayeh Tabs', () => {
 			disabled: false,
 			icon: 'home',
 		}];
-		render(<Tabs tabs={tabs} onChange={function (id?: string): void {
-			throw new Error('Function not implemented.');
-		} }></Tabs>);
+		const fn = jest.fn().mockImplementation((value) => {
+			expect(value).toBe('0');
+		});
+		render(<Tabs tabs={tabs} onChange={fn}></Tabs>);
 		const node = screen.getByText('tab-1');
 		expect(node).toBeDefined();
+		node.click();
+		expect(fn).toBeCalled();
+	});
+	test('Check Tabs Defaults', () => {
+		const tabs: Tab[] = [{
+			disabled: false,
+			icon: 'home',
+		}];
+		const fn = jest.fn();
+		render(<Tabs tyClass='custom-class' tabs={tabs} onChange={fn}></Tabs>);
+		const node = screen.getByRole('tab');
+		expect(node).toHaveClass('custom-class');
 	});
 });

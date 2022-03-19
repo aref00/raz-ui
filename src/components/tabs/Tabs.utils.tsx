@@ -46,7 +46,7 @@ export function tabOptions(tabs: Tab[]) {
 	const ids = tabs.map((t, i) => t.id||''+i);
 	return function (active: string) {
 		const index = ids.indexOf(active);
-		if (index==-1) return {width, right: '0'};
+		// if (index==-1) return {width, right: '0'};
 		return {width, right: `calc(${index} * (${width}))`};
 	};
 }
