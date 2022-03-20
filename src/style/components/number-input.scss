@@ -1,0 +1,78 @@
+.ty-input-number {
+	position: relative;
+	/* Chrome, Safari, Edge, Opera */
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	/* Firefox */
+	input[type='number'] {
+		-moz-appearance: textfield;
+	}
+
+	.ty-input-main {
+		position: relative;
+		display: inline-block;
+		line-height: 32px;
+	}
+}
+
+.input-number-wrapper {
+	position: relative;
+	border: 1px solid #e0e0e0;
+	border-radius: 3px;
+}
+
+.input-number-wrapper input {
+	display: inline-block;
+	padding-left: 50px;
+	padding-right: 50px;
+	height: 100%;
+}
+
+.input-number-suffix {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.increase,
+.decrease {
+	position: absolute;
+	text-align: center;
+	cursor: pointer;
+	top: 1px;
+	width: 38px;
+	bottom: 1px;
+	font-size: 4px;
+}
+.increase.disabled,
+.decrease.disabled {
+	pointer-events: none;
+	opacity: 0.3;
+	cursor: default;
+}
+
+.increase {
+	right: 1px;
+	border-left: 1px solid #dcdfe6;
+	border-radius: 0 3px 3px 0;
+}
+
+.increase i,
+.decrease i {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+.decrease {
+	left: 1px;
+	border-radius: 3px 0px 0px 3px;
+	border-right: 1px solid #dcdfe6;
+}
+.input-content input {
+	border: none;
+	border-radius: 3px;
+}
