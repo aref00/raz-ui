@@ -31,7 +31,7 @@ const NumberInput: FC<NumberInputProps> = ({
 	tyClass = tyClass || '';
 	height = height || '45px';
 	suffixWidth = suffixWidth || 32;
-	step = step || 1;
+	step = step;
 	plusColor = plusColor || 'light';
 	minusColor = minusColor || 'light';
 

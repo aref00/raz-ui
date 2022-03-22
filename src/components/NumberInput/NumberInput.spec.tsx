@@ -20,9 +20,10 @@ describe('Running Test for Tayeh NumberInput', () => {
 	});
 
 	test('Check NumberInput plusHandle', async () => {
+		const fn = jest.fn();
 		render(
 			<NumberInput
-				onChange={() => {}}
+				onChange={fn}
 				max={20}
 				min={1}
 				value={25}
@@ -32,13 +33,14 @@ describe('Running Test for Tayeh NumberInput', () => {
 		const input = screen.getByPlaceholderText('Tayeh NumberInput');
 		const node = screen.getByRole('none')?.children[0];
 		fireEvent.click(node);
-		expect(input.getAttribute('value')).toBe("20");
+		expect(input.getAttribute('value')).toBe('20');
 	});
 
 	test('Check NumberInput minusHandle', async () => {
+		const fn = jest.fn();
 		render(
 			<NumberInput
-				onChange={() => {}}
+				onChange={fn}
 				max={20}
 				min={1}
 				value={-3}
@@ -48,13 +50,14 @@ describe('Running Test for Tayeh NumberInput', () => {
 		const input = screen.getByPlaceholderText('Tayeh NumberInput');
 		const node = screen.getByRole('none')?.children[2];
 		fireEvent.click(node);
-		expect(input.getAttribute('value')).toBe("1");
+		expect(input.getAttribute('value')).toBe('1');
 	});
 
 	test('Check NumberInput plusMinus disabled', async () => {
+		const fn = jest.fn();
 		render(
 			<NumberInput
-				onChange={() => {}}
+				onChange={fn}
 				max={20}
 				min={1}
 				placeholder="Tayeh NumberInput"
@@ -68,9 +71,10 @@ describe('Running Test for Tayeh NumberInput', () => {
 	});
 
 	test('Check NumberInput plus value undefined', async () => {
+		const fn = jest.fn();
 		render(
 			<NumberInput
-				onChange={() => {}}
+				onChange={fn}
 				max={20}
 				min={1}
 				placeholder="Tayeh NumberInput"
@@ -83,9 +87,10 @@ describe('Running Test for Tayeh NumberInput', () => {
 	});
 
 	test('Check NumberInput Minus value undefined', async () => {
+		const fn = jest.fn();
 		render(
 			<NumberInput
-				onChange={() => {}}
+				onChange={fn}
 				max={20}
 				min={1}
 				placeholder="Tayeh NumberInput"
@@ -98,8 +103,13 @@ describe('Running Test for Tayeh NumberInput', () => {
 	});
 
 	test('Check NumberInput undefined-min & value for plusHnadle', async () => {
+		const fn = jest.fn();
 		render(
-			<NumberInput onChange={() => {}} max={20} placeholder="Tayeh NumberInput" />,
+			<NumberInput
+				onChange={fn}
+				max={20}
+				placeholder="Tayeh NumberInput"
+			/>,
 		);
 		const input = screen.getByPlaceholderText('Tayeh NumberInput');
 		const plus = screen.getByRole('none')?.children[0];
@@ -108,8 +118,13 @@ describe('Running Test for Tayeh NumberInput', () => {
 	});
 
 	test('Check NumberInput undefined-min & value for minusHnadle', async () => {
+		const fn = jest.fn();
 		render(
-			<NumberInput onChange={() => {}} max={20} placeholder="Tayeh NumberInput" />,
+			<NumberInput
+				onChange={fn}
+				max={20}
+				placeholder="Tayeh NumberInput"
+			/>,
 		);
 		const input = screen.getByPlaceholderText('Tayeh NumberInput');
 		const minus = screen.getByRole('none')?.children[2];
@@ -125,6 +140,8 @@ describe('Running Test for Tayeh NumberInput', () => {
 				max={20}
 				min={1}
 				value={5}
+				error="Something is wrong"
+				label='error check'
 				placeholder="Tayeh NumberInput"
 			/>,
 		);
@@ -143,6 +160,8 @@ describe('Running Test for Tayeh NumberInput', () => {
 				max={20}
 				min={1}
 				value={5}
+				label="error check"
+				required
 				placeholder="Tayeh NumberInput"
 			/>,
 		);
@@ -150,6 +169,6 @@ describe('Running Test for Tayeh NumberInput', () => {
 		fireEvent.input(input, { target: { value: '' } });
 		fireEvent.change(input, { target: { value: '' } });
 		expect(fn).toBeCalled();
-		expect(input.getAttribute('value')).toBe("5");
+		expect(input.getAttribute('value')).toBe('5');
 	});
 });
