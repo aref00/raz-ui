@@ -19,73 +19,137 @@ describe('Running Test for Tayeh NumberInput', () => {
 		container.remove();
 	});
 
-	test('Check NumberInput Disabled', () => {
-		let value = 5;
-		const fn = jest
-			.fn()
-			.mockImplementation((e: ChangeEvent<HTMLInputElement>) => {
-				value = Number(e.target.value);
-				expect(value).toBe(5);
-			});
+	test('Check NumberInput plusHandle', async () => {
 		render(
-			<NumberInput onChange={fn} disabled placeholder="Tayeh NumberInput" />,
+			<NumberInput
+				onChange={() => {}}
+				max={20}
+				min={1}
+				value={25}
+				placeholder="Tayeh NumberInput"
+			/>,
 		);
-		expect(screen.getByPlaceholderText('Tayeh NumberInput')).toBeDisabled();
+		const input = screen.getByPlaceholderText('Tayeh NumberInput');
+		const node = screen.getByRole('none')?.children[0];
+		fireEvent.click(node);
+		expect(input.getAttribute('value')).toBe("20");
 	});
 
-	test('Check NumberInput Value', async () => {
-		let value = null;
-		const fn = jest
-			.fn()
-			.mockImplementation((e: ChangeEvent<HTMLInputElement>) => {
-				value = e.target.value;
-				expect(value).toBe(200);
-			});
+	test('Check NumberInput minusHandle', async () => {
 		render(
-			<NumberInput onChange={fn} value={100} placeholder="Tayeh NumberInput" />,
+			<NumberInput
+				onChange={() => {}}
+				max={20}
+				min={1}
+				value={-3}
+				placeholder="Tayeh NumberInput"
+			/>,
 		);
-		const node = screen.getByPlaceholderText('Tayeh NumberInput');
-		expect(node?.getAttribute('value')).toBe(100);
-		fireEvent.input(node, { target: { value: 200 } });
-		fireEvent.change(node, { target: { value: 200 } });
-		fireEvent.submit(node, { target: { value: 200 } });
-		expect(fn).toBeCalled();
-		expect(node?.getAttribute('value')).toBe(200);
+		const input = screen.getByPlaceholderText('Tayeh NumberInput');
+		const node = screen.getByRole('none')?.children[2];
+		fireEvent.click(node);
+		expect(input.getAttribute('value')).toBe("1");
 	});
 
-	test('Check NumberInput Max', async () => {
+	test('Check NumberInput plusMinus disabled', async () => {
+		render(
+			<NumberInput
+				onChange={() => {}}
+				max={20}
+				min={1}
+				placeholder="Tayeh NumberInput"
+				disabled={true}
+			/>,
+		);
+		const plus = screen.getByRole('none')?.children[0];
+		const minus = screen.getByRole('none')?.children[2];
+		fireEvent.click(plus);
+		fireEvent.click(minus);
+	});
+
+	test('Check NumberInput plus value undefined', async () => {
+		render(
+			<NumberInput
+				onChange={() => {}}
+				max={20}
+				min={1}
+				placeholder="Tayeh NumberInput"
+			/>,
+		);
+		const input = screen.getByPlaceholderText('Tayeh NumberInput');
+		const plus = screen.getByRole('none')?.children[0];
+		fireEvent.click(plus);
+		expect(input.getAttribute('value')).toBe(input.getAttribute('min'));
+	});
+
+	test('Check NumberInput Minus value undefined', async () => {
+		render(
+			<NumberInput
+				onChange={() => {}}
+				max={20}
+				min={1}
+				placeholder="Tayeh NumberInput"
+			/>,
+		);
+		const input = screen.getByPlaceholderText('Tayeh NumberInput');
+		const minus = screen.getByRole('none')?.children[2];
+		fireEvent.click(minus);
+		expect(input.getAttribute('value')).toBe(input.getAttribute('min'));
+	});
+
+	test('Check NumberInput undefined-min & value for plusHnadle', async () => {
+		render(
+			<NumberInput onChange={() => {}} max={20} placeholder="Tayeh NumberInput" />,
+		);
+		const input = screen.getByPlaceholderText('Tayeh NumberInput');
+		const plus = screen.getByRole('none')?.children[0];
+		fireEvent.click(plus);
+		expect(input.getAttribute('value')).toBe('0');
+	});
+
+	test('Check NumberInput undefined-min & value for minusHnadle', async () => {
+		render(
+			<NumberInput onChange={() => {}} max={20} placeholder="Tayeh NumberInput" />,
+		);
+		const input = screen.getByPlaceholderText('Tayeh NumberInput');
+		const minus = screen.getByRole('none')?.children[2];
+		fireEvent.click(minus);
+		expect(input.getAttribute('value')).toBe('0');
+	});
+
+	test('Check NumberInput change & input', async () => {
 		const fn = jest.fn();
 		render(
 			<NumberInput
 				onChange={fn}
 				max={20}
-				value={1000}
+				min={1}
+				value={5}
 				placeholder="Tayeh NumberInput"
 			/>,
 		);
-		const node = screen.getByPlaceholderText('Tayeh NumberInput');
-		expect(node?.getAttribute('value')).toBe(20);
-		fireEvent.change(node, { target: { value: 100 } });
-		fireEvent.submit(node, { target: { value: 100 } });
+		const input = screen.getByPlaceholderText('Tayeh NumberInput');
+		fireEvent.input(input, { target: { value: 25 } });
+		fireEvent.change(input, { target: { value: 25 } });
 		expect(fn).toBeCalled();
-		expect(node.getAttribute('value')).toBe(20);
+		expect(input.getAttribute('value')).toBe('20');
 	});
 
-	test('Check NumberInput Min', async () => {
+	test('Check NumberInput change to undefined', async () => {
 		const fn = jest.fn();
 		render(
 			<NumberInput
 				onChange={fn}
-				min={10}
-				value={0}
+				max={20}
+				min={1}
+				value={5}
 				placeholder="Tayeh NumberInput"
 			/>,
 		);
-		const node = screen.getByPlaceholderText('Tayeh NumberInput');
-		expect(node?.getAttribute('value')).toBe(0);
-		fireEvent.change(node, { target: { value: 1 } });
-		fireEvent.submit(node, { target: { value: 2 } });
+		const input = screen.getByPlaceholderText('Tayeh NumberInput');
+		fireEvent.input(input, { target: { value: '' } });
+		fireEvent.change(input, { target: { value: '' } });
 		expect(fn).toBeCalled();
-		expect(node.getAttribute('value')).toBe(0);
+		expect(input.getAttribute('value')).toBe("5");
 	});
 });

@@ -22,6 +22,14 @@ Values.args = {
 	step: 2,
 };
 
+export const Undefined = Template.bind({});
+Undefined.args = {
+	label: 'Label',
+	min: 1,
+	max: 11,
+	step: 2,
+};
+
 export const Disable = Template.bind({});
 Disable.args = {
 	disabled: true,
