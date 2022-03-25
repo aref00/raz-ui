@@ -1,6 +1,6 @@
-import React, { ChangeEvent } from 'react';
+import React from 'react';
 import '@testing-library/jest-dom';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import '../../style/index.scss';
 import NumberInput from './NumberInput';
 import { unmountComponentAtNode } from 'react-dom';
