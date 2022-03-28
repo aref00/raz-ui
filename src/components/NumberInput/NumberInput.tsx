@@ -1,4 +1,4 @@
-import React, { ChangeEvent, createRef, FC, useState } from 'react';
+import React, { ChangeEvent, FC, useState } from 'react';
 import { NumberInputProps } from './NumberInput.types';
 import '../../style/components/input.scss';
 import '../../style/components/number-input.scss';
@@ -6,7 +6,6 @@ import '../../style/components/number-input.scss';
 const NumberInput: FC<NumberInputProps> = ({
 	disabled,
 	height,
-	inputDisabled,
 	label,
 	max,
 	maxLength,
@@ -17,7 +16,6 @@ const NumberInput: FC<NumberInputProps> = ({
 	plusColor,
 	required,
 	step,
-	suffixWidth,
 	value,
 	error,
 	tyClass,
@@ -25,26 +23,22 @@ const NumberInput: FC<NumberInputProps> = ({
 	onChange,
 	...props
 }) => {
-	// value = value || null;
-	const [inputValue, setInputValue] = useState(value);
-	// const input_ref = createRef<HTMLInputElement>();
+	const [inputValue, setInputValue] = useState(value||'');
 	tyClass = tyClass || '';
 	height = height || '45px';
-	suffixWidth = suffixWidth || 32;
-	step = step;
 	plusColor = plusColor || 'light';
 	minusColor = minusColor || 'light';
 
-	let plusDisabled = () => {
+	const plusDisabled = () => {
 		return max && value && max <= value;
 	};
-	let minusDisabled = () => {
+	const minusDisabled = () => {
 		return min && value && min >= value;
 	};
 
-	let handlePlusClick = () => {
+	const handlePlusClick = () => {
 		if (disabled) return;
-		if (typeof inputValue === 'undefined') {
+		if (typeof inputValue !== 'number') {
 			if (typeof min === 'number') {
 				setInputValue(min);
 			} else setInputValue(0);
@@ -55,9 +49,9 @@ const NumberInput: FC<NumberInputProps> = ({
 			setInputValue(v);
 		}
 	};
-	let handleMinusClick = () => {
+	const handleMinusClick = () => {
 		if (disabled) return;
-		if (typeof inputValue === 'undefined') {
+		if (typeof inputValue !== 'number') {
 			if (typeof min === 'number') {
 				setInputValue(min);
 			} else setInputValue(0);
@@ -69,17 +63,17 @@ const NumberInput: FC<NumberInputProps> = ({
 		}
 	};
 
-	let handleInput = (e: ChangeEvent) => {
+	const handleInput = (e: ChangeEvent) => {
 		if ((e.target as HTMLInputElement).value) {
 			setInputValue(Number((e.target as HTMLInputElement).value));
 		} else {
-			setInputValue(undefined);
+			setInputValue('');
 		}
 	};
 
-	let handleChange = (e: Event) => {
+	const handleChange = (e: Event) => {
 		let temp = Number((e.target as HTMLInputElement).value);
-		if (typeof max === 'number' && temp > max) temp = Number(max);
+		if (typeof max === 'number' && temp > max) temp = max;
 		if (typeof min === 'number' && temp < min) temp = min;
 		setInputValue(temp);
 		const event = { target: { value: temp } };
@@ -114,8 +108,7 @@ const NumberInput: FC<NumberInputProps> = ({
 				</span>
 				<span className="input-content">
 					<input
-						// ref={input_ref}
-						disabled={disabled || inputDisabled}
+						disabled={disabled}
 						ref={registerCallbacks}
 						minLength={minLength}
 						maxLength={maxLength}

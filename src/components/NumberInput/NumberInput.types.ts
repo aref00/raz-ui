@@ -12,7 +12,6 @@ export interface NumberInputProps {
 	clear?: string;
 	borderBottom?: boolean;
 	disabled?: boolean;
-	inputDisabled?: boolean;
 	minLength?: number;
 	maxLength?: number;
 	min?: number;

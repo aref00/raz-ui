@@ -169,6 +169,6 @@ describe('Running Test for Tayeh NumberInput', () => {
 		fireEvent.input(input, { target: { value: '' } });
 		fireEvent.change(input, { target: { value: '' } });
 		expect(fn).toBeCalled();
-		expect(input.getAttribute('value')).toBe('5');
+		expect(input.getAttribute('value')).toBe('1');
 	});
 });
