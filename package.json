@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "tayeh react components",
   "main": "lib/index.js",
+  "files": [
+    "lib/**/*",
+    "*.md"
+  ],
   "scripts": {
     "test": "jest",
     "test:cov": "jest --coverage",
