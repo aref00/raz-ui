@@ -87,7 +87,7 @@ const NumberInput: FC<NumberInputProps> = ({
 	}
 
 	return (
-		<div className={`inline-block ty-input ty-input-number ${tyClass}`}>
+		<div className={`inline-block ty-input ty-input-number ${disabled?'disabled':''} ${tyClass}`}>
 			{label && (
 				<p className={`fs-12 fs-sm-14 mb-1 ${error ? 'ty-color-danger' : ''}`}>
 					{label} <span className="ty-color-danger">{required ? '*' : ''}</span>
@@ -104,7 +104,7 @@ const NumberInput: FC<NumberInputProps> = ({
 					}`}
 					onClick={handlePlusClick}
 				>
-					<i className="ty-icon ty-icon-plus fs-12 full-width" />
+					<i className="ty-icon ty-icon-add-outline fs-12 full-width" />
 				</span>
 				<span className="input-content">
 					<input
@@ -129,7 +129,7 @@ const NumberInput: FC<NumberInputProps> = ({
 					}`}
 					onClick={handleMinusClick}
 				>
-					<i className="ty-icon ty-icon-minus fs-12 full-width" />
+					<i className="ty-icon ty-icon-minus-outline fs-12 full-width" />
 				</span>
 			</div>
 		</div>
