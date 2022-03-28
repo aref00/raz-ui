@@ -11,31 +11,40 @@ const Tab: FC<TabProps> = ({
 	defaultColor,
 	activeColor,
 	tyClass,
-	onChange
+	onChange,
 }) => {
 	const [state, setState] = useState({
-		active
+		active,
 	});
 	const getStyle = tabOptions(tabs);
 	return (
-		<div className='ty-tabs' dir='rtl'>
-			<ul role='tablist' className='ty-tabs-list ty-flex ty-space-around ofx-auto ofy-hidden'>
+		<div className="ty-tabs" dir="rtl">
+			<ul
+				role="tablist"
+				className="ty-tabs-list ty-flex ty-space-around ofx-auto ofy-hidden"
+			>
 				{generateTabs({
 					active: state.active,
 					defaultColor: defaultColor || 'text-primary',
 					activeColor: activeColor || 'text-primary',
-					class: tyClass||'',
+					class: tyClass || '',
 					onChange,
 					setState,
-					tabs
+					tabs,
 				})}
 			</ul>
-			<div className='ty-tab-border ty-relative mt-1'>
-				{
-					state.active&&<div style={getStyle(state.active)} className='full-height ty-flex ty-justify-center'>
-						<div style={{width: borderWidth||'40px'}} className={`border-radius-5 ty-bg-${borderColor||'primary'}`}/>
+			<div className="ty-tab-border ty-relative mt-1">
+				{state.active && (
+					<div
+						style={getStyle(state.active)}
+						className="full-height ty-flex ty-justify-center"
+					>
+						<div
+							style={{ width: borderWidth || '40px' }}
+							className={`border-radius-5 ty-bg-${borderColor || 'primary'}`}
+						/>
 					</div>
-				}
+				)}
 			</div>
 		</div>
 	);

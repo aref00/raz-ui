@@ -21,16 +21,20 @@ const Template: Story<TabProps> = (args) => (
 
 export const Icon = Template.bind({});
 Icon.args = {
-	tabs: [{
-		icon: 'eye',
-		disabled: false,
-	},{
-		icon: 'share',
-		disabled: false,
-	},{
-		icon: 'setting',
-		disabled: false,
-	}],
+	tabs: [
+		{
+			icon: 'eye',
+			disabled: false,
+		},
+		{
+			icon: 'share',
+			disabled: false,
+		},
+		{
+			icon: 'setting',
+			disabled: false,
+		},
+	],
 	onChange: () => null,
 	tyClass: 'fs-32 px-4 py-2',
 };
@@ -41,16 +45,20 @@ Color.args = {
 	defaultColor: 'success',
 	activeColor: 'danger',
 	borderColor: 'warning',
-	tabs: [{
-		icon: 'eye',
-		disabled: false,
-	},{
-		icon: 'share',
-		disabled: false,
-	},{
-		icon: 'setting',
-		disabled: false,
-	}],
+	tabs: [
+		{
+			icon: 'eye',
+			disabled: false,
+		},
+		{
+			icon: 'share',
+			disabled: false,
+		},
+		{
+			icon: 'setting',
+			disabled: false,
+		},
+	],
 	onChange: () => null,
 	tyClass: 'fs-32 px-4 py-2',
 };
@@ -61,19 +69,23 @@ Label.args = {
 	defaultColor: 'success',
 	activeColor: 'danger',
 	borderColor: 'warning',
-	tabs: [{
-		icon: 'eye',
-		label: 'Eye',
-		disabled: false,
-	},{
-		icon: 'share',
-		label: 'Share',
-		disabled: false,
-	},{
-		icon: 'setting',
-		label: 'Setting',
-		disabled: false,
-	}],
+	tabs: [
+		{
+			icon: 'eye',
+			label: 'Eye',
+			disabled: false,
+		},
+		{
+			icon: 'share',
+			label: 'Share',
+			disabled: false,
+		},
+		{
+			icon: 'setting',
+			label: 'Setting',
+			disabled: false,
+		},
+	],
 	onChange: () => null,
 	tyClass: 'fs-32 px-4 py-2',
 };
@@ -83,23 +95,28 @@ Border.args = {
 	active: '0',
 	borderColor: 'warning',
 	borderWidth: '100%',
-	tabs: [{
-		icon: 'eye',
-		label: 'Eye',
-		disabled: false,
-	},{
-		icon: 'share',
-		label: 'Share',
-		disabled: false,
-	},{
-		icon: 'setting',
-		label: 'Setting',
-		disabled: false,
-	},{
-		icon: 'cart',
-		label: 'Cart',
-		disabled: false,
-	}],
+	tabs: [
+		{
+			icon: 'eye',
+			label: 'Eye',
+			disabled: false,
+		},
+		{
+			icon: 'share',
+			label: 'Share',
+			disabled: false,
+		},
+		{
+			icon: 'setting',
+			label: 'Setting',
+			disabled: false,
+		},
+		{
+			icon: 'cart',
+			label: 'Cart',
+			disabled: false,
+		},
+	],
 	onChange: () => null,
 	tyClass: 'fs-20 px-4 py-2',
 };
@@ -109,31 +126,40 @@ WithManyTabs.args = {
 	active: '0',
 	borderColor: 'warning',
 	borderWidth: '100%',
-	tabs: [{
-		icon: 'eye',
-		disabled: false,
-	},{
-		icon: 'share',
-		disabled: false,
-	},{
-		icon: 'setting',
-		disabled: false,
-	},{
-		icon: 'setting',
-		disabled: false,
-	},{
-		icon: 'eye',
-		disabled: false,
-	},{
-		icon: 'share',
-		disabled: false,
-	},{
-		icon: 'truck',
-		disabled: false,
-	},{
-		icon: 'truck-fast',
-		disabled: false,
-	}],
+	tabs: [
+		{
+			icon: 'eye',
+			disabled: false,
+		},
+		{
+			icon: 'share',
+			disabled: false,
+		},
+		{
+			icon: 'setting',
+			disabled: false,
+		},
+		{
+			icon: 'setting',
+			disabled: false,
+		},
+		{
+			icon: 'eye',
+			disabled: false,
+		},
+		{
+			icon: 'share',
+			disabled: false,
+		},
+		{
+			icon: 'truck',
+			disabled: false,
+		},
+		{
+			icon: 'truck-fast',
+			disabled: false,
+		},
+	],
 	onChange: () => null,
 	tyClass: 'fs-20 px-4 py-2',
 };
@@ -143,21 +169,27 @@ disabled.args = {
 	active: '1',
 	borderColor: 'warning',
 	borderWidth: '100%',
-	tabs: [{
-		icon: 'eye',
-		disabled: true,
-	},{
-		icon: 'share',
-		disabled: false,
-	},{
-		icon: 'setting',
-		disabled: false,
-	},{
-		icon: 'setting',
-		disabled: false,
-	},{
-		icon: 'eye',
-	}],
+	tabs: [
+		{
+			icon: 'eye',
+			disabled: true,
+		},
+		{
+			icon: 'share',
+			disabled: false,
+		},
+		{
+			icon: 'setting',
+			disabled: false,
+		},
+		{
+			icon: 'setting',
+			disabled: false,
+		},
+		{
+			icon: 'eye',
+		},
+	],
 	onChange: () => null,
 	tyClass: 'fs-20 px-4 py-2',
 };

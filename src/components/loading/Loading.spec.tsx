@@ -20,7 +20,11 @@ describe('Running Test for Tayeh Loading', () => {
 	});
 
 	test('Check Loading Defaults', () => {
-		render(<div style={{width: '100px', height: '100px'}}><Loading show>Loading Content</Loading></div>);
+		render(
+			<div style={{ width: '100px', height: '100px' }}>
+				<Loading show>Loading Content</Loading>
+			</div>,
+		);
 		const node = screen.getByText('Loading Content');
 		expect(node).toBeVisible();
 	});

@@ -105,11 +105,7 @@ describe('Running Test for Tayeh NumberInput', () => {
 	test('Check NumberInput undefined-min & value for plusHnadle', async () => {
 		const fn = jest.fn();
 		render(
-			<NumberInput
-				onChange={fn}
-				max={20}
-				placeholder="Tayeh NumberInput"
-			/>,
+			<NumberInput onChange={fn} max={20} placeholder="Tayeh NumberInput" />,
 		);
 		const input = screen.getByPlaceholderText('Tayeh NumberInput');
 		const plus = screen.getByRole('none')?.children[0];
@@ -120,11 +116,7 @@ describe('Running Test for Tayeh NumberInput', () => {
 	test('Check NumberInput undefined-min & value for minusHnadle', async () => {
 		const fn = jest.fn();
 		render(
-			<NumberInput
-				onChange={fn}
-				max={20}
-				placeholder="Tayeh NumberInput"
-			/>,
+			<NumberInput onChange={fn} max={20} placeholder="Tayeh NumberInput" />,
 		);
 		const input = screen.getByPlaceholderText('Tayeh NumberInput');
 		const minus = screen.getByRole('none')?.children[2];
@@ -141,7 +133,7 @@ describe('Running Test for Tayeh NumberInput', () => {
 				min={1}
 				value={5}
 				error="Something is wrong"
-				label='error check'
+				label="error check"
 				placeholder="Tayeh NumberInput"
 			/>,
 		);

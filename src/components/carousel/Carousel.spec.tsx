@@ -23,8 +23,8 @@ describe('Running Test for Tayeh Carousel', () => {
 		const ChildComp: React.FC = () => <h2>This is a child component</h2>;
 		render(
 			<Carousel
-				data= {[{}, {}]}
-				SlideContent = {ChildComp}
+				data={[{}, {}]}
+				SlideContent={ChildComp}
 				circles
 				arrows
 				interval

@@ -34,7 +34,7 @@ export const Disable = Template.bind({});
 Disable.args = {
 	disabled: true,
 	label: 'Only Readable',
-	placeholder: 'Unchangable'
+	placeholder: 'Unchangable',
 };
 
 export const Error = Template.bind({});

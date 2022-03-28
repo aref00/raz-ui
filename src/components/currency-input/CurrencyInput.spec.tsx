@@ -52,7 +52,8 @@ describe('Running Test for Tayeh Input', () => {
 		expect(node?.getAttribute('value')).toBe('2,000');
 	});
 
-	test('Check CurrencyInput Max', async () => { //this test should be fixed
+	test('Check CurrencyInput Max', async () => {
+		//this test should be fixed
 		const fn = jest.fn();
 		// .mockImplementation((value) => {
 		// expect(value).toBe('20');

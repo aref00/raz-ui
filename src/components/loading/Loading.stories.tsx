@@ -23,11 +23,11 @@ const Template: Story<LoadingProps> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-	show: true
+	show: true,
 };
 
 export const Fullscreen = Template.bind({});
 Fullscreen.args = {
 	show: true,
-	fullscreen: true
+	fullscreen: true,
 };

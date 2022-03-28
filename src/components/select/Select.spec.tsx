@@ -189,20 +189,37 @@ describe('Running Test for Tayeh Select', () => {
 	test('Check handleInputChange Util', () => {
 		const base = handleInputChange('test');
 		const res1 = base([{ label: 'test-2', value: 'test-2' }])(
-			{ filteredOptions: [], inputValue: 'test', open: true, value: {label: null, value: null} },
+			{
+				filteredOptions: [],
+				inputValue: 'test',
+				open: true,
+				value: { label: null, value: null },
+			},
 			() => null,
 		)(() => null);
 		const res2 = base([{ label: 'not-2', value: 'test-2' }])(
-			{ filteredOptions: [], inputValue: 'test', open: true, value: {label: null, value: null} },
+			{
+				filteredOptions: [],
+				inputValue: 'test',
+				open: true,
+				value: { label: null, value: null },
+			},
 			() => null,
 		)(() => null);
 		expect(res1).toBeUndefined();
 		expect(res2).toBeUndefined();
 	});
 	test('Check handleSelect Util', () => {
-		const base = handleSelect({ preventDefault: () => null } as unknown as MouseEvent);
+		const base = handleSelect({
+			preventDefault: () => null,
+		} as unknown as MouseEvent);
 		const res = base({ label: null, value: null })([])(
-			{ filteredOptions: [], inputValue: '', open: false, value: {label: null, value: null} },
+			{
+				filteredOptions: [],
+				inputValue: '',
+				open: false,
+				value: { label: null, value: null },
+			},
 			() => null,
 		)(() => null);
 		expect(res).toBeUndefined();

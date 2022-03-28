@@ -27,4 +27,4 @@ export type Tab = {
 	disabled: boolean;
 	id?: string;
 	onClick?: MouseEventHandler;
-}
+};

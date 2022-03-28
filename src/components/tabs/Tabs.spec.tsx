@@ -21,11 +21,13 @@ describe('Running Test for Tayeh Tabs', () => {
 	});
 
 	test('Check Tabs Defaults', () => {
-		const tabs: Tab[] = [{
-			label: 'tab-1',
-			disabled: false,
-			icon: 'home',
-		}];
+		const tabs: Tab[] = [
+			{
+				label: 'tab-1',
+				disabled: false,
+				icon: 'home',
+			},
+		];
 		const fn = jest.fn().mockImplementation((value) => {
 			expect(value).toBe('0');
 		});
@@ -36,12 +38,14 @@ describe('Running Test for Tayeh Tabs', () => {
 		expect(fn).toBeCalled();
 	});
 	test('Check Tabs Defaults', () => {
-		const tabs: Tab[] = [{
-			disabled: false,
-			icon: 'home',
-		}];
+		const tabs: Tab[] = [
+			{
+				disabled: false,
+				icon: 'home',
+			},
+		];
 		const fn = jest.fn();
-		render(<Tabs tyClass='custom-class' tabs={tabs} onChange={fn}></Tabs>);
+		render(<Tabs tyClass="custom-class" tabs={tabs} onChange={fn}></Tabs>);
 		const node = screen.getByRole('tab');
 		expect(node).toHaveClass('custom-class');
 	});

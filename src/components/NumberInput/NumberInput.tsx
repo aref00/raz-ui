@@ -23,7 +23,7 @@ const NumberInput: FC<NumberInputProps> = ({
 	onChange,
 	...props
 }) => {
-	const [inputValue, setInputValue] = useState(value||'');
+	const [inputValue, setInputValue] = useState(value || '');
 	tyClass = tyClass || '';
 	height = height || '45px';
 	plusColor = plusColor || 'light';
@@ -87,7 +87,11 @@ const NumberInput: FC<NumberInputProps> = ({
 	}
 
 	return (
-		<div className={`inline-block ty-input ty-input-number ${disabled?'disabled':''} ${tyClass}`}>
+		<div
+			className={`inline-block ty-input ty-input-number ${
+				disabled ? 'disabled' : ''
+			} ${tyClass}`}
+		>
 			{label && (
 				<p className={`fs-12 fs-sm-14 mb-1 ${error ? 'ty-color-danger' : ''}`}>
 					{label} <span className="ty-color-danger">{required ? '*' : ''}</span>
