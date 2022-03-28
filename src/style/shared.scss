@@ -78,3 +78,13 @@
 .ty-sticky {
 	position: sticky;
 }
+.ty-border {
+	border: 1px solid;
+	display: inline-block;
+}
+
+@for $size from 1 to 20 {
+	.bw-#{$size} {
+		border-width: #{$size}px;
+	}
+}
