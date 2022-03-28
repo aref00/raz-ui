@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { SkeletonProps } from './Skeleton.types';
-import '../../style/components/skeleton.scss';
+import '../../style/components/skeleton.module.scss';
 
 const Skeleton: FC<SkeletonProps> = ({
 	radius,

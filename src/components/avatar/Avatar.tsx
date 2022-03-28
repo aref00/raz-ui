@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { AvatarProps } from './Avatar.types';
-import '../../style/components/avatar.scss';
+import '../../style/components/avatar.module.scss';
 
 const Avatar: FC<AvatarProps> = ({ tyClass, children, title, ...props }) => {
 	props.width = props.width || '45px';

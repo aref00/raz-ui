@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { ButtonProps } from './Button.types';
-import '../../style/components/button.scss';
+import '../../style/components/button.module.scss';
 function typeCss(
 	type?: 'simple' | 'outline' | 'clear',
 	color = 'primary',

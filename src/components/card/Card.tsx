@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { CardProps } from './Card.types';
-import '../../style/components/card.scss';
+import '../../style/components/card.module.scss';
 
 const Card: FC<CardProps> = ({
 	color,

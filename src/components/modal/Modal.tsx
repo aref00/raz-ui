@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { ModalProps } from './Modal.types';
-import '../../style/components/modal.scss';
+import '../../style/components/modal.module.scss';
 import { clickHandler } from './Modal.utils';
 import Button from '../button/Button';
 import Card from '../card/Card';
