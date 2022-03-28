@@ -101,7 +101,7 @@
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
 	"plugins": [{"name": "typescript-plugin-css-modules"}]
   },
-  "include": ["src/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": [
 	  "lib",
 	  "node_modules",
