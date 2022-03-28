@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import { TabProps } from './Tabs.types';
-import '../../style/components/tabs.module.scss';
+import '../../style/components/tabs.scss';
 import { generateTabs, tabOptions } from './Tabs.utils';
 
 export const Tabs: FC<TabProps> = ({

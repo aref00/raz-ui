@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FC, useState } from 'react';
 import { NumberInputProps } from './NumberInput.types';
-import '../../style/components/input.module.scss';
-import '../../style/components/number-input.module.scss';
+import '../../style/components/input.scss';
+import '../../style/components/number-input.scss';
 
 export const NumberInput: FC<NumberInputProps> = ({
 	disabled,

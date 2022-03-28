@@ -7,7 +7,7 @@ for file in lib/**/*.js; do
     uglifyjs "$file" --compress -o "$file" 
 done 
 for file in lib/**/**/*.js; do
-	sed -i 's/.module.scss/.module.css/g' "$file"
+	sed -i 's/.scss/.css/g' "$file"
 	# sed -i 's/..\/..\/style\/components/..\/style/g' "$file"
     uglifyjs "$file" --compress -o "$file" 
 done 

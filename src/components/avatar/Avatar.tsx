@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { AvatarProps } from './Avatar.types';
-import '../../style/components/avatar.module.scss';
+import '../../style/components/avatar.scss';
 
 export const Avatar: FC<AvatarProps> = ({
 	tyClass,

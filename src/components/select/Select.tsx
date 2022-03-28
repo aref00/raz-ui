@@ -6,7 +6,7 @@ import React, {
 	useState,
 } from 'react';
 import { SelectProps } from './Select.types';
-import '../../style/components/select.module.scss';
+import '../../style/components/select.scss';
 import { Input } from '../input/Input';
 import { Button } from '../button/Button';
 import {

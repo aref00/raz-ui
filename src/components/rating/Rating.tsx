@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import { RatingProps } from './Rating.types';
-import '../../style/components/card.module.scss';
+import '../../style/components/card.scss';
 // import Button from '../button/Button';
 import { generateStars } from './Rating.utils';
 
