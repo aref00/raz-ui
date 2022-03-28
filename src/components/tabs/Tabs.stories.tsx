@@ -31,7 +31,7 @@ Icon.args = {
 		icon: 'setting',
 		disabled: false,
 	}],
-	onChange: (value: string) => null,
+	onChange: () => null,
 	tyClass: 'fs-32 px-4 py-2',
 };
 
@@ -51,7 +51,7 @@ Color.args = {
 		icon: 'setting',
 		disabled: false,
 	}],
-	onChange: (value: string) => null,
+	onChange: () => null,
 	tyClass: 'fs-32 px-4 py-2',
 };
 
@@ -74,7 +74,7 @@ Label.args = {
 		label: 'Setting',
 		disabled: false,
 	}],
-	onChange: (value: string) => null,
+	onChange: () => null,
 	tyClass: 'fs-32 px-4 py-2',
 };
 
@@ -100,7 +100,7 @@ Border.args = {
 		label: 'Cart',
 		disabled: false,
 	}],
-	onChange: (value: string) => null,
+	onChange: () => null,
 	tyClass: 'fs-20 px-4 py-2',
 };
 
@@ -134,7 +134,7 @@ WithManyTabs.args = {
 		icon: 'truck-fast',
 		disabled: false,
 	}],
-	onChange: (value: string) => null,
+	onChange: () => null,
 	tyClass: 'fs-20 px-4 py-2',
 };
 
@@ -158,6 +158,6 @@ disabled.args = {
 	},{
 		icon: 'eye',
 	}],
-	onChange: (value: string) => null,
+	onChange: () => null,
 	tyClass: 'fs-20 px-4 py-2',
 };

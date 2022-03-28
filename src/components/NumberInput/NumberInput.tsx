@@ -77,7 +77,7 @@ const NumberInput: FC<NumberInputProps> = ({
 		if (typeof min === 'number' && temp < min) temp = min;
 		setInputValue(temp);
 		const event = { target: { value: temp } };
-		onChange(event as any);
+		onChange(event as unknown as ChangeEvent<HTMLInputElement>);
 	};
 
 	function registerCallbacks(element: HTMLInputElement | null) {

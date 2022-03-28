@@ -32,7 +32,7 @@ const Carousel: FC<CarouselProps> = ({
 	const subtrahend = slices;
 	const multiplied = -100 / slices;
 
-	let leftHandler = () => {
+	const leftHandler = () => {
 		if (orient <= (data.length - subtrahend) * multiplied) {
 			setOrient(0);
 		} else {
@@ -40,7 +40,7 @@ const Carousel: FC<CarouselProps> = ({
 		}
 	};
 
-	let rightHandler = () => {
+	const rightHandler = () => {
 		if (orient >= deciCondition) {
 			setOrient((data.length - subtrahend) * multiplied);
 		} else {
@@ -49,22 +49,22 @@ const Carousel: FC<CarouselProps> = ({
 	};
 
 	useEffect(() => {
-		let my_interval: any = null;
+		let my_interval: NodeJS.Timer|null = null;
 		if (interval) {
 			if (!isHovered) {
 				my_interval = setInterval(() => {
 					leftHandler();
 				}, intervalTime);
 			}
-			return () => clearInterval(my_interval);
+			return () => {if (my_interval) clearInterval(my_interval);};
 		}
 	}, [orient, isHovered]);
 	return (
 		<div className={`slider-father ${tyClass}`}>
 			<div
 				className="Slider"
-				onMouseEnter={(e) => setHovered(true)}
-				onMouseLeave={(e) => setHovered(false)}
+				onMouseEnter={() => setHovered(true)}
+				onMouseLeave={() => setHovered(false)}
 			>
 				<div
 					className="gallery ty-flex"
