@@ -3,7 +3,7 @@ import { NumberInputProps } from './NumberInput.types';
 import '../../style/components/input.module.scss';
 import '../../style/components/number-input.module.scss';
 
-const NumberInput: FC<NumberInputProps> = ({
+export const NumberInput: FC<NumberInputProps> = ({
 	disabled,
 	height,
 	label,
@@ -139,5 +139,3 @@ const NumberInput: FC<NumberInputProps> = ({
 		</div>
 	);
 };
-
-export default NumberInput;

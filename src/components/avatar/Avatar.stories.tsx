@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
 import { AvatarProps } from './Avatar.types';
-import Avatar from './Avatar';
+import { Avatar } from './Avatar';
 
 export default {
 	title: 'Tayeh/Avatar',

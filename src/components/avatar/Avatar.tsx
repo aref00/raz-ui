@@ -2,7 +2,12 @@ import React, { FC } from 'react';
 import { AvatarProps } from './Avatar.types';
 import '../../style/components/avatar.module.scss';
 
-const Avatar: FC<AvatarProps> = ({ tyClass, children, title, ...props }) => {
+export const Avatar: FC<AvatarProps> = ({
+	tyClass,
+	children,
+	title,
+	...props
+}) => {
 	props.width = props.width || '45px';
 	return (
 		<div style={props} className={`ty-avatar ${tyClass}`} title={title}>
@@ -14,5 +19,3 @@ const Avatar: FC<AvatarProps> = ({ tyClass, children, title, ...props }) => {
 		</div>
 	);
 };
-
-export default Avatar;

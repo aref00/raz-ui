@@ -2,7 +2,7 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import '../../style/index.scss';
-import RadioButton from './RadioButton';
+import { RadioButton } from './RadioButton';
 import { unmountComponentAtNode } from 'react-dom';
 
 describe('Running Test for Tayeh RadioButton', () => {

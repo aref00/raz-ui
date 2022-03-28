@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
 import { RatingProps } from './Rating.types';
-import Rating from './Rating';
+import { Rating } from './Rating';
 
 export default {
 	title: 'Tayeh/Rating',

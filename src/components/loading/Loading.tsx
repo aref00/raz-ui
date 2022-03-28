@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { LoadingProps } from './Loading.types';
 import '../../style/components/loading.module.scss';
 
-const Loading: FC<LoadingProps> = ({
+export const Loading: FC<LoadingProps> = ({
 	show,
 	color,
 	fullscreen,
@@ -35,5 +35,3 @@ const Loading: FC<LoadingProps> = ({
 		</div>
 	);
 };
-
-export default Loading;

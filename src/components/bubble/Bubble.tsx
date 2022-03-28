@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { BubbleProps } from './Bubble.types';
 import '../../style/components/bubble.module.scss';
 
-const Bubble: FC<BubbleProps> = ({
+export const Bubble: FC<BubbleProps> = ({
 	color,
 	replyColor,
 	radius,
@@ -33,5 +33,3 @@ const Bubble: FC<BubbleProps> = ({
 		</div>
 	);
 };
-
-export default Bubble;

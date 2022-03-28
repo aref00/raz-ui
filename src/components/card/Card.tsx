@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { CardProps } from './Card.types';
 import '../../style/components/card.module.scss';
 
-const Card: FC<CardProps> = ({
+export const Card: FC<CardProps> = ({
 	color,
 	radius,
 	tyClass,
@@ -21,5 +21,3 @@ const Card: FC<CardProps> = ({
 		</div>
 	);
 };
-
-export default Card;

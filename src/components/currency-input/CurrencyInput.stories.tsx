@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
 import { CurrencyInputProps } from './CurrencyInput.types';
-import CurrencyInput from './CurrencyInput';
+import { CurrencyInput } from './CurrencyInput';
 
 export default {
 	title: 'Tayeh/CurrencyInput',

@@ -3,7 +3,7 @@ import { TabProps } from './Tabs.types';
 import '../../style/components/tabs.module.scss';
 import { generateTabs, tabOptions } from './Tabs.utils';
 
-const Tab: FC<TabProps> = ({
+export const Tabs: FC<TabProps> = ({
 	active,
 	tabs,
 	borderWidth,
@@ -49,5 +49,3 @@ const Tab: FC<TabProps> = ({
 		</div>
 	);
 };
-
-export default Tab;

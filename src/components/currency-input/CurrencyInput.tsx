@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FC, useState } from 'react';
 import { CurrencyInputProps } from './CurrencyInput.types';
 import '../../style/components/input.module.scss';
-import Input from '../input/Input';
+import { Input } from '../input/Input';
 
 function format(valString?: string | number) {
 	if (!valString) return '';
@@ -9,7 +9,7 @@ function format(valString?: string | number) {
 	return val.replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
 }
 
-const CurrencyInput: FC<CurrencyInputProps> = ({
+export const CurrencyInput: FC<CurrencyInputProps> = ({
 	value,
 	onChange,
 	...props
@@ -55,5 +55,3 @@ const CurrencyInput: FC<CurrencyInputProps> = ({
 		/>
 	);
 };
-
-export default CurrencyInput;

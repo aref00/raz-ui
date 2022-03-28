@@ -1,5 +1,5 @@
 import React, { MouseEvent } from 'react';
-import Button from '../button/Button';
+import { Button } from '../button/Button';
 import { Color, Tab } from '../types';
 type Params = {
 	defaultColor: Color;

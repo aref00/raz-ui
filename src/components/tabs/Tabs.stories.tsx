@@ -3,8 +3,8 @@ import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
 import { TabProps } from './Tabs.types';
-import Tabs from './Tabs';
-import Button from '../button/Button';
+import { Tabs } from './Tabs';
+import { Button } from '../button/Button';
 
 export default {
 	title: 'Tayeh/Tabs',

@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { SkeletonProps } from './Skeleton.types';
 import '../../style/components/skeleton.module.scss';
 
-const Skeleton: FC<SkeletonProps> = ({
+export const Skeleton: FC<SkeletonProps> = ({
 	radius,
 	color,
 	width,
@@ -21,5 +21,3 @@ const Skeleton: FC<SkeletonProps> = ({
 		</section>
 	);
 };
-
-export default Skeleton;

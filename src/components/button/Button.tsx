@@ -11,7 +11,7 @@ function typeCss(
 		return `outline ty-color-${color} ty-border-color-${outlineColor}`;
 	return `simple ty-bg-${color}`;
 }
-const Button: FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
 	disabled,
 	children,
 	width,
@@ -41,5 +41,3 @@ const Button: FC<ButtonProps> = ({
 		</button>
 	);
 };
-
-export default Button;

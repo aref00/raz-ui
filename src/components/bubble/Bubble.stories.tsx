@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
 import { BubbleProps } from './Bubble.types';
-import Bubble from './Bubble';
+import { Bubble } from './Bubble';
 
 export default {
 	title: 'Tayeh/Bubble',

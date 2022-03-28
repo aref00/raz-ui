@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
 import { SelectProps } from './Select.types';
-import Select from './Select';
+import { Select } from './Select';
 
 export default {
 	title: 'Tayeh/Select',

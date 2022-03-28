@@ -3,8 +3,8 @@ import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
 import { LoadingProps } from './Loading.types';
-import Loading from './Loading';
-import Button from '../button/Button';
+import { Loading } from './Loading';
+import { Button } from '../button/Button';
 
 export default {
 	title: 'Tayeh/Loading',

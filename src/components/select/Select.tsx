@@ -7,8 +7,8 @@ import React, {
 } from 'react';
 import { SelectProps } from './Select.types';
 import '../../style/components/select.module.scss';
-import Input from '../input/Input';
-import Button from '../button/Button';
+import { Input } from '../input/Input';
+import { Button } from '../button/Button';
 import {
 	handleSelect,
 	getSuffix,
@@ -17,7 +17,7 @@ import {
 	change,
 } from './Select.utils';
 
-const Select: FC<SelectProps> = ({
+export const Select: FC<SelectProps> = ({
 	defaultValue,
 	options,
 	color,
@@ -101,5 +101,3 @@ const Select: FC<SelectProps> = ({
 		</div>
 	);
 };
-
-export default Select;

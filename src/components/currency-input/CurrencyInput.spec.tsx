@@ -2,7 +2,7 @@ import React, { ChangeEvent } from 'react';
 import '@testing-library/jest-dom';
 import { fireEvent, render, screen } from '@testing-library/react';
 import '../../style/index.scss';
-import CurrencyInput from './CurrencyInput';
+import { CurrencyInput } from './CurrencyInput';
 import { unmountComponentAtNode } from 'react-dom';
 
 describe('Running Test for Tayeh Input', () => {

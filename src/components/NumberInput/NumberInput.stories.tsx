@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
 import { NumberInputProps } from './NumberInput.types';
-import NumberInput from './NumberInput';
+import { NumberInput } from './NumberInput';
 
 export default {
 	title: 'Tayeh/NumberInput',

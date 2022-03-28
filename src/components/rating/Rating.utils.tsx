@@ -1,4 +1,4 @@
-import Button from '../button/Button';
+import { Button } from '../button/Button';
 import React from 'react';
 import { Color } from '../types';
 

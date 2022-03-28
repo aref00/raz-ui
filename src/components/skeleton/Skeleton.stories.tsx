@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
 import { SkeletonProps } from './Skeleton.types';
-import Skeleton from './Skeleton';
+import { Skeleton } from './Skeleton';
 
 export default {
 	title: 'Tayeh/Skeleton',

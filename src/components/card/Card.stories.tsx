@@ -3,8 +3,8 @@ import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
 import { CardProps } from './Card.types';
-import Card from './Card';
-import Button from '../button/Button';
+import { Card } from './Card';
+import { Button } from '../button/Button';
 
 export default {
 	title: 'Tayeh/Card',

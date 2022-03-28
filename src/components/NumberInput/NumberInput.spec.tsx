@@ -2,7 +2,7 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { fireEvent, render, screen } from '@testing-library/react';
 import '../../style/index.scss';
-import NumberInput from './NumberInput';
+import { NumberInput } from './NumberInput';
 import { unmountComponentAtNode } from 'react-dom';
 
 describe('Running Test for Tayeh NumberInput', () => {

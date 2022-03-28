@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
 import { RadioButtonProps } from './RadioButton.types';
-import RadioButton from './RadioButton';
+import { RadioButton } from './RadioButton';
 
 export default {
 	title: 'Tayeh/RadioButton',

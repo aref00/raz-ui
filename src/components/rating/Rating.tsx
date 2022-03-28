@@ -4,7 +4,7 @@ import '../../style/components/card.module.scss';
 // import Button from '../button/Button';
 import { generateStars } from './Rating.utils';
 
-const Rating: FC<RatingProps> = ({
+export const Rating: FC<RatingProps> = ({
 	value,
 	readonly,
 	disabled,
@@ -39,5 +39,3 @@ const Rating: FC<RatingProps> = ({
 		</div>
 	);
 };
-
-export default Rating;

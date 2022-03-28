@@ -1,5 +1,5 @@
 import React, { KeyboardEvent, MouseEvent } from 'react';
-import Button from '../button/Button';
+import { Button } from '../button/Button';
 import { Option } from '../types';
 
 type State = {

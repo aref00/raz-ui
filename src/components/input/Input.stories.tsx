@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
 import { InputProps } from './Input.types';
-import Input from './Input';
+import { Input } from './Input';
 
 export default {
 	title: 'Tayeh/Input',

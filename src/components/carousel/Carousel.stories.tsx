@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
 import { CarouselProps } from './Carousel.types';
-import Carousel from './Carousel';
+import { Carousel } from './Carousel';
 
 export default {
 	title: 'Tayeh/Carousel',

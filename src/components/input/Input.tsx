@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import { InputProps } from './Input.types';
 import '../../style/components/input.module.scss';
 
-const Input: FC<InputProps> = ({
+export const Input: FC<InputProps> = ({
 	label,
 	width,
 	height,
@@ -94,5 +94,3 @@ ${disabled ? 'disabled' : ''} ${
 		</div>
 	);
 };
-
-export default Input;

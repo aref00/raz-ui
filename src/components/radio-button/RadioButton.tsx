@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import { RadioButtonProps } from './RadioButton.types';
 import '../../style/components/radio-button.module.scss';
 
-const RadioButton: FC<RadioButtonProps> = ({
+export const RadioButton: FC<RadioButtonProps> = ({
 	value,
 	options,
 	width,
@@ -53,5 +53,3 @@ const RadioButton: FC<RadioButtonProps> = ({
 		</div>
 	);
 };
-
-export default RadioButton;

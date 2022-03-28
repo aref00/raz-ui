@@ -2,7 +2,7 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import '../../style/index.scss';
-import Carousel from './Carousel';
+import { Carousel } from './Carousel';
 import { unmountComponentAtNode } from 'react-dom';
 
 describe('Running Test for Tayeh Carousel', () => {

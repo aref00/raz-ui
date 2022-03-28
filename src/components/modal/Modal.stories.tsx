@@ -3,8 +3,8 @@ import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
 import { ModalProps } from './Modal.types';
-import Modal from './Modal';
-import Card from '../card/Card';
+import { Modal } from './Modal';
+import { Card } from '../card/Card';
 
 export default {
 	title: 'Tayeh/Modal',

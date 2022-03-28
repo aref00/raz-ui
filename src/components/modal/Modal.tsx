@@ -2,10 +2,10 @@ import React, { FC, useEffect, useRef, useState } from 'react';
 import { ModalProps } from './Modal.types';
 import '../../style/components/modal.module.scss';
 import { clickHandler } from './Modal.utils';
-import Button from '../button/Button';
-import Card from '../card/Card';
+import { Button } from '../button/Button';
+import { Card } from '../card/Card';
 
-const Modal: FC<ModalProps> = ({
+export const Modal: FC<ModalProps> = ({
 	color,
 	radius,
 	transparent,
@@ -84,5 +84,3 @@ const Modal: FC<ModalProps> = ({
 		<></>
 	);
 };
-
-export default Modal;

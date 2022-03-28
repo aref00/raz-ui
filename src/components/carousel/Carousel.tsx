@@ -1,9 +1,9 @@
 import React, { FC, useEffect, useState } from 'react';
 import { CarouselProps } from './Carousel.types';
 import '../../style/components/carousel.module.scss';
-import Button from '../button/Button';
+import { Button } from '../button/Button';
 
-const Carousel: FC<CarouselProps> = ({
+export const Carousel: FC<CarouselProps> = ({
 	tyClass,
 	data,
 	slices,
@@ -124,5 +124,3 @@ const Carousel: FC<CarouselProps> = ({
 		</div>
 	);
 };
-
-export default Carousel;

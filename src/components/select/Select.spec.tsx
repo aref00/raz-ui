@@ -2,7 +2,7 @@ import React, { MouseEvent } from 'react';
 import '@testing-library/jest-dom';
 import { fireEvent, render, screen } from '@testing-library/react';
 import '../../style/index.scss';
-import Select from './Select';
+import { Select } from './Select';
 import { handleInputChange, handleSelect } from './Select.utils';
 import { unmountComponentAtNode } from 'react-dom';
 
