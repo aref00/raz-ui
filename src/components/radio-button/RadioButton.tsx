@@ -1,6 +1,5 @@
 import React, { FC, useState } from 'react';
 import { RadioButtonProps } from './RadioButton.types';
-import '../../style/components/radio-button.scss';
 
 export const RadioButton: FC<RadioButtonProps> = ({
 	value,

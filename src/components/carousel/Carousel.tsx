@@ -1,6 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
 import { CarouselProps } from './Carousel.types';
-import '../../style/components/carousel.scss';
 import { Button } from '../button/Button';
 
 export const Carousel: FC<CarouselProps> = ({

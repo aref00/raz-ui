@@ -1,6 +1,5 @@
 import React, { ChangeEvent, FC, useState } from 'react';
 import { CurrencyInputProps } from './CurrencyInput.types';
-import '../../style/components/input.scss';
 import { Input } from '../input/Input';
 
 function format(valString?: string | number) {

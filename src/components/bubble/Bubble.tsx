@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { BubbleProps } from './Bubble.types';
-import '../../style/components/bubble.scss';
 
 export const Bubble: FC<BubbleProps> = ({
 	color,

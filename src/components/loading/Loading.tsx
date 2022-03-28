@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { LoadingProps } from './Loading.types';
-import '../../style/components/loading.scss';
 
 export const Loading: FC<LoadingProps> = ({
 	show,
