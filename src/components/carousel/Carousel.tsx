@@ -15,6 +15,7 @@ export const Carousel: FC<CarouselProps> = ({
 	circleClass,
 	interval,
 	intervalTime,
+	dir,
 }) => {
 	const [orient, setOrient] = useState(0);
 	const [isHovered, setHovered] = useState(false);
@@ -23,6 +24,7 @@ export const Carousel: FC<CarouselProps> = ({
 	circleClass = circleClass || '';
 	rightClass = rightClass || '';
 	leftClass = leftClass || '';
+	dir = dir || 'ltr';
 	slices = slices || 1;
 	circlesPosition = circlesPosition || { bottom: '4%', right: '50%' };
 	intervalTime = intervalTime || 5000;
@@ -61,7 +63,7 @@ export const Carousel: FC<CarouselProps> = ({
 		}
 	}, [orient, isHovered]);
 	return (
-		<div className={`slider-father ${tyClass}`}>
+		<div className={`slider-father ${tyClass}`} style={{ direction: dir }}>
 			<div
 				className="Slider"
 				onMouseEnter={() => setHovered(true)}
@@ -71,7 +73,8 @@ export const Carousel: FC<CarouselProps> = ({
 					className="gallery ty-flex"
 					style={{
 						width: `calc(100% * ${galWidth})`,
-						right: `${orient}%`,
+						right: `${dir && dir === 'rtl' ? orient + '%' : '0'}`,
+						left: `${dir && dir === 'ltr' ? orient + '%' : '0'}`,
 					}}
 				>
 					{data.map((item, index) => (
@@ -91,13 +94,13 @@ export const Carousel: FC<CarouselProps> = ({
 						tyClass={`click-icon mini-arrows mini-right ${rightClass}`}
 						onClick={rightHandler}
 					>
-						<i className="ty-icon ty-icon-arrow-right" />
+						<i className="ty-icon ty-icon-arrow-right-outline ty-color-dark fs-22" />
 					</Button>
 					<Button
 						tyClass={`click-icon mini-arrows mini-left ${leftClass}`}
 						onClick={leftHandler}
 					>
-						<i className="ty-icon ty-icon-arrow-left" />
+						<i className="ty-icon ty-icon-arrow-left-outline ty-color-dark fs-22" />
 					</Button>
 				</>
 			)}
