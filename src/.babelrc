@@ -1,5 +1,5 @@
 {
 	"presets": [["minify", { "builtIns": false }], "@babel/react", "@babel/env", "@babel/preset-typescript"],
-	"ignore": ["./src/**/*.stories.tsx", "./src/**/*.spec.tsx", "./src/**/*.test.tsx"],
+	"ignore": ["**/*.test.tsx", "**/*.spec.tsx", "**/*.stories.tsx"],
 	"plugins": ["babel-plugin-transform-scss", "@babel/plugin-transform-modules-commonjs"]
 }
