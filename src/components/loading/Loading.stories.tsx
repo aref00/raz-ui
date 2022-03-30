@@ -2,6 +2,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
+import '../../style/components/components.scss';
 import { LoadingProps } from './Loading.types';
 import { Loading } from './Loading';
 import { Button } from '../button/Button';
@@ -23,7 +24,13 @@ const Template: Story<LoadingProps> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
+	ok: true,
 	show: true,
+};
+
+export const NotShowing = Template.bind({});
+NotShowing.args = {
+	show: false,
 };
 
 export const Fullscreen = Template.bind({});
