@@ -14,6 +14,7 @@
 	  input, textarea, input:hover, textarea:hover, input:focus, textarea:focus {
 		  border: none;
 		  outline: none;
+		  resize: none;
 	  }
 	}
 	::-webkit-resizer {

@@ -2,6 +2,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react';
 
 import '../../style/index.scss';
+import '../../style/components/components.scss';
 import { ModalProps } from './Modal.types';
 import { Modal } from './Modal';
 import { Card } from '../card/Card';
