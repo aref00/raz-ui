@@ -13,3 +13,4 @@ export * from './components/NumberInput/NumberInput';
 export * from './components/carousel/Carousel';
 export * from './components/button/Button';
 export * from './components/tabs/Tabs';
+export * from './components/loading/Loading';
