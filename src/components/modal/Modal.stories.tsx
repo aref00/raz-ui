@@ -54,3 +54,26 @@ HideClose.args = {
 	canExit: false,
 	children: <div className="p-4">Modal Content</div>,
 };
+
+export const WithoutBackdropClose = Template.bind({});
+WithoutBackdropClose.args = {
+	radius: 10,
+	visible: true,
+	disableBackdropExit: true,
+	canExit: true,
+	children: <div className="p-4">Modal Content</div>,
+};
+
+
+export const Styled = Template.bind({});
+Styled.args = {
+	radius: 10,
+	visible: true,
+	style: {
+		width: '90%',
+		minWidth: '200px',
+		height: '280px',
+		maxHeight: '100%',
+	},
+	children: <div className="p-4">Modal Content</div>,
+};
