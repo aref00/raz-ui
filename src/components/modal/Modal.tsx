@@ -34,7 +34,7 @@ export const Modal: FC<ModalProps> = ({
 		}
 	}, [state.visible]);
 	useEffect(() => {
-		setState({...state, visible: visible || false});
+		setState({ ...state, visible: visible || false });
 	}, [visible]);
 	//  (() => typeof canExit == 'boolean' ? canExit : true);
 	// const style = {width, minWidth, maxWidth, height, minHeight, maxHeight};
@@ -43,7 +43,11 @@ export const Modal: FC<ModalProps> = ({
 		<div
 			tabIndex={0}
 			className={`ty-modal-mask ${transparent ? 'scrollable' : ''}`}
-			{...{onClick: disableBackdropExit?undefined:(e) => clickHandler(e)(beforeClose)(state)(setState)}}
+			{...{
+				onClick: disableBackdropExit
+					? undefined
+					: (e) => clickHandler(e)(beforeClose)(state)(setState),
+			}}
 		>
 			<Card
 				style={style}
@@ -56,17 +60,20 @@ export const Modal: FC<ModalProps> = ({
 				<div className="ty-flex ty-space-between">
 					{header}
 					{title}
-					{letExit &&
+					{letExit && (
 						<div className="mr-auto">
-							<Button layout="clear" color="dark" tyClass="p-2"
-								onClick={(e) => clickHandler(e)(beforeClose)(state)(setState)}>
-								<i
-									className="ty-icon ty-icon-close-circle-outline fs-12 fs-sm-14 fs-md-16">
+							<Button
+								layout="clear"
+								color="dark"
+								tyClass="p-2"
+								onClick={(e) => clickHandler(e)(beforeClose)(state)(setState)}
+							>
+								<i className="ty-icon ty-icon-close-circle-outline fs-12 fs-sm-14 fs-md-16">
 									<span>close</span>
 								</i>
 							</Button>
 						</div>
-					}
+					)}
 				</div>
 				<div className="ty-modal-body">{children}</div>
 				{footer && <div className="ty-modal-footer">{footer}</div>}

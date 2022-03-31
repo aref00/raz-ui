@@ -9,13 +9,13 @@ export interface ModalProps {
 	canExit?: boolean;
 	disableBackdropExit?: boolean;
 	style?: {
-		width?: string,
-		minWidth?: string,
-		maxWidth?: string,
-		height?: string,
-		minHeight?: string,
-		maxHeight?: string,
-	}
+		width?: string;
+		minWidth?: string;
+		maxWidth?: string;
+		height?: string;
+		minHeight?: string;
+		maxHeight?: string;
+	};
 	title?: string;
 	fullscreen?: boolean;
 	header?: ReactNode;

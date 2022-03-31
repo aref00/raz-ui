@@ -64,7 +64,6 @@ WithoutBackdropClose.args = {
 	children: <div className="p-4">Modal Content</div>,
 };
 
-
 export const Styled = Template.bind({});
 Styled.args = {
 	radius: 10,
