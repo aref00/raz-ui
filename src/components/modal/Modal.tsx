@@ -10,7 +10,7 @@ export const Modal: FC<ModalProps> = ({
 	transparent,
 	visible,
 	canExit,
-	// closeOnBackdropClick,
+	backdropClose = true,
 	// width,
 	// minWidth,
 	// maxWidth,
@@ -48,7 +48,7 @@ export const Modal: FC<ModalProps> = ({
 		<div
 			tabIndex={0}
 			className={`ty-modal-mask ${transparent ? 'scrollable' : ''}`}
-			onClick={(e) => clickHandler(e)(beforeClose)(state)(setState)}
+			{...{onClick: backdropClose?(e) => clickHandler(e)(beforeClose)(state)(setState):undefined}}
 		>
 			<Card
 				color={color}

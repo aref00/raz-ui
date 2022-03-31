@@ -7,7 +7,7 @@ export interface ModalProps {
 	transparent?: boolean;
 	visible?: boolean;
 	canExit?: boolean;
-	// closeOnBackdropClick?: boolean;
+	backdropClose?: boolean;
 	// width?: string;
 	// minWidth?: string;
 	// maxWidth?: string;
