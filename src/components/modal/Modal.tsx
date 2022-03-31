@@ -38,9 +38,9 @@ export const Modal: FC<ModalProps> = ({
 			mounted.current = true;
 		}
 	}, [state.visible]);
-	useEffect(() => {
-		setState({...state, visible: visible || false});
-	}, [visible]);
+	// useEffect(() => {
+	// 	setState({...state, visible: visible || false});
+	// }, [visible]);
 	//  (() => typeof canExit == 'boolean' ? canExit : true);
 	// const style = {width, minWidth, maxWidth, height, minHeight, maxHeight};
 	tyClass = tyClass || '';
