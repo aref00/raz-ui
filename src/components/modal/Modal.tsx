@@ -10,13 +10,8 @@ export const Modal: FC<ModalProps> = ({
 	transparent,
 	visible,
 	canExit,
-	// closeOnBackdropClick,
-	// width,
-	// minWidth,
-	// maxWidth,
-	// height,
-	// minHeight,
-	// maxHeight,
+	disableBackdropExit,
+	style,
 	title,
 	fullscreen,
 	header,
@@ -26,7 +21,7 @@ export const Modal: FC<ModalProps> = ({
 	onChange,
 	...props
 }) => {
-	const letExit = typeof canExit == 'boolean' ? canExit : true;
+	const letExit = typeof canExit === 'boolean' ? canExit : true;
 	const mounted = useRef(false);
 	const [state, setState] = useState({ visible: visible || false });
 	const beforeClose = props.beforeClose ? props.beforeClose : () => letExit;
@@ -48,9 +43,14 @@ export const Modal: FC<ModalProps> = ({
 		<div
 			tabIndex={0}
 			className={`ty-modal-mask ${transparent ? 'scrollable' : ''}`}
-			onClick={(e) => clickHandler(e)(beforeClose)(state)(setState)}
+			{...{
+				onClick: disableBackdropExit
+					? undefined
+					: (e) => clickHandler(e)(beforeClose)(state)(setState),
+			}}
 		>
 			<Card
+				style={style}
 				color={color}
 				radius={radius}
 				tyClass={`ty-modal-container my-auto ${fullscreen ? 'fullscreen' : ''}
@@ -62,11 +62,13 @@ export const Modal: FC<ModalProps> = ({
 					{title}
 					{letExit && (
 						<div className="mr-auto">
-							<Button layout="clear" color="dark" tyClass="p-2">
-								<i
-									className="ty-icon ty-icon-close-circle-outline fs-10 fs-sm-12"
-									onClick={(e) => clickHandler(e)(beforeClose)(state)(setState)}
-								>
+							<Button
+								layout="clear"
+								color="dark"
+								tyClass="p-2"
+								onClick={(e) => clickHandler(e)(beforeClose)(state)(setState)}
+							>
+								<i className="ty-icon ty-icon-close-circle-outline fs-12 fs-sm-14 fs-md-16">
 									<span>close</span>
 								</i>
 							</Button>

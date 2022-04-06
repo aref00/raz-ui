@@ -9,7 +9,7 @@ export const Loading: FC<LoadingProps> = ({
 	children,
 }) => {
 	return (
-		<div className={`ty-loading-parent ${show?'active':''}`}>
+		<div className={`ty-loading-parent ${show ? 'active' : ''}`}>
 			{show && (
 				<div
 					className={`ty-loading-mask ty-bg-light ty-opacity-90 ${

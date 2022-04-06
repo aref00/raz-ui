@@ -7,13 +7,15 @@ export interface ModalProps {
 	transparent?: boolean;
 	visible?: boolean;
 	canExit?: boolean;
-	// closeOnBackdropClick?: boolean;
-	// width?: string;
-	// minWidth?: string;
-	// maxWidth?: string;
-	// height?: string;
-	// minHeight?: string;
-	// maxHeight?: string;
+	disableBackdropExit?: boolean;
+	style?: {
+		width?: string;
+		minWidth?: string;
+		maxWidth?: string;
+		height?: string;
+		minHeight?: string;
+		maxHeight?: string;
+	};
 	title?: string;
 	fullscreen?: boolean;
 	header?: ReactNode;
