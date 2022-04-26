@@ -16,6 +16,7 @@ export const Carousel: FC<CarouselProps> = ({
 	interval,
 	intervalTime,
 	dir,
+	radius
 }) => {
 	const [orient, setOrient] = useState(0);
 	const [isHovered, setHovered] = useState(false);
@@ -66,6 +67,7 @@ export const Carousel: FC<CarouselProps> = ({
 		<div className={`slider-father ${tyClass}`} style={{ direction: dir }}>
 			<div
 				className="Slider"
+				style={{borderRadius: radius}}
 				onMouseEnter={() => setHovered(true)}
 				onMouseLeave={() => setHovered(false)}
 			>
