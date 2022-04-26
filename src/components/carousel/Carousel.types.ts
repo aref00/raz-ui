@@ -23,5 +23,4 @@ export interface CarouselProps {
 	circleClass?: string;
 	interval?: boolean;
 	intervalTime?: number;
-	radius?: string;
 }
