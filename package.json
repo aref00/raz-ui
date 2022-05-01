@@ -1,6 +1,6 @@
 {
   "name": "tayeh-react",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "description": "tayeh react components",
   "main": "lib/index.js",
   "files": [
