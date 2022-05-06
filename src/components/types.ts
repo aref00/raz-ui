@@ -11,7 +11,7 @@ export type Color =
 	| 'dark'
 	| 'light'
 	| 'contrast-primary'
-	| 'contrast-primary'
+	| 'contrast-secondary'
 	| 'text-primary'
 	| 'text-secondary'
 	| 'rating';
