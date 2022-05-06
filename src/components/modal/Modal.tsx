@@ -34,7 +34,7 @@ export const Modal: FC<ModalProps> = ({
 		}
 	}, [state.visible]);
 	useEffect(() => {
-		setState({...state, visible: visible || false});
+		setState({ ...state, visible: visible || false });
 	}, [visible]);
 	//  (() => typeof canExit == 'boolean' ? canExit : true);
 	// const style = {width, minWidth, maxWidth, height, minHeight, maxHeight};

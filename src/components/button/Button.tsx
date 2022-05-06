@@ -32,7 +32,6 @@ export const Button: FC<ButtonProps> = ({
 				outlineColor,
 			)} ${disabled ? 'disabled' : ''} ${tyClass || ''}`}
 			style={{ width, height, borderRadius: (radius || 5) + 'px' }}
-			type="button"
 			onClick={onClick}
 			disabled={disabled}
 			{...props}
