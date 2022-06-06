@@ -2,7 +2,7 @@ import { ChangeEventHandler, FocusEventHandler } from 'react';
 import { Color } from '../types';
 
 export interface NumberInputProps {
-	value?: number;
+	value: number;
 	height?: string;
 	width?: string;
 	placeholder?: string;
@@ -25,6 +25,7 @@ export interface NumberInputProps {
 	color?: Color;
 	radius?: number;
 	inputClass?: string;
+	changeValue: (num: number|string) => void;
 	onChange: ChangeEventHandler<HTMLInputElement>;
 	onFocus?: FocusEventHandler<HTMLInputElement>;
 	onBlur?: FocusEventHandler<HTMLInputElement>;
