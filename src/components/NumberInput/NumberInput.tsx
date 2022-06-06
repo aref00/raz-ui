@@ -9,23 +9,25 @@ export const NumberInput: FC<NumberInputProps> = ({
 	maxLength,
 	min,
 	minLength,
-	minusColor,
 	placeholder,
-	plusColor,
+	color,
+	radius,
 	required,
 	step,
 	value,
 	error,
 	tyClass,
+	inputClass,
 	width,
 	onChange,
 	...props
 }) => {
 	const [inputValue, setInputValue] = useState(value || '');
 	tyClass = tyClass || '';
+	inputClass = inputClass || '';
 	height = height || '45px';
-	plusColor = plusColor || 'light';
-	minusColor = minusColor || 'light';
+	color = color || 'primary';
+	radius = radius || 5;
 
 	const plusDisabled = () => {
 		return max && value && max <= value;
@@ -97,19 +99,21 @@ export const NumberInput: FC<NumberInputProps> = ({
 			)}
 			<div
 				role="none"
-				className="input-number-wrapper"
+				className={`input-number-wrapper ty-border ty-border-color-${color} border-radius-${radius}`}
 				style={{ width, height }}
 			>
 				<span
-					className={`increase ty-flex align-items-center ty-space-between ty-bg-${plusColor} ${
+					className={`increase ty-flex align-items-center ty-space-between ty-color-${color} ${
 						plusDisabled() ? 'disabled' : ''
 					}`}
+					style={{ borderRadius: `0 ${radius} ${radius} 0` }}
 					onClick={handlePlusClick}
 				>
-					<i className="ty-icon ty-icon-add-outline fs-12 full-width" />
+					<i className="ty-icon ty-icon-add-outline fs-24 full-width" />
 				</span>
 				<span className="input-content">
 					<input
+						className={`ty-color-${color} border-radius-${radius} ${inputClass}`}
 						disabled={disabled}
 						ref={registerCallbacks}
 						minLength={minLength}
@@ -119,19 +123,23 @@ export const NumberInput: FC<NumberInputProps> = ({
 						step={step}
 						type="number"
 						placeholder={placeholder}
-						style={{ lineHeight: height, height: `calc(${height} - 2px)` }}
+						style={{
+							lineHeight: height,
+							height: `calc(${height} - 2px)`,
+						}}
 						value={inputValue}
 						onChange={handleInput}
 						{...props}
 					/>
 				</span>
 				<span
-					className={`decrease ty-flex align-items-center ty-space-between ty-bg-${minusColor} ${
+					className={`decrease ty-flex align-items-center ty-space-between ty-color-${color} ${
 						minusDisabled() ? 'disabled' : ''
 					}`}
+					style={{ borderRadius: `${radius} 0 0 ${radius}` }}
 					onClick={handleMinusClick}
 				>
-					<i className="ty-icon ty-icon-minus-outline fs-12 full-width" />
+					<i className="ty-icon ty-icon-minus-outline fs-24 full-width" />
 				</span>
 			</div>
 		</div>

@@ -21,8 +21,6 @@
 
 .input-number-wrapper {
 	position: relative;
-	border: 1px solid #e0e0e0;
-	border-radius: 3px;
 }
 
 .input-number-wrapper input {
@@ -30,6 +28,8 @@
 	padding-left: 50px;
 	padding-right: 50px;
 	height: 100%;
+	font-size: 14px;
+	font-weight: 700;
 }
 
 .input-number-suffix {
@@ -46,7 +46,6 @@
 	top: 1px;
 	width: 38px;
 	bottom: 1px;
-	font-size: 4px;
 }
 .increase.disabled,
 .decrease.disabled {
@@ -57,8 +56,6 @@
 
 .increase {
 	right: 1px;
-	border-left: 1px solid #dcdfe6;
-	border-radius: 0 3px 3px 0;
 }
 
 .increase i,
@@ -69,12 +66,9 @@
 
 .decrease {
 	left: 1px;
-	border-radius: 3px 0px 0px 3px;
-	border-right: 1px solid #dcdfe6;
 }
 .input-content input {
 	border: none;
-	border-radius: 3px;
 }
 .disabled {
 	cursor: default !important;

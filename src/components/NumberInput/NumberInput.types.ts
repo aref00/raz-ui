@@ -22,8 +22,9 @@ export interface NumberInputProps {
 	rows?: number;
 	cols?: number;
 	tyClass?: string;
-	plusColor?: Color;
-	minusColor?: Color;
+	color?: Color;
+	radius?: number;
+	inputClass?: string;
 	onChange: ChangeEventHandler<HTMLInputElement>;
 	onFocus?: FocusEventHandler<HTMLInputElement>;
 	onBlur?: FocusEventHandler<HTMLInputElement>;
