@@ -91,6 +91,7 @@ export const NumberInput: FC<NumberInputProps> = ({
 			className={`inline-block ty-input ty-input-number ${
 				disabled ? 'disabled' : ''
 			} ${tyClass}`}
+			style={{width: width}}
 		>
 			{label && (
 				<p className={`fs-12 fs-sm-14 mb-1 ${error ? 'ty-color-danger' : ''}`}>
@@ -124,6 +125,7 @@ export const NumberInput: FC<NumberInputProps> = ({
 						placeholder={placeholder}
 						style={{
 							lineHeight: height,
+							width: width,
 							height: `calc(${height} - 2px)`,
 						}}
 						value={value || ''}
