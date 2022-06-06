@@ -63,15 +63,15 @@ export const NumberInput: FC<NumberInputProps> = ({
 		}
 	};
 
-	// const handleInput = (e: ChangeEvent) => {
-	// 	if ((e.target as HTMLInputElement).value) {
-	// 		setInputValue(Number((e.target as HTMLInputElement).value));
-	// 	} else {
-	// 		setInputValue('');
-	// 	}
-	// };
+	const handleInput = (e: ChangeEvent) => {
+		if ((e.target as HTMLInputElement).value) {
+			setInputValue(Number((e.target as HTMLInputElement).value));
+		} else {
+			setInputValue('');
+		}
+	};
 
-	const handleChange = (e: ChangeEvent) => {
+	const handleChange = (e: Event) => {
 		let temp = Number((e.target as HTMLInputElement).value);
 		if (typeof max === 'number' && temp > max) temp = max;
 		if (typeof min === 'number' && temp < min) temp = min;
@@ -80,11 +80,11 @@ export const NumberInput: FC<NumberInputProps> = ({
 		onChange(event as unknown as ChangeEvent<HTMLInputElement>);
 	};
 
-	// function registerCallbacks(element: HTMLInputElement | null) {
-	// 	if (element) {
-	// 		element.onchange = handleChange;
-	// 	}
-	// }
+	function registerCallbacks(element: HTMLInputElement | null) {
+		if (element) {
+			element.onchange = handleChange;
+		}
+	}
 
 	return (
 		<div
@@ -114,7 +114,7 @@ export const NumberInput: FC<NumberInputProps> = ({
 					<input
 						className={`text-center ty-color-${color} border-radius-${radius} ${inputClass}`}
 						disabled={disabled}
-						// ref={registerCallbacks}
+						ref={registerCallbacks}
 						minLength={minLength}
 						maxLength={maxLength}
 						min={min}
@@ -127,7 +127,7 @@ export const NumberInput: FC<NumberInputProps> = ({
 							height: `calc(${height} - 2px)`,
 						}}
 						value={inputValue}
-						onChange={handleChange}
+						onChange={handleInput}
 						{...props}
 					/>
 				</span>
