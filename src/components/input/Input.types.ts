@@ -41,7 +41,6 @@ export interface InputProps {
 	suffix?: React.ReactNode;
 	type?: React.HTMLInputTypeAttribute;
 	autoFocus?: boolean;
-	id?: string;
 	onChange?: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
 	onInput?: FormEventHandler<HTMLInputElement | HTMLTextAreaElement>;
 	onKeyUp?: KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>;
