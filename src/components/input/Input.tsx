@@ -47,7 +47,6 @@ ${disabled ? 'disabled' : ''} ${
 			)}
 			<div role="none" className={wrapper_class} style={{ width, height }}>
 				<InputTag
-					id={props.id}
 					tabIndex={0}
 					// eslint-disable-next-line @typescript-eslint/no-explicit-any
 					ref={(node: any) => {
