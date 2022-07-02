@@ -7,6 +7,7 @@ import {
 import { Color } from '../types';
 
 export interface InputProps {
+	id?: string;
 	value?: string | number;
 	defaultValue?: string | number;
 	name?: string;

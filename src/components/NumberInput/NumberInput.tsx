@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC, useState } from 'react';
+import React, { ChangeEvent, FC } from 'react';
 import { NumberInputProps } from './NumberInput.types';
 
 export const NumberInput: FC<NumberInputProps> = ({
@@ -9,23 +9,25 @@ export const NumberInput: FC<NumberInputProps> = ({
 	maxLength,
 	min,
 	minLength,
-	minusColor,
 	placeholder,
-	plusColor,
+	color,
+	radius,
 	required,
 	step,
 	value,
+	changeValue,
 	error,
 	tyClass,
+	inputClass,
 	width,
 	onChange,
 	...props
 }) => {
-	const [inputValue, setInputValue] = useState(value || '');
 	tyClass = tyClass || '';
+	inputClass = inputClass || '';
 	height = height || '45px';
-	plusColor = plusColor || 'light';
-	minusColor = minusColor || 'light';
+	color = color || 'primary';
+	radius = radius || 5;
 
 	const plusDisabled = () => {
 		return max && value && max <= value;
@@ -36,36 +38,36 @@ export const NumberInput: FC<NumberInputProps> = ({
 
 	const handlePlusClick = () => {
 		if (disabled) return;
-		if (typeof inputValue !== 'number') {
+		if (typeof value !== 'number') {
 			if (typeof min === 'number') {
-				setInputValue(min);
-			} else setInputValue(0);
+				changeValue(min);
+			} else changeValue(0);
 		} else {
-			let v = +inputValue;
+			let v = +value;
 			v += step || 1;
 			if (typeof max === 'number' && v > max) v = Number(max);
-			setInputValue(v);
+			changeValue(v);
 		}
 	};
 	const handleMinusClick = () => {
 		if (disabled) return;
-		if (typeof inputValue !== 'number') {
+		if (typeof value !== 'number') {
 			if (typeof min === 'number') {
-				setInputValue(min);
-			} else setInputValue(0);
+				changeValue(min);
+			} else changeValue(0);
 		} else {
-			let v = +inputValue;
+			let v = +value;
 			v -= step || 1;
 			if (typeof min === 'number' && v < min) v = min;
-			setInputValue(v);
+			changeValue(v);
 		}
 	};
 
 	const handleInput = (e: ChangeEvent) => {
 		if ((e.target as HTMLInputElement).value) {
-			setInputValue(Number((e.target as HTMLInputElement).value));
+			changeValue(Number((e.target as HTMLInputElement).value));
 		} else {
-			setInputValue('');
+			changeValue('');
 		}
 	};
 
@@ -73,7 +75,7 @@ export const NumberInput: FC<NumberInputProps> = ({
 		let temp = Number((e.target as HTMLInputElement).value);
 		if (typeof max === 'number' && temp > max) temp = max;
 		if (typeof min === 'number' && temp < min) temp = min;
-		setInputValue(temp);
+		changeValue(temp);
 		const event = { target: { value: temp } };
 		onChange(event as unknown as ChangeEvent<HTMLInputElement>);
 	};
@@ -97,19 +99,20 @@ export const NumberInput: FC<NumberInputProps> = ({
 			)}
 			<div
 				role="none"
-				className="input-number-wrapper"
+				className={`input-number-wrapper ty-border ty-border-color-${color} border-radius-${radius}`}
 				style={{ width, height }}
 			>
 				<span
-					className={`increase ty-flex align-items-center ty-space-between ty-bg-${plusColor} ${
+					className={`increase ty-flex align-items-center ty-space-between ty-color-${color} ${
 						plusDisabled() ? 'disabled' : ''
 					}`}
 					onClick={handlePlusClick}
 				>
-					<i className="ty-icon ty-icon-add-outline fs-12 full-width" />
+					<i className="ty-icon ty-icon-add-outline fs-24 full-width" />
 				</span>
 				<span className="input-content">
 					<input
+						className={`text-center ty-color-${color} border-radius-${radius} ${inputClass}`}
 						disabled={disabled}
 						ref={registerCallbacks}
 						minLength={minLength}
@@ -119,19 +122,22 @@ export const NumberInput: FC<NumberInputProps> = ({
 						step={step}
 						type="number"
 						placeholder={placeholder}
-						style={{ lineHeight: height, height: `calc(${height} - 2px)` }}
-						value={inputValue}
+						style={{
+							lineHeight: height,
+							height: `calc(${height} - 2px)`,
+						}}
+						value={value || ''}
 						onChange={handleInput}
 						{...props}
 					/>
 				</span>
 				<span
-					className={`decrease ty-flex align-items-center ty-space-between ty-bg-${minusColor} ${
+					className={`decrease ty-flex align-items-center ty-space-between ty-color-${color} ${
 						minusDisabled() ? 'disabled' : ''
 					}`}
 					onClick={handleMinusClick}
 				>
-					<i className="ty-icon ty-icon-minus-outline fs-12 full-width" />
+					<i className="ty-icon ty-icon-minus-outline fs-24 full-width" />
 				</span>
 			</div>
 		</div>
