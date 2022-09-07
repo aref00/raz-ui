@@ -41,19 +41,19 @@ Color.args = {
 	radius: 5,
 	width: '100px',
 	height: '50px',
-	tyClass: 'm-2 p-5',
+	className: 'm-2 p-5',
 	children: 'Skeleton Content',
 };
 
 export const FullWidth = Template.bind({});
 FullWidth.args = {
 	width: '100%',
-	tyClass: 'm-2 py-2',
+	className: 'm-2 py-2',
 };
 
 export const DarkTheme = DarkTemplate.bind({});
 DarkTheme.args = {
 	width: '500px',
 	height: '80px',
-	tyClass: 'm-2 py-2',
+	className: 'm-2 py-2',
 };

@@ -9,7 +9,7 @@ export const Tabs: FC<TabProps> = ({
 	borderColor,
 	defaultColor,
 	activeColor,
-	tyClass,
+	className,
 	onChange,
 }) => {
 	const [state, setState] = useState({
@@ -26,7 +26,7 @@ export const Tabs: FC<TabProps> = ({
 					active: state.active,
 					defaultColor: defaultColor || 'text-primary',
 					activeColor: activeColor || 'text-primary',
-					class: tyClass || '',
+					class: className || '',
 					onChange,
 					setState,
 					tabs,

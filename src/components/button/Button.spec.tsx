@@ -37,7 +37,7 @@ describe('Running Test for Tayeh Button', () => {
 		expect(node?.className).toContain('outline');
 	});
 	test('Check Button TyClass', () => {
-		render(<Button tyClass="test-class">Tayeh button</Button>);
+		render(<Button className="test-class">Tayeh button</Button>);
 		const node = screen.queryByRole('button', { name: 'Tayeh button' });
 		expect(node?.className).toContain('test-class');
 	});

@@ -23,7 +23,7 @@ const DarkTemplate: Story<ButtonProps[]> = (args) => (
 export const Primary = Template.bind({});
 Primary.args = {
 	color: 'primary',
-	tyClass: 'px-3 px-sm-4 py-1 py-sm-2 fs-12 fs-sm-14 fs-md-16',
+	className: 'px-3 px-sm-4 py-1 py-sm-2 fs-12 fs-sm-14 fs-md-16',
 	disabled: false,
 	children: <span>test</span>,
 };
@@ -31,7 +31,7 @@ Primary.args = {
 export const Secondary = Template.bind({});
 Secondary.args = {
 	color: 'secondary',
-	tyClass: 'px-3 px-sm-4 py-1 py-sm-2 fs-12 fs-sm-14 fs-md-16',
+	className: 'px-3 px-sm-4 py-1 py-sm-2 fs-12 fs-sm-14 fs-md-16',
 	disabled: false,
 	children: 'Secondary Button',
 };
@@ -39,7 +39,7 @@ Secondary.args = {
 export const Disabled = Template.bind({});
 Disabled.args = {
 	disabled: true,
-	tyClass: 'px-4 py-2',
+	className: 'px-4 py-2',
 	children: 'Disabled',
 };
 
@@ -47,21 +47,21 @@ export const Small = Template.bind({});
 Small.args = {
 	disabled: false,
 	children: 'Small',
-	tyClass: 'fs-10 px-2 py-1',
+	className: 'fs-10 px-2 py-1',
 };
 
 export const Medium = Template.bind({});
 Medium.args = {
 	disabled: false,
 	children: 'Medium',
-	tyClass: 'fs-12 px-3 py-2',
+	className: 'fs-12 px-3 py-2',
 };
 
 export const Large = Template.bind({});
 Large.args = {
 	disabled: false,
 	children: 'Large',
-	tyClass: 'fs-16 px-5 py-3',
+	className: 'fs-16 px-5 py-3',
 };
 
 export const Outline = Template.bind({});
@@ -69,7 +69,7 @@ Outline.args = {
 	disabled: false,
 	layout: 'outline',
 	children: 'Outline',
-	tyClass: 'px-4 py-2',
+	className: 'px-4 py-2',
 	width: '100px',
 };
 
@@ -83,7 +83,7 @@ Clear.args = {
 export const Icon = Template.bind({});
 Icon.args = {
 	disabled: false,
-	tyClass: 'ty-icon ty-icon-share',
+	className: 'ty-icon ty-icon-share',
 	layout: 'clear',
 };
 
@@ -93,12 +93,12 @@ DarkTheme.args = [
 		children: 'Button Content',
 	},
 	{
-		tyClass: 'ty-icon ty-icon-cart px-5 py-2',
+		className: 'ty-icon ty-icon-cart px-5 py-2',
 		layout: 'clear',
 	},
 	{
 		disabled: false,
-		tyClass: 'ty-icon ty-icon-cart',
+		className: 'ty-icon ty-icon-cart',
 		layout: 'clear',
 		children: 'Button Content',
 	},

@@ -21,7 +21,7 @@ export interface NumberInputProps {
 	error?: string;
 	rows?: number;
 	cols?: number;
-	tyClass?: string;
+	className?: string;
 	color?: Color;
 	radius?: number;
 	inputClass?: string;

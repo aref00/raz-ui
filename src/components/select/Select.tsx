@@ -91,7 +91,7 @@ export const Select: FC<SelectProps> = ({
 						width={width}
 						height={height}
 						className="text-justify px-3"
-						color="contrast-secondary"
+						color="text"
 					>
 						{o.label}
 					</Button>

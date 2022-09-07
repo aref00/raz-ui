@@ -45,7 +45,7 @@ describe('Running Test for Tayeh Tabs', () => {
 			},
 		];
 		const fn = jest.fn();
-		render(<Tabs tyClass="custom-class" tabs={tabs} onChange={fn}></Tabs>);
+		render(<Tabs className="custom-class" tabs={tabs} onChange={fn}></Tabs>);
 		const node = screen.getByRole('tab');
 		expect(node).toHaveClass('custom-class');
 	});

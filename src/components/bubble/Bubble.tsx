@@ -8,12 +8,12 @@ export const Bubble: FC<BubbleProps> = ({
 	replyTo,
 	footer,
 	isMe,
-	tyClass,
+	className,
 	children,
 }) => {
 	color = color || 'primary';
 	replyColor = replyColor || 'secondary';
-	tyClass = tyClass || '';
+	className = className || '';
 	const side = isMe ? 'start' : 'end';
 	return (
 		<div className={`ty-flex ty-flex-col align-items-${side}`}>
@@ -21,7 +21,7 @@ export const Bubble: FC<BubbleProps> = ({
 				role="dialog"
 				className={`ty-bubble text-justify border-radius-${
 					radius || 10
-				} ty-bg-${color} ty-bubble-${side} ${tyClass}`}
+				} ty-bg-${color} ty-bubble-${side} ${className}`}
 			>
 				{replyTo && (
 					<div className={`full-width ty-bg-${replyColor}`}>{replyTo}</div>

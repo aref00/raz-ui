@@ -12,6 +12,6 @@ export interface CardProps {
 		minHeight?: string;
 		maxHeight?: string;
 	};
-	tyClass?: string;
+	className?: string;
 	onClick?: MouseEventHandler;
 }

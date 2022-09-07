@@ -17,13 +17,13 @@ export const NumberInput: FC<NumberInputProps> = ({
 	value,
 	changeValue,
 	error,
-	tyClass,
+	className,
 	inputClass,
 	width,
 	onChange,
 	...props
 }) => {
-	tyClass = tyClass || '';
+	className = className || '';
 	inputClass = inputClass || '';
 	height = height || '45px';
 	color = color || 'primary';
@@ -90,7 +90,7 @@ export const NumberInput: FC<NumberInputProps> = ({
 		<div
 			className={`inline-block ty-input ty-input-number ${
 				disabled ? 'disabled' : ''
-			} ${tyClass}`}
+			} ${className}`}
 		>
 			{label && (
 				<p className={`fs-12 fs-sm-14 mb-1 ${error ? 'ty-color-danger' : ''}`}>

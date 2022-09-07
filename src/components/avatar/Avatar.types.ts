@@ -3,6 +3,6 @@ export interface AvatarProps {
 	maxWidth?: string;
 	minWidth?: string;
 	minHeight?: string;
-	tyClass?: string;
+	className?: string;
 	title?: string;
 }

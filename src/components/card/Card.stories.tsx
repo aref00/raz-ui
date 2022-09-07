@@ -34,25 +34,25 @@ const DarkTemplate: Story<CardProps> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-	tyClass: 'p-4',
+	className: 'p-4',
 };
 
 export const Color = Template.bind({});
 Color.args = {
 	color: 'primary',
 	radius: 10,
-	tyClass: 'p-2',
+	className: 'p-2',
 	children: 'Card Content',
 };
 
 export const Padding = Template.bind({});
 Padding.args = {
-	tyClass: 'p-5',
+	className: 'p-5',
 	children: 'Card Content',
 };
 
 export const DarkTheme = DarkTemplate.bind({});
 DarkTheme.args = {
-	tyClass: 'p-5',
+	className: 'p-5',
 	children: 'Card Content',
 };

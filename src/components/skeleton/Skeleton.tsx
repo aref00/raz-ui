@@ -6,14 +6,14 @@ export const Skeleton: FC<SkeletonProps> = ({
 	color,
 	width,
 	height,
-	tyClass,
+	className,
 	children,
 }) => {
 	return (
 		<section
 			className={`ty-skeleton border-radius-${radius || 15} ty-bg-${
 				color || 'light'
-			} ${tyClass}`}
+			} ${className}`}
 			style={{ width, height }}
 		>
 			{children}

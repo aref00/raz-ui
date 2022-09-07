@@ -7,6 +7,6 @@ export interface RatingProps {
 	defaultColor?: Color;
 	disabled?: boolean;
 	max?: number;
-	tyClass?: string;
+	className?: string;
 	onChange?: (value: number) => void;
 }

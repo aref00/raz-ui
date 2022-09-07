@@ -10,7 +10,7 @@ interface circlePos {
 }
 
 export interface CarouselProps {
-	tyClass?: string;
+	className?: string;
 	dir?: 'rtl' | 'ltr';
 	slices?: number;
 	data: object[];

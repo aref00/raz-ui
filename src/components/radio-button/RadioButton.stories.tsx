@@ -29,5 +29,5 @@ Style.args = {
 		{ value: 'test', label: 'test' },
 		{ value: 'test-2', label: 'test-2' },
 	],
-	tyClass: 'py-3 px-2',
+	className: 'py-3 px-2',
 };

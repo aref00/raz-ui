@@ -17,14 +17,14 @@ export const Color = Template.bind({});
 Color.args = {
 	children: 'Tayeh Bubble',
 	color: 'success',
-	tyClass: 'p-2',
+	className: 'p-2',
 };
 
 export const Reply = Template.bind({});
 Reply.args = {
 	replyTo: <div className="p-2">Hello sir</div>,
 	children: <div className="p-2">Hello to you</div>,
-	tyClass: 'half-width',
+	className: 'half-width',
 };
 
 export const Side = Template.bind({});
@@ -33,5 +33,5 @@ Side.args = {
 	children: <div className="p-2">Hello to you</div>,
 	footer: <div className="fs-8 p-1">footer</div>,
 	isMe: true,
-	tyClass: 'half-width',
+	className: 'half-width',
 };

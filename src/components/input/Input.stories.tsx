@@ -57,7 +57,7 @@ OutlineColor.args = {
 export const FontSize = Template.bind({});
 FontSize.args = {
 	label: 'Label',
-	tyClass: 'fs-16 fw-600',
+	className: 'fs-16 fw-600',
 	inputClass: 'fs-18 fw-800',
 	suffix: <i className="fs-8 fw-100 pl-3">search</i>,
 	placeholder: 'Input Placeholder',
@@ -66,7 +66,7 @@ FontSize.args = {
 export const Prefix = Template.bind({});
 Prefix.args = {
 	label: 'Label',
-	tyClass: 'fs-16 fw-600',
+	className: 'fs-16 fw-600',
 	inputClass: 'fs-18 fw-800',
 	prefix: <i className="fs-8 fw-100 pl-3">search</i>,
 	placeholder: 'Input Placeholder',

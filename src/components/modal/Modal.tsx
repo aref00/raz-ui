@@ -16,7 +16,7 @@ export const Modal: FC<ModalProps> = ({
 	fullscreen,
 	header,
 	footer,
-	tyClass,
+	className,
 	children,
 	onChange,
 	...props
@@ -38,7 +38,7 @@ export const Modal: FC<ModalProps> = ({
 	}, [visible]);
 	//  (() => typeof canExit == 'boolean' ? canExit : true);
 	// const style = {width, minWidth, maxWidth, height, minHeight, maxHeight};
-	tyClass = tyClass || '';
+	className = className || '';
 	return state.visible ? (
 		<div
 			tabIndex={0}
@@ -53,8 +53,8 @@ export const Modal: FC<ModalProps> = ({
 				style={style}
 				color={color}
 				radius={radius}
-				tyClass={`ty-modal-container my-auto ${fullscreen ? 'fullscreen' : ''}
-					${transparent ? 'transparent' : ''} ${tyClass}`}
+				className={`ty-modal-container my-auto ${fullscreen ? 'fullscreen' : ''}
+					${transparent ? 'transparent' : ''} ${className}`}
 				onClick={clickHandler}
 			>
 				<div className="ty-flex ty-space-between">
@@ -65,7 +65,7 @@ export const Modal: FC<ModalProps> = ({
 							<Button
 								layout="clear"
 								color="dark"
-								tyClass="p-2"
+								className="p-2"
 								onClick={(e) => clickHandler(e)(beforeClose)(state)(setState)}
 							>
 								<i className="ty-icon ty-icon-close-circle-outline fs-12 fs-sm-14 fs-md-16">
@@ -79,7 +79,7 @@ export const Modal: FC<ModalProps> = ({
 				{footer && <div className="ty-modal-footer">{footer}</div>}
 			</Card>
 			{/* <div className={` px-1 px-sm-2 py-1 py-sm-2 py-md-3 ty-bg-contrast-primary
-			ty-shadow my-auto border-radius-${radius||15} ${fullscreen?'fullscreen':''} ${transparent?'transparent':''} ${tyClass}`}
+			ty-shadow my-auto border-radius-${radius||15} ${fullscreen?'fullscreen':''} ${transparent?'transparent':''} ${className}`}
 				style={style}>
 					
 			</div> */}

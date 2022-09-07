@@ -36,7 +36,7 @@ Icon.args = {
 		},
 	],
 	onChange: () => null,
-	tyClass: 'fs-32 px-4 py-2',
+	className: 'fs-32 px-4 py-2',
 };
 
 export const Color = Template.bind({});
@@ -60,7 +60,7 @@ Color.args = {
 		},
 	],
 	onChange: () => null,
-	tyClass: 'fs-32 px-4 py-2',
+	className: 'fs-32 px-4 py-2',
 };
 
 export const Label = Template.bind({});
@@ -87,7 +87,7 @@ Label.args = {
 		},
 	],
 	onChange: () => null,
-	tyClass: 'fs-32 px-4 py-2',
+	className: 'fs-32 px-4 py-2',
 };
 
 export const Border = Template.bind({});
@@ -118,7 +118,7 @@ Border.args = {
 		},
 	],
 	onChange: () => null,
-	tyClass: 'fs-20 px-4 py-2',
+	className: 'fs-20 px-4 py-2',
 };
 
 export const WithManyTabs = Template.bind({});
@@ -161,7 +161,7 @@ WithManyTabs.args = {
 		},
 	],
 	onChange: () => null,
-	tyClass: 'fs-20 px-4 py-2',
+	className: 'fs-20 px-4 py-2',
 };
 
 export const disabled = Template.bind({});
@@ -191,5 +191,5 @@ disabled.args = {
 		},
 	],
 	onChange: () => null,
-	tyClass: 'fs-20 px-4 py-2',
+	className: 'fs-20 px-4 py-2',
 };

@@ -22,6 +22,6 @@ Img.args = {
 
 export const Text = Template.bind({});
 Text.args = {
-	tyClass: 'fs-8',
+	className: 'fs-8',
 	children: 'Avatar',
 };

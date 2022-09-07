@@ -27,7 +27,7 @@ describe('Running Test for Tayeh Select', () => {
 				options={[]}
 				onChange={fn}
 				placeholder="Select Content"
-				tyClass="test"
+				className="test"
 			/>,
 		);
 		const node = screen.getByRole('combobox');
@@ -42,7 +42,7 @@ describe('Running Test for Tayeh Select', () => {
 				label="select label"
 				onChange={fn}
 				placeholder="Select Content"
-				tyClass="test"
+				className="test"
 			/>,
 		);
 		const label_node = screen.getByText('select label');
@@ -56,7 +56,7 @@ describe('Running Test for Tayeh Select', () => {
 				options={[]}
 				onChange={fn}
 				placeholder="Select Content"
-				tyClass="test"
+				className="test"
 			/>,
 		);
 		const node = screen.getByRole('textbox');
@@ -82,7 +82,7 @@ describe('Running Test for Tayeh Select', () => {
 				options={[{ label: 'test-2', value: 'test' }]}
 				onChange={fn}
 				placeholder="Select Content"
-				tyClass="test"
+				className="test"
 			/>,
 		);
 		const node = screen.getByRole('textbox');
@@ -100,7 +100,7 @@ describe('Running Test for Tayeh Select', () => {
 				options={[{ label: 'test', value: 'test' }]}
 				onChange={fn}
 				placeholder="Select Content"
-				tyClass="test"
+				className="test"
 			/>,
 		);
 		const node = screen.getByRole('textbox');
@@ -115,7 +115,7 @@ describe('Running Test for Tayeh Select', () => {
 				options={[{ label: 'test', value: 'test' }]}
 				onChange={fn}
 				placeholder="Select Content"
-				tyClass="test"
+				className="test"
 			/>,
 		);
 		const node = screen.getByRole('switch');
@@ -134,7 +134,7 @@ describe('Running Test for Tayeh Select', () => {
 				options={[{ label: 'test', value: 'test' }]}
 				onChange={fn}
 				placeholder="Select Content"
-				tyClass="test"
+				className="test"
 			/>,
 		);
 		const node = screen.getByRole('option');
@@ -152,7 +152,7 @@ describe('Running Test for Tayeh Select', () => {
 				options={[{ label: 'test', value: 'test' }]}
 				onChange={fn}
 				placeholder="Select Content"
-				tyClass="test"
+				className="test"
 			/>,
 		);
 		const input_node = screen.getByRole('textbox');
@@ -162,7 +162,7 @@ describe('Running Test for Tayeh Select', () => {
 
 	test('Check Select Clear', () => {
 		const fn = jest.fn();
-		render(<Select clear options={[]} onChange={fn} tyClass="test" />);
+		render(<Select clear options={[]} onChange={fn} className="test" />);
 		const input_node = screen.getByRole('none');
 		expect(input_node).toHaveClass('--border-clear');
 		expect(fn).not.toBeCalled();
@@ -175,7 +175,7 @@ describe('Running Test for Tayeh Select', () => {
 				options={[]}
 				onChange={fn}
 				placeholder="Select Content"
-				tyClass="test"
+				className="test"
 			/>,
 		);
 		const node = screen.getByRole('textbox');

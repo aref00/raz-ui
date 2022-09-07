@@ -22,5 +22,5 @@ export interface ModalProps {
 	footer?: ReactNode;
 	beforeClose?: () => boolean;
 	onChange?: (visible: boolean) => void;
-	tyClass?: string;
+	className?: string;
 }

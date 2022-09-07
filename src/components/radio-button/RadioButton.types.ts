@@ -5,6 +5,6 @@ export interface RadioButtonProps {
 	value?: any;
 	width?: string;
 	activeColor?: Color;
-	tyClass?: string;
+	className?: string;
 	onChange: (value: string) => void;
 }

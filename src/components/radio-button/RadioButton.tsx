@@ -5,12 +5,12 @@ export const RadioButton: FC<RadioButtonProps> = ({
 	value,
 	options,
 	width,
-	tyClass,
+	className,
 	onChange,
 	...props
 }) => {
 	const [currentValue, setCurrentValue] = useState(value);
-	tyClass = `ty-radio-button ${tyClass || ''}`;
+	className = `ty-radio-button ${className || ''}`;
 	width = width || '16px';
 	const inner_width = +width.replace('px', '') - 1.6 + 'px';
 	props.activeColor = props.activeColor || 'primary';
@@ -29,7 +29,7 @@ export const RadioButton: FC<RadioButtonProps> = ({
 						onClick={() => handleChange(o.value)}
 						key={i}
 						role="radio"
-						className={`ty-radio-row ty-flex ty-space-between align-items-center ${tyClass} ${
+						className={`ty-radio-row ty-flex ty-space-between align-items-center ${className} ${
 							active ? 'active' : ''
 						}`}
 					>

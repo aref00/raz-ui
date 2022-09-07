@@ -27,7 +27,7 @@ export interface CurrencyInputProps {
 	// color?: Color;
 	// placeholderColor?: Color;
 	outlineColor?: Color;
-	tyClass?: string;
+	className?: string;
 	inputClass?: string;
 	suffix?: React.ReactNode;
 	onChange: ChangeEventHandler;

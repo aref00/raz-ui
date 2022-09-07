@@ -3,7 +3,7 @@ import { CarouselProps } from './Carousel.types';
 import { Button } from '../button/Button';
 
 export const Carousel: FC<CarouselProps> = ({
-	tyClass,
+	className,
 	data,
 	slices,
 	SlideContent,
@@ -20,7 +20,7 @@ export const Carousel: FC<CarouselProps> = ({
 	const [orient, setOrient] = useState(0);
 	const [isHovered, setHovered] = useState(false);
 
-	tyClass = tyClass || '';
+	className = className || '';
 	circleClass = circleClass || '';
 	rightClass = rightClass || '';
 	leftClass = leftClass || '';
@@ -65,7 +65,7 @@ export const Carousel: FC<CarouselProps> = ({
 	return (
 		<div className="slider-father" style={{ direction: dir }}>
 			<div
-				className={`Slider ${tyClass}`}
+				className={`Slider ${className}`}
 				onMouseEnter={() => setHovered(true)}
 				onMouseLeave={() => setHovered(false)}
 			>
@@ -91,13 +91,13 @@ export const Carousel: FC<CarouselProps> = ({
 			{arrows && (
 				<>
 					<Button
-						tyClass={`click-icon mini-arrows mini-right ${rightClass}`}
+						className={`click-icon mini-arrows mini-right ${rightClass}`}
 						onClick={rightHandler}
 					>
 						<i className="ty-icon ty-icon-arrow-right-outline ty-color-dark fs-22" />
 					</Button>
 					<Button
-						tyClass={`click-icon mini-arrows mini-left ${leftClass}`}
+						className={`click-icon mini-arrows mini-left ${leftClass}`}
 						onClick={leftHandler}
 					>
 						<i className="ty-icon ty-icon-arrow-left-outline ty-color-dark fs-22" />

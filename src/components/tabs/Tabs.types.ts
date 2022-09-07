@@ -7,6 +7,6 @@ export interface TabProps {
 	borderWidth?: string;
 	defaultColor?: Color;
 	activeColor?: Color;
-	tyClass?: string;
+	className?: string;
 	onChange: (id?: string) => void;
 }

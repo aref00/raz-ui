@@ -5,5 +5,5 @@ export interface SkeletonProps {
 	color?: Color;
 	width?: string;
 	height?: string;
-	tyClass?: string;
+	className?: string;
 }

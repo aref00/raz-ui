@@ -22,7 +22,7 @@ const DarkTemplate: Story<RatingProps> = (args) => (
 
 export const Default = Template.bind({});
 Default.args = {
-	tyClass: 'p-2',
+	className: 'p-2',
 };
 
 export const Value = Template.bind({});

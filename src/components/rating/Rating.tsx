@@ -7,7 +7,7 @@ export const Rating: FC<RatingProps> = ({
 	value,
 	readonly,
 	disabled,
-	tyClass,
+	className,
 	activeColor,
 	defaultColor,
 	onChange,
@@ -29,7 +29,7 @@ export const Rating: FC<RatingProps> = ({
 	});
 	return (
 		<div
-			className={`ty-flex ty-gap-1 ${tyClass} ${
+			className={`ty-flex ty-gap-1 ${className} ${
 				disabled ? 'ty-opacity-50' : ''
 			}`}
 		>

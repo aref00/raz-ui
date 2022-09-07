@@ -46,7 +46,7 @@ export function generateTabs(params: Params) {
 					role="tab"
 					disabled={tab.disabled}
 					color={isActive ? params.activeColor : params.defaultColor}
-					tyClass={params.class}
+					className={params.class}
 					onClick={(e) => eventHandler(e)({ ...passDown, active: id })}
 					aria-selected={isActive ? 'true' : 'false'}
 					aria-controls={id}

@@ -7,5 +7,5 @@ export interface BubbleProps {
 	replyTo?: React.ReactNode;
 	footer?: React.ReactNode;
 	isMe?: boolean;
-	tyClass?: string;
+	className?: string;
 }

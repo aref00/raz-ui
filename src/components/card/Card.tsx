@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 import { CardProps } from './Card.types';
 
-export const Card: FC<CardProps> = ({
+export const Card: FC<PropsWithChildren<CardProps>> = ({
 	color,
 	radius,
-	tyClass,
+	className,
 	children,
 	...props
 }) => {
@@ -12,8 +12,8 @@ export const Card: FC<CardProps> = ({
 	return (
 		<div
 			tabIndex={0}
-			className={`ty-card ty-shadow border-radius-${radius}
-			ty-bg-${color || 'contrast-primary'} ${tyClass || ''}`}
+			className={`raz-card raz-shadow border-radius-${radius}
+			raz-bg-${color || 'contrast-primary'} ${className || ''}`}
 			{...props}
 		>
 			{children}
