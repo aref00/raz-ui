@@ -9,9 +9,9 @@ export const Avatar: FC<PropsWithChildren<AvatarProps>> = ({
 }) => {
 	props.width = props.width || '45px';
 	return (
-		<div style={props} className={`ty-avatar ${className}`} title={title}>
-			<div className="ty-avatar-wrapper">
-				<div className="ty-avatar-content ty-flex ty-justify-center align-items-center">
+		<div style={props} className={`raz-avatar ${className}`} title={title}>
+			<div className="raz-avatar-wrapper">
+				<div className="raz-avatar-content raz-flex raz-justify-center align-items-center">
 					{children}
 				</div>
 			</div>
