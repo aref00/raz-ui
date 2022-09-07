@@ -35,7 +35,7 @@ export interface InputProps {
 	color?: Color;
 	// placeholderColor?: Color;
 	outlineColor?: Color;
-	tyClass?: string;
+	className?: string;
 	inputClass?: string;
 	tag?: 'input' | 'textarea';
 	prefix?: React.ReactNode;

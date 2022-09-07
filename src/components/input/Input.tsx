@@ -7,7 +7,7 @@ export const Input: FC<InputProps> = ({
 	height,
 	clear,
 	borderBottom,
-	tyClass,
+	className,
 	radius,
 	dir,
 	error,
@@ -24,27 +24,27 @@ export const Input: FC<InputProps> = ({
 }) => {
 	const InputTag: keyof JSX.IntrinsicElements = tag || 'input';
 	const [showPassword, setShowPassword] = useState(false);
-	tyClass = tyClass || '';
-	const wrapper_class = `ty-input-wrapper ty-flex align-items-center ty-justify-center border-radius-${
+	className = className || '';
+	const wrapper_class = `raz-input-wrapper raz-flex align-items-center raz-justify-center border-radius-${
 		radius || 4
 	} \
-${disabled ? '' : `ty-hover-outline-${outlineColor || 'primary'}`} ${
+${disabled ? '' : `raz-hover-outline-${outlineColor || 'primary'}`} ${
 	clear ? '--border-clear' : borderBottom ? '--border-bottom' : ''
 } \
 ${disabled ? 'disabled' : ''} ${
-	error ? 'ty-color-danger ty-border-color-danger' : ''
+	error ? 'raz-color-danger raz-border-color-danger' : ''
 } ${inputClass || ''}`;
 
 	return (
-		<div className={`ty-input ${tyClass}`}>
+		<div className={`raz-input ${className}`}>
 			{label && (
 				<p
-					className={`fs-12 fs-sm-14 ty-input-label mb-1 ${
-						error ? 'ty-color-danger' : ''
+					className={`fs-12 fs-sm-14 raz-input-label mb-1 ${
+						error ? 'raz-color-danger' : ''
 					}`}
 				>
 					{label}
-					<span className="ty-color-danger">{props.required ? '*' : ''}</span>
+					<span className="raz-color-danger">{props.required ? '*' : ''}</span>
 				</p>
 			)}
 			<div role="none" className={wrapper_class} style={{ width, height }}>
@@ -58,7 +58,7 @@ ${disabled ? 'disabled' : ''} ${
 					aria-label={label || props.placeholder}
 					role="textbox"
 					dir={dir}
-					className={`inline-block full-width ty-input px-3 py-2 ty-bg-${color||'input'} ${
+					className={`inline-block full-width raz-input px-3 py-2 raz-bg-${color||'input'} ${
 						inputClass || ''
 					}`}
 					type={type == 'password' ? (showPassword ? 'text' : type) : ''}
@@ -66,7 +66,7 @@ ${disabled ? 'disabled' : ''} ${
 					{...props}
 				/>
 				<div
-					className={`ty-flex ty-justify-center items-align-center ${
+					className={`raz-flex raz-justify-center items-align-center ${
 						dir === 'ltr' ? 'suffix--ltr' : ''
 					}`}
 				>
@@ -74,21 +74,21 @@ ${disabled ? 'disabled' : ''} ${
 					{!suffix && type === 'password' && (
 						<div
 							role="button"
-							className='"ty-flex align-items-center'
+							className='"raz-flex align-items-center'
 							onClick={() => setShowPassword(!showPassword)}
 						>
 							<i
-								className={`ty-icon px-1 ${
+								className={`raz-icon px-1 ${
 									showPassword
-										? 'ty-icon-eye ty-color-primary'
-										: 'ty-icon-eye-slash ty-color-border'
+										? 'raz-icon-eye raz-color-primary'
+										: 'raz-icon-eye-slash raz-color-border'
 								}`}
 							/>
 						</div>
 					)}
 				</div>
 			</div>
-			<div role="alert" className="ty-color-danger fs-12 mt-1" style={{height: '12px'}}>
+			<div role="alert" className="raz-color-danger fs-12 mt-1" style={{height: '12px'}}>
 				{error}
 			</div>
 			{/* {error && (
