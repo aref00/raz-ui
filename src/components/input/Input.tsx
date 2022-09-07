@@ -29,11 +29,11 @@ export const Input: FC<InputProps> = ({
 		radius || 4
 	} \
 ${disabled ? '' : `raz-hover-outline-${outlineColor || 'primary'}`} ${
-	clear ? '--border-clear' : borderBottom ? '--border-bottom' : ''
-} \
+		clear ? '--border-clear' : borderBottom ? '--border-bottom' : ''
+	} \
 ${disabled ? 'disabled' : ''} ${
-	error ? 'raz-color-danger raz-border-color-danger' : ''
-} ${inputClass || ''}`;
+		error ? 'raz-color-danger raz-border-color-danger' : ''
+	} ${inputClass || ''}`;
 
 	return (
 		<div className={`raz-input ${className}`}>
@@ -58,9 +58,9 @@ ${disabled ? 'disabled' : ''} ${
 					aria-label={label || props.placeholder}
 					role="textbox"
 					dir={dir}
-					className={`inline-block full-width raz-input px-3 py-2 raz-bg-${color||'input'} ${
-						inputClass || ''
-					}`}
+					className={`inline-block full-width raz-input px-3 py-2 raz-bg-${
+						color || 'input'
+					} ${inputClass || ''}`}
 					type={type == 'password' ? (showPassword ? 'text' : type) : ''}
 					disabled={disabled}
 					{...props}
@@ -88,7 +88,11 @@ ${disabled ? 'disabled' : ''} ${
 					)}
 				</div>
 			</div>
-			<div role="alert" className="raz-color-danger fs-12 mt-1" style={{height: '12px'}}>
+			<div
+				role="alert"
+				className="raz-color-danger fs-12 mt-1"
+				style={{ height: '12px' }}
+			>
 				{error}
 			</div>
 			{/* {error && (

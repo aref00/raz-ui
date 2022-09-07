@@ -1,4 +1,10 @@
-import React, { FC, PropsWithChildren, useEffect, useRef, useState } from 'react';
+import React, {
+	FC,
+	PropsWithChildren,
+	useEffect,
+	useRef,
+	useState,
+} from 'react';
 import { ModalProps } from './Modal.types';
 import { clickHandler } from './Modal.utils';
 import { Button } from '../button/Button';
