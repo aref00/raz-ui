@@ -5,6 +5,8 @@ export const Input: FC<InputProps> = ({
 	label,
 	width,
 	height,
+	clear,
+	borderBottom,
 	className,
 	radius,
 	dir,
@@ -14,6 +16,7 @@ export const Input: FC<InputProps> = ({
 	type,
 	disabled,
 	tag,
+	outlineColor,
 	inputClass,
 	color,
 	passRef,
@@ -25,12 +28,12 @@ export const Input: FC<InputProps> = ({
 	const wrapper_class = `raz-input-wrapper raz-flex align-items-center raz-justify-center border-radius-${
 		radius || 4
 	} \
-	${disabled ? 'disabled' : ''} ${error ? 'raz-color-danger raz-border-color-danger' : ''} ${
+${disabled ? '' : `raz-hover-outline-${outlineColor || 'primary'}`} ${
+		clear ? '--border-clear' : borderBottom ? '--border-bottom' : ''
+	} \
+${disabled ? 'disabled' : ''} ${error ? 'raz-color-danger raz-border-color-danger' : ''} ${
 		inputClass || ''
 	}`;
-	// ${disabled ? '' : `raz-hover-outline-${outlineColor || 'primary'}`} ${
-	// 		clear ? '--border-clear' : borderBottom ? '--border-bottom' : ''
-	// 	} \
 
 	return (
 		<div className={`raz-input ${className}`}>
