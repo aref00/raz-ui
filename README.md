@@ -1,5 +1,5 @@
-## Tayeh React
-This ui library is used for design and development of tayeh.ir. 
+## Raz React UI kit
+Ui components for react
 
 #### Goals
 - [ ] simplicity 
@@ -8,7 +8,5 @@ This ui library is used for design and development of tayeh.ir.
 #### Usage 
 
 ```
-	npm install tayeh-react
+	npm install raz-ui
 ``` 
-
-Also take a look at our vue library: [tayeh-ui](https://github.com/PchasSoftware/tayeh-ui)

@@ -1,7 +1,7 @@
 {
-  "name": "tayeh-react",
-  "version": "0.0.38",
-  "description": "tayeh react components",
+  "name": "raz-react",
+  "version": "0.0.1",
+  "description": "raz react components",
   "main": "lib/index.js",
   "files": [
     "lib/**/*",
@@ -26,20 +26,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PchasSoftware/tayeh-react.git"
+    "url": "git+https://github.com/aref00/raz-ui.git"
   },
   "keywords": [
-    "tayeh",
+    "raz",
     "ui",
     "react",
     "component"
   ],
-  "author": "Aref Akbari <aref@pchas.ir> (http://pchas.ir/), Saeed Salehi <saeed@pchas.ir>",
+  "author": "Aref Akbari <aref@pchas.ir> (http://pchas.ir/)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PchasSoftware/tayeh-react/issues"
+    "url": "https://github.com/aref00/raz-ui/issues"
   },
-  "homepage": "https://github.com/PchasSoftware/tayeh-react#readme",
+  "homepage": "https://github.com/aref00/raz-ui#readme",
   "devDependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.5",
