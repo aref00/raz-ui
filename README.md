@@ -1,7 +1,7 @@
 ![Raz UI]()
 ## Raz React UI kit
 Ui components for react
-Forked from [tayeh-react](https://github.com/PchasSoftware/tayeh-react)
+Forked from [tayeh-react](https://raw.githubusercontent.com/aref00/raz-ui/master/assets/icon.jpg)
 
 #### Goals
 - [ ] simplicity 
