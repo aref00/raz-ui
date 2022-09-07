@@ -18,26 +18,26 @@ $colors: (
 );
 
 @each $name, $color, $oposite in $colors {
-	.ty-color-#{$name} {
+	.raz-color-#{$name} {
 		color: $color;
 		stroke: $color;
 	}
-	.ty-outline-#{$name}, .ty-hover-outline-#{$name}:active, .ty-hover-outline-#{$name}:hover, .ty-hover-outline-#{$name}:focus-within {
+	.raz-outline-#{$name}, .raz-hover-outline-#{$name}:active, .raz-hover-outline-#{$name}:hover, .raz-hover-outline-#{$name}:focus-within {
 		outline: $color auto 1px;
 	}
-	.ty-bg-#{$name}, .ty-outline-#{$name}.ty-hoverable:not(.disable):hover {
+	.raz-bg-#{$name}, .raz-outline-#{$name}.raz-hoverable:not(.disable):hover {
 		background-color: $color;
 		color: $oposite;
 	}
-	.ty-border-color-#{$name} {
+	.raz-border-color-#{$name} {
 		border-color: $color !important;
 	}
 }
-.ty-shadow {
+.raz-shadow {
 	box-shadow: 0px 4px 8px rgba(240,242,246,0.8);
 }
 
-.ty-color-rating {
+.raz-color-rating {
 	color: #FFA800;
 }
 
@@ -47,7 +47,7 @@ $colors: (
 
 $i: 0;
 @while $i < 1 {
-	.ty-opacity-#{$i*100} {
+	.raz-opacity-#{$i*100} {
 		opacity: #{$i};
 	}
   $i: $i + 0.1;
