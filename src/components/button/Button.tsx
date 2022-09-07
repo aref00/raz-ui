@@ -20,7 +20,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
 	color,
 	outlineColor,
 	radius,
-	tyClass,
+	className,
 	onClick,
 	...props
 }) => {
@@ -30,7 +30,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
 				layout,
 				color,
 				outlineColor,
-			)} ${disabled ? 'disabled' : ''} ${tyClass || ''}`}
+			)} ${disabled ? 'disabled' : ''} ${className || ''}`}
 			style={{ width, height, borderRadius: (radius || 5) + 'px' }}
 			onClick={onClick}
 			disabled={disabled}

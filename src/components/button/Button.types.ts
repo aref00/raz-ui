@@ -8,7 +8,7 @@ export interface ButtonProps {
 	layout?: 'simple' | 'outline' | 'clear';
 	role?: AriaRole;
 	radius?: number;
-	tyClass?: string;
+	className?: string;
 	type?: 'button' | 'submit' | 'reset';
 	'aria-selected'?: 'true' | 'false';
 	'aria-controls'?: string;
