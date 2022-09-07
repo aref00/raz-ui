@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 import { ButtonProps } from './Button.types';
 
 function typeCss(
@@ -11,7 +11,7 @@ function typeCss(
 		return `outline ty-color-${color} ty-border-color-${outlineColor}`;
 	return `simple ty-bg-${color}`;
 }
-export const Button: FC<ButtonProps> = ({
+export const Button: FC<PropsWithChildren<ButtonProps>> = ({
 	disabled,
 	children,
 	width,
