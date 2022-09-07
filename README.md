@@ -11,17 +11,17 @@ Forked from [tayeh-react](https://github.com/PchasSoftware/tayeh-react)
 #### Usage 
 Installing via npm
 ```
-	npm install --save raz-ui
+  npm install --save raz-ui
 ``` 
   
 Installing via pnpm
 ```
-	pnpm add raz-ui
+  pnpm add raz-ui
 ```   
 
 Installing via pnpm
 ```
-	yarn add raz-ui
+  yarn add raz-ui
 ```   
 
 #### Components
