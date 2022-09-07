@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 import { BubbleProps } from './Bubble.types';
 
-export const Bubble: FC<BubbleProps> = ({
+export const Bubble: FC<PropsWithChildren<BubbleProps>> = ({
 	color,
 	replyColor,
 	radius,

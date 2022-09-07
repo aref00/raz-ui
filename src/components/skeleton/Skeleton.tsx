@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 import { SkeletonProps } from './Skeleton.types';
 
-export const Skeleton: FC<SkeletonProps> = ({
+export const Skeleton: FC<PropsWithChildren<SkeletonProps>> = ({
 	radius,
 	color,
 	width,

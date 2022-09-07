@@ -24,8 +24,8 @@ export const Tabs: FC<TabProps> = ({
 			>
 				{generateTabs({
 					active: state.active,
-					defaultColor: defaultColor || 'text-primary',
-					activeColor: activeColor || 'text-primary',
+					defaultColor: defaultColor || 'text',
+					activeColor: activeColor || 'text',
 					class: className || '',
 					onChange,
 					setState,

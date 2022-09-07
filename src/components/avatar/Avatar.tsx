@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 import { AvatarProps } from './Avatar.types';
 
-export const Avatar: FC<AvatarProps> = ({
+export const Avatar: FC<PropsWithChildren<AvatarProps>> = ({
 	className,
 	children,
 	title,

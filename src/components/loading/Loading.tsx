@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 import { LoadingProps } from './Loading.types';
 
-export const Loading: FC<LoadingProps> = ({
+export const Loading: FC<PropsWithChildren<LoadingProps>> = ({
 	show,
 	color,
 	fullscreen,
