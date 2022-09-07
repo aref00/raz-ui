@@ -9,7 +9,17 @@ Forked from [tayeh-react](https://github.com/PchasSoftware/tayeh-react)
 - [ ] precision 
 
 #### Usage 
-
+Installing via npm
 ```
-	npm install raz-ui
+	npm install --save raz-ui
 ``` 
+  
+Installing via pnpm
+```
+	pnpm add raz-ui
+```   
+
+Installing via pnpm
+```
+	yarn add raz-ui
+```   
