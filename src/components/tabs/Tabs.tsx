@@ -18,10 +18,7 @@ export const Tabs: FC<TabProps> = ({
 	const getStyle = tabOptions(tabs);
 	return (
 		<div className="ty-tabs" dir="rtl">
-			<ul
-				role="tablist"
-				className="ty-tabs-list ty-flex ty-space-around ofx-auto ofy-hidden"
-			>
+			<ul role="tablist" className="ty-tabs-list ty-flex ty-space-around ofx-auto ofy-hidden">
 				{generateTabs({
 					active: state.active,
 					defaultColor: defaultColor || 'text',
@@ -36,8 +33,7 @@ export const Tabs: FC<TabProps> = ({
 				{state.active && (
 					<div
 						style={getStyle(state.active)}
-						className="full-height ty-flex ty-justify-center"
-					>
+						className="full-height ty-flex ty-justify-center">
 						<div
 							style={{ width: borderWidth || '40px' }}
 							className={`border-radius-5 raz-bg-${borderColor || 'primary'}`}

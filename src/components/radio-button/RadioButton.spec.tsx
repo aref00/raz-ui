@@ -24,12 +24,7 @@ describe('Running Test for Tayeh RadioButton', () => {
 		const fn = jest.fn().mockImplementation((value) => {
 			expect(value).toBe('test');
 		});
-		render(
-			<RadioButton
-				onChange={fn}
-				options={[{ label: 'test', value: 'test' }]}
-			/>,
-		);
+		render(<RadioButton onChange={fn} options={[{ label: 'test', value: 'test' }]} />);
 		const node = screen.getByRole('button');
 		expect(node?.className).toContain('ty-border-color-gray');
 		expect(node?.style.width).toBe('16px');
@@ -38,12 +33,7 @@ describe('Running Test for Tayeh RadioButton', () => {
 
 	test('Check RadioButton onChange', () => {
 		const fn = jest.fn();
-		render(
-			<RadioButton
-				onChange={fn}
-				options={[{ label: 'test', value: 'test' }]}
-			/>,
-		);
+		render(<RadioButton onChange={fn} options={[{ label: 'test', value: 'test' }]} />);
 		const node = screen.getByRole('radio');
 		act(() => node.click());
 		const button = screen.getByRole('button');

@@ -11,10 +11,7 @@ export default {
 const Template: Story = (args) => (
 	<div {...args}>
 		<div className="raz-color-light">Content</div>
-		<div
-			className="raz-bg-contrast-primary"
-			style={{ width: '100px', height: '100px' }}
-		>
+		<div className="raz-bg-contrast-primary" style={{ width: '100px', height: '100px' }}>
 			with bg
 		</div>
 		<div className="raz-bg-light" style={{ width: '100px', height: '100px' }}>

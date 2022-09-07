@@ -6,17 +6,13 @@ type Params = {
 	activeColor: Color;
 	active?: string;
 	class: string;
-	setState: React.Dispatch<
-		React.SetStateAction<{ active: string | undefined }>
-	>;
+	setState: React.Dispatch<React.SetStateAction<{ active: string | undefined }>>;
 	onChange: (id?: string) => void;
 	tabs: Tab[];
 };
 type SetNewTab = {
 	active?: string;
-	setState: React.Dispatch<
-		React.SetStateAction<{ active: string | undefined }>
-	>;
+	setState: React.Dispatch<React.SetStateAction<{ active: string | undefined }>>;
 	onChange: (id?: string) => void;
 };
 function eventHandler(e: MouseEvent) {
@@ -36,11 +32,7 @@ export function generateTabs(params: Params) {
 		const id = tab.id || '' + i;
 		const isActive = id == params.active;
 		return (
-			<li
-				role="presentation"
-				key={id}
-				className={`${isActive ? 'fw-bolder' : ''}`}
-			>
+			<li role="presentation" key={id} className={`${isActive ? 'fw-bolder' : ''}`}>
 				<Button
 					layout="clear"
 					role="tab"
@@ -49,13 +41,8 @@ export function generateTabs(params: Params) {
 					className={params.class}
 					onClick={(e) => eventHandler(e)({ ...passDown, active: id })}
 					aria-selected={isActive ? 'true' : 'false'}
-					aria-controls={id}
-				>
-					<i
-						className={`ty-icon ty-icon-${tab.icon}${
-							isActive ? '' : '-outline'
-						}`}
-					/>
+					aria-controls={id}>
+					<i className={`ty-icon ty-icon-${tab.icon}${isActive ? '' : '-outline'}`} />
 					{tab.label ? ' ' + tab.label : ''}
 				</Button>
 			</li>

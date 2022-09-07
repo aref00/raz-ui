@@ -45,7 +45,7 @@ describe('Running Test for Tayeh Modal', () => {
 		render(
 			<Modal beforeClose={fn} visible>
 				Modal Content
-			</Modal>,
+			</Modal>
 		);
 		const node = screen.getByText('Modal Content');
 		const card = node?.parentElement;
@@ -62,7 +62,7 @@ describe('Running Test for Tayeh Modal', () => {
 		render(
 			<Modal transparent visible>
 				Modal Content
-			</Modal>,
+			</Modal>
 		);
 		const node = screen.getByText('Modal Content');
 		const card = node?.parentElement;
@@ -75,7 +75,7 @@ describe('Running Test for Tayeh Modal', () => {
 		render(
 			<Modal footer={'footer'} visible>
 				Modal Content
-			</Modal>,
+			</Modal>
 		);
 		const node = screen.getByText('footer');
 		expect(node).toHaveClass('ty-modal-footer');
@@ -85,7 +85,7 @@ describe('Running Test for Tayeh Modal', () => {
 		render(
 			<Modal header={'header'} visible>
 				Modal Content
-			</Modal>,
+			</Modal>
 		);
 		const node = screen.getByText('header');
 		expect(node).toHaveClass('ty-space-between');
@@ -95,7 +95,7 @@ describe('Running Test for Tayeh Modal', () => {
 		render(
 			<Modal title="title" visible>
 				Modal Content
-			</Modal>,
+			</Modal>
 		);
 		const node = screen.getByText('title');
 		expect(node).toHaveClass('ty-flex ty-space-between');
@@ -108,7 +108,7 @@ describe('Running Test for Tayeh Modal', () => {
 		render(
 			<Modal onChange={fn} title="title" visible>
 				Modal Content
-			</Modal>,
+			</Modal>
 		);
 		const button = screen.getByText('close');
 		act(() => button.click());
@@ -116,7 +116,7 @@ describe('Running Test for Tayeh Modal', () => {
 			() => {
 				expect(fn).toBeCalled();
 			},
-			{ timeout: 1000 },
+			{ timeout: 1000 }
 		);
 	});
 });

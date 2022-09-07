@@ -6,7 +6,8 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -37,7 +38,20 @@
             "error",
             "always"
         ],
-		"no-console": "error"
+		"no-console": "error",
+        "prettier/prettier": [
+			"error",
+			{
+				"semi": true,
+				"tabWidth": 4,
+				"printWidth": 100,
+				"singleQuote": true,
+				"trailingComma": "es5",
+				"jsxBracketSameLine": true,
+				"bracketSameLine": true,
+				"useTabs": true
+			}
+		]
     },
 	"overrides": [
 		{

@@ -29,7 +29,7 @@ describe('Running Test for Tayeh Avatar', () => {
 		render(
 			<Avatar title="test" width="100px" maxWidth="100%">
 				Avatar Content
-			</Avatar>,
+			</Avatar>
 		);
 		const node = screen.getByTitle('test');
 		expect(node).toHaveStyle({ width: '100px', maxWidth: '100%' });

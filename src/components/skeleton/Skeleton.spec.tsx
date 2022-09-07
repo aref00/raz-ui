@@ -29,7 +29,7 @@ describe('Running Test for Tayeh Skeleton', () => {
 		render(
 			<Skeleton width="100%" height="110%">
 				Skeleton Content
-			</Skeleton>,
+			</Skeleton>
 		);
 		const node = screen.getByText('Skeleton Content');
 		expect(node).toHaveStyle({ width: '100%', height: '110%' });

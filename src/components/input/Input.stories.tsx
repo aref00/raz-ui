@@ -14,10 +14,7 @@ export default {
 const Template: Story<InputProps> = (args) => <Input {...args} />;
 const DarkTemplate: Story<InputProps> = (args) => (
 	<div className="dark-theme">
-		<div
-			className="raz-bg-light p-4"
-			style={{ width: '500px', height: '500px' }}
-		>
+		<div className="raz-bg-light p-4" style={{ width: '500px', height: '500px' }}>
 			<div className="mb-4">
 				<Input {...args} />
 			</div>

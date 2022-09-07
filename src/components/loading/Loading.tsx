@@ -14,8 +14,7 @@ export const Loading: FC<PropsWithChildren<LoadingProps>> = ({
 				<div
 					className={`ty-loading-mask raz-bg-light ty-opacity-90 ${
 						fullscreen ? 'is-fullscreen' : ''
-					}`}
-				>
+					}`}>
 					<div className="ty-loading-spinner">
 						<svg className="ty-circular-loading" viewBox="25 25 50 50">
 							<circle

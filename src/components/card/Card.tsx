@@ -14,8 +14,7 @@ export const Card: FC<PropsWithChildren<CardProps>> = ({
 			tabIndex={0}
 			className={`raz-card raz-shadow border-radius-${radius}
 			raz-bg-${color || 'contrast-primary'} ${className || ''}`}
-			{...props}
-		>
+			{...props}>
 			{children}
 		</div>
 	);

@@ -31,9 +31,9 @@ export const Input: FC<InputProps> = ({
 ${disabled ? '' : `raz-hover-outline-${outlineColor || 'primary'}`} ${
 		clear ? '--border-clear' : borderBottom ? '--border-bottom' : ''
 	} \
-${disabled ? 'disabled' : ''} ${
-		error ? 'raz-color-danger raz-border-color-danger' : ''
-	} ${inputClass || ''}`;
+${disabled ? 'disabled' : ''} ${error ? 'raz-color-danger raz-border-color-danger' : ''} ${
+		inputClass || ''
+	}`;
 
 	return (
 		<div className={`raz-input ${className}`}>
@@ -41,8 +41,7 @@ ${disabled ? 'disabled' : ''} ${
 				<p
 					className={`fs-12 fs-sm-14 raz-input-label mb-1 ${
 						error ? 'raz-color-danger' : ''
-					}`}
-				>
+					}`}>
 					{label}
 					<span className="raz-color-danger">{props.required ? '*' : ''}</span>
 				</p>
@@ -68,15 +67,13 @@ ${disabled ? 'disabled' : ''} ${
 				<div
 					className={`raz-flex raz-justify-center items-align-center ${
 						dir === 'ltr' ? 'suffix--ltr' : ''
-					}`}
-				>
+					}`}>
 					{suffix}
 					{!suffix && type === 'password' && (
 						<div
 							role="button"
 							className='"raz-flex align-items-center'
-							onClick={() => setShowPassword(!showPassword)}
-						>
+							onClick={() => setShowPassword(!showPassword)}>
 							<i
 								className={`raz-icon px-1 ${
 									showPassword
@@ -88,11 +85,7 @@ ${disabled ? 'disabled' : ''} ${
 					)}
 				</div>
 			</div>
-			<div
-				role="alert"
-				className="raz-color-danger fs-12 mt-1"
-				style={{ height: '12px' }}
-			>
+			<div role="alert" className="raz-color-danger fs-12 mt-1" style={{ height: '12px' }}>
 				{error}
 			</div>
 			{/* {error && (

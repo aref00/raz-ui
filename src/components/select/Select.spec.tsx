@@ -23,14 +23,7 @@ describe('Running Test for Tayeh Select', () => {
 
 	test('Check Select TyClass', () => {
 		const fn = jest.fn();
-		render(
-			<Select
-				options={[]}
-				onChange={fn}
-				placeholder="Select Content"
-				className="test"
-			/>,
-		);
+		render(<Select options={[]} onChange={fn} placeholder="Select Content" className="test" />);
 		const node = screen.getByRole('combobox');
 		expect(node?.className).toContain('test');
 		expect(node?.tagName).toBe('DIV');
@@ -44,7 +37,7 @@ describe('Running Test for Tayeh Select', () => {
 				onChange={fn}
 				placeholder="Select Content"
 				className="test"
-			/>,
+			/>
 		);
 		const label_node = screen.getByText('select label');
 		expect(label_node).toBeDefined();
@@ -52,14 +45,7 @@ describe('Running Test for Tayeh Select', () => {
 	});
 	test('Check Select Focus', () => {
 		const fn = jest.fn();
-		render(
-			<Select
-				options={[]}
-				onChange={fn}
-				placeholder="Select Content"
-				className="test"
-			/>,
-		);
+		render(<Select options={[]} onChange={fn} placeholder="Select Content" className="test" />);
 		const node = screen.getByRole('textbox');
 		expect(node).not.toHaveFocus();
 		act(() => node.focus());
@@ -84,7 +70,7 @@ describe('Running Test for Tayeh Select', () => {
 				onChange={fn}
 				placeholder="Select Content"
 				className="test"
-			/>,
+			/>
 		);
 		const node = screen.getByRole('textbox');
 		fireEvent.change(node, { target: { value: 'test' } });
@@ -102,7 +88,7 @@ describe('Running Test for Tayeh Select', () => {
 				onChange={fn}
 				placeholder="Select Content"
 				className="test"
-			/>,
+			/>
 		);
 		const node = screen.getByRole('textbox');
 		expect(node).toBeDisabled();
@@ -117,7 +103,7 @@ describe('Running Test for Tayeh Select', () => {
 				onChange={fn}
 				placeholder="Select Content"
 				className="test"
-			/>,
+			/>
 		);
 		const node = screen.getByRole('switch');
 		const input_node = screen.getByRole('textbox');
@@ -136,7 +122,7 @@ describe('Running Test for Tayeh Select', () => {
 				onChange={fn}
 				placeholder="Select Content"
 				className="test"
-			/>,
+			/>
 		);
 		const node = screen.getByRole('option');
 		act(() => node.click());
@@ -154,7 +140,7 @@ describe('Running Test for Tayeh Select', () => {
 				onChange={fn}
 				placeholder="Select Content"
 				className="test"
-			/>,
+			/>
 		);
 		const input_node = screen.getByRole('textbox');
 		expect(input_node.getAttribute('value')).toBe('test-2');
@@ -171,14 +157,7 @@ describe('Running Test for Tayeh Select', () => {
 
 	test('Check Select OtherKeys', () => {
 		const fn = jest.fn();
-		render(
-			<Select
-				options={[]}
-				onChange={fn}
-				placeholder="Select Content"
-				className="test"
-			/>,
-		);
+		render(<Select options={[]} onChange={fn} placeholder="Select Content" className="test" />);
 		const node = screen.getByRole('textbox');
 		expect(node).not.toHaveFocus();
 		act(() => node.focus());
@@ -196,7 +175,7 @@ describe('Running Test for Tayeh Select', () => {
 				open: true,
 				value: { label: null, value: null },
 			},
-			() => null,
+			() => null
 		)(() => null);
 		const res2 = base([{ label: 'not-2', value: 'test-2' }])(
 			{
@@ -205,7 +184,7 @@ describe('Running Test for Tayeh Select', () => {
 				open: true,
 				value: { label: null, value: null },
 			},
-			() => null,
+			() => null
 		)(() => null);
 		expect(res1).toBeUndefined();
 		expect(res2).toBeUndefined();
@@ -222,7 +201,7 @@ describe('Running Test for Tayeh Select', () => {
 				open: false,
 				value: { label: null, value: null },
 			},
-			() => null,
+			() => null
 		)(() => null);
 		expect(res).toBeUndefined();
 	});

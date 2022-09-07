@@ -31,19 +31,16 @@ export const RadioButton: FC<RadioButtonProps> = ({
 						role="radio"
 						className={`ty-radio-row ty-flex ty-space-between ty-gap-10 align-items-center ${className} ${
 							active ? 'active' : ''
-						}`}
-					>
+						}`}>
 						<div
 							role="button"
 							style={{ width, height: width }}
 							className={`ty-radio-toggle ${
 								active ? borderColor : 'ty-border-color-gray'
-							}`}
-						>
+							}`}>
 							<div
 								style={{ width: inner_width, height: inner_width }}
-								className={`ty-radio-fill ${active ? activeColor : ''}`}
-							></div>
+								className={`ty-radio-fill ${active ? activeColor : ''}`}></div>
 						</div>
 						<div>{o.label}</div>
 					</div>

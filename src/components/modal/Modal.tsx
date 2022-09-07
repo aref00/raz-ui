@@ -1,10 +1,4 @@
-import React, {
-	FC,
-	PropsWithChildren,
-	useEffect,
-	useRef,
-	useState,
-} from 'react';
+import React, { FC, PropsWithChildren, useEffect, useRef, useState } from 'react';
 import { ModalProps } from './Modal.types';
 import { clickHandler } from './Modal.utils';
 import { Button } from '../button/Button';
@@ -53,16 +47,14 @@ export const Modal: FC<PropsWithChildren<ModalProps>> = ({
 				onClick: disableBackdropExit
 					? undefined
 					: (e) => clickHandler(e)(beforeClose)(state)(setState),
-			}}
-		>
+			}}>
 			<Card
 				style={style}
 				color={color}
 				radius={radius}
 				className={`ty-modal-container my-auto ${fullscreen ? 'fullscreen' : ''}
 					${transparent ? 'transparent' : ''} ${className}`}
-				onClick={clickHandler}
-			>
+				onClick={clickHandler}>
 				<div className="ty-flex ty-space-between">
 					{header}
 					{title}
@@ -72,8 +64,7 @@ export const Modal: FC<PropsWithChildren<ModalProps>> = ({
 								layout="clear"
 								color="dark"
 								className="p-2"
-								onClick={(e) => clickHandler(e)(beforeClose)(state)(setState)}
-							>
+								onClick={(e) => clickHandler(e)(beforeClose)(state)(setState)}>
 								<i className="ty-icon ty-icon-close-circle-outline fs-12 fs-sm-14 fs-md-16">
 									<span>close</span>
 								</i>

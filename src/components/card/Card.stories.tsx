@@ -20,10 +20,7 @@ const Template: Story<CardProps> = (args) => (
 );
 const DarkTemplate: Story<CardProps> = (args) => (
 	<div className="dark-theme">
-		<div
-			className="full-width raz-bg-light p-4"
-			style={{ width: '500px', height: '500px' }}
-		>
+		<div className="full-width raz-bg-light p-4" style={{ width: '500px', height: '500px' }}>
 			<Card {...args}>
 				<div className="raz-color-text">Card Content</div>
 				<Button>Button</Button>

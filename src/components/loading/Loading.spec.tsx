@@ -23,7 +23,7 @@ describe('Running Test for Tayeh Loading', () => {
 		render(
 			<div style={{ width: '100px', height: '100px' }}>
 				<Loading show>Loading Content</Loading>
-			</div>,
+			</div>
 		);
 		const node = screen.getByText('Loading Content');
 		expect(node).toBeVisible();

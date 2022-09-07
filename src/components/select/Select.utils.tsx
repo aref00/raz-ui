@@ -60,7 +60,7 @@ export function handleInputChange(value: string) {
 	return function (options: Option[]) {
 		const o = options.find((o) => o.label == value || o.value == value);
 		const filteredOptions = options.filter(
-			(o) => ('' + o.label).includes(value) || ('' + o.value).includes(value),
+			(o) => ('' + o.label).includes(value) || ('' + o.value).includes(value)
 		);
 		return function (state: State, setState: React.Dispatch<State>) {
 			setState({
