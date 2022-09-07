@@ -23,3 +23,18 @@ Installing via pnpm
 ```
 	yarn add raz-ui
 ```   
+
+#### Components
+
+- [x] Avatar
+- [x] Button
+- [x] Card
+- [x] Input
+- [x] Loading
+- [x] Modal
+- [x] RadioButton
+- [x] Select
+- [x] Skeleton
+- [x] Tabs
+- [ ] Table
+- [ ] Drawer
