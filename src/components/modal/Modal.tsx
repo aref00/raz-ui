@@ -42,7 +42,7 @@ export const Modal: FC<PropsWithChildren<ModalProps>> = ({
 	return state.visible ? (
 		<div
 			tabIndex={0}
-			className={`ty-modal-mask ${transparent ? 'scrollable' : ''}`}
+			className={`raz-modal-mask ${transparent ? 'scrollable' : ''}`}
 			{...{
 				onClick: disableBackdropExit
 					? undefined
@@ -52,10 +52,10 @@ export const Modal: FC<PropsWithChildren<ModalProps>> = ({
 				style={style}
 				color={color}
 				radius={radius}
-				className={`ty-modal-container my-auto ${fullscreen ? 'fullscreen' : ''}
+				className={`raz-modal-container my-auto ${fullscreen ? 'fullscreen' : ''}
 					${transparent ? 'transparent' : ''} ${className}`}
 				onClick={clickHandler}>
-				<div className="ty-flex ty-space-between">
+				<div className="raz-flex raz-space-between">
 					{header}
 					{title}
 					{letExit && (
@@ -72,11 +72,11 @@ export const Modal: FC<PropsWithChildren<ModalProps>> = ({
 						</div>
 					)}
 				</div>
-				<div className="ty-modal-body">{children}</div>
-				{footer && <div className="ty-modal-footer">{footer}</div>}
+				<div className="raz-modal-body">{children}</div>
+				{footer && <div className="raz-modal-footer">{footer}</div>}
 			</Card>
 			{/* <div className={` px-1 px-sm-2 py-1 py-sm-2 py-md-3 raz-bg-contrast-primary
-			ty-shadow my-auto border-radius-${radius||15} ${fullscreen?'fullscreen':''} ${transparent?'transparent':''} ${className}`}
+			raz-shadow my-auto border-radius-${radius||15} ${fullscreen?'fullscreen':''} ${transparent?'transparent':''} ${className}`}
 				style={style}>
 					
 			</div> */}

@@ -26,7 +26,7 @@ describe('Running Test for Tayeh RadioButton', () => {
 		});
 		render(<RadioButton onChange={fn} options={[{ label: 'test', value: 'test' }]} />);
 		const node = screen.getByRole('button');
-		expect(node?.className).toContain('ty-border-color-gray');
+		expect(node?.className).toContain('raz-border-color-gray');
 		expect(node?.style.width).toBe('16px');
 		expect(node?.style.height).toBe('16px');
 	});
@@ -37,7 +37,7 @@ describe('Running Test for Tayeh RadioButton', () => {
 		const node = screen.getByRole('radio');
 		act(() => node.click());
 		const button = screen.getByRole('button');
-		expect(button?.className).toContain('ty-border-color-primary');
+		expect(button?.className).toContain('raz-border-color-primary');
 		expect(fn).toBeCalled();
 	});
 });

@@ -23,7 +23,7 @@ describe('Running Test for Tayeh Modal', () => {
 	test('Check Modal Defaults', () => {
 		render(<Modal visible>Modal Content</Modal>);
 		const node = screen.getByText('Modal Content');
-		expect(node).toHaveClass('ty-modal-body');
+		expect(node).toHaveClass('raz-modal-body');
 	});
 
 	test('Check Modal Visibility', () => {
@@ -78,7 +78,7 @@ describe('Running Test for Tayeh Modal', () => {
 			</Modal>
 		);
 		const node = screen.getByText('footer');
-		expect(node).toHaveClass('ty-modal-footer');
+		expect(node).toHaveClass('raz-modal-footer');
 	});
 
 	test('Check Modal Header', () => {
@@ -88,7 +88,7 @@ describe('Running Test for Tayeh Modal', () => {
 			</Modal>
 		);
 		const node = screen.getByText('header');
-		expect(node).toHaveClass('ty-space-between');
+		expect(node).toHaveClass('raz-space-between');
 	});
 
 	test('Check Modal title', () => {
@@ -98,7 +98,7 @@ describe('Running Test for Tayeh Modal', () => {
 			</Modal>
 		);
 		const node = screen.getByText('title');
-		expect(node).toHaveClass('ty-flex ty-space-between');
+		expect(node).toHaveClass('raz-flex raz-space-between');
 	});
 
 	test('Check Modal Default BeforeClose', async () => {

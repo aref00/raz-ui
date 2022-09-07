@@ -75,10 +75,10 @@ ${disabled ? 'disabled' : ''} ${error ? 'raz-color-danger raz-border-color-dange
 							className='"raz-flex align-items-center'
 							onClick={() => setShowPassword(!showPassword)}>
 							<i
-								className={`raz-icon px-1 ${
+								className={`ty-icon px-1 ${
 									showPassword
-										? 'raz-icon-eye raz-color-primary'
-										: 'raz-icon-eye-slash raz-color-border'
+										? 'ty-icon-eye raz-color-primary'
+										: 'ty-icon-eye-slash raz-color-border'
 								}`}
 							/>
 						</div>

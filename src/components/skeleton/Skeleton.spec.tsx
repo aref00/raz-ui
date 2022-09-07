@@ -22,7 +22,7 @@ describe('Running Test for Tayeh Skeleton', () => {
 	test('Check Skeleton Defaults', () => {
 		render(<Skeleton>Skeleton Content</Skeleton>);
 		const node = screen.getByText('Skeleton Content');
-		expect(node).toHaveClass('ty-skeleton');
+		expect(node).toHaveClass('raz-skeleton');
 	});
 
 	test('Check Skeleton Style', () => {

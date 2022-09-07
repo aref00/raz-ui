@@ -37,11 +37,6 @@ describe('Running Test for Tayeh Input', () => {
 		const node = screen.getByRole('none');
 		expect(node?.className).toContain('--border-clear');
 	});
-	// test('Check Input Outline', () => {
-	// 	render(<Input outline placeholder='Tayeh input'/>);
-	// 	const node = screen.getByRole('none');
-	// 	expect(node?.className).toContain('ty-input-focus');
-	// });
 	test('Check Input Error', () => {
 		render(<Input error="error" label="label" placeholder="Tayeh input" />);
 		const node = screen.getByRole('none');
