@@ -29,11 +29,10 @@ export const RadioButton: FC<RadioButtonProps> = ({
 						onClick={() => handleChange(o.value)}
 						key={i}
 						role="radio"
-						className={`ty-radio-row ty-flex ty-space-between align-items-center ${className} ${
+						className={`ty-radio-row ty-flex ty-space-between ty-gap-10 align-items-center ${className} ${
 							active ? 'active' : ''
 						}`}
 					>
-						<div>{o.label}</div>
 						<div
 							role="button"
 							style={{ width, height: width }}
@@ -46,6 +45,7 @@ export const RadioButton: FC<RadioButtonProps> = ({
 								className={`ty-radio-fill ${active ? activeColor : ''}`}
 							></div>
 						</div>
+						<div>{o.label}</div>
 					</div>
 				);
 			})}
