@@ -111,8 +111,8 @@ Error.args = {
 	error: 'There is an errro',
 };
 
-// export const DarkTheme = DarkTemplate.bind({});
-// DarkTheme.args = {
-// 	label: 'Label',
-// 	placeholder: 'Input Placeholder',
-// };
+export const DarkTheme = DarkTemplate.bind({});
+DarkTheme.args = {
+	label: 'Label',
+	placeholder: 'Input Placeholder',
+};
