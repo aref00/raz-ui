@@ -1,88 +1,46 @@
-:not(.dark-theme) {
-	$colors: (
-		"primary"	#4895EF	#FFFFFF,
-		"secondary"	#536EEF	#FFFFFF,
-		"success"	#20ce66	#FFFFFF,
-		"warning"	#FCD300	#F7F9FB,
-		"danger"	#FD3F67	#F7F9FB,
-		"contrast-primary"	#FFF	#404040,
-		"contrast-secondary"	#404040	#FFFFFF,
-		"text"	#434343	#292D32,
-		"gray"	#A0AFB4	#434343,
-		"santa-gray"	#9BA0B6	#9BA0B6,
-		"shadow"	rgba(240,242,246,0.8)	#292D32,
-		"dark"	#292D32	#F7F9FB,
-		"light"	#F7F9FB	#292D32,
-		"border"	#E8ECED	#292D32,
-		"transparent"	transparent	#292D32,
-	);
+$colors: (
+	"primary"	#4895EF	#FFFFFF,
+	"secondary"	#536EEF	#FFFFFF,
+	"success"	#20ce66	#FFFFFF,
+	"warning"	#FCD300	#F7F9FB,
+	"danger"	#FD3F67	#F7F9FB,
+	"card"	#323236	#aaaab3,
+	"input" #28282b #FFFFFF,
+	"text"	#aaaab3	#292D32,
+	"text-opacity"	#999	#292D32,
+	"gray"	#A0AFB4	#434343,
+	"shadow"	rgba(240,242,246,0.8)	#292D32,
+	"dark"	#232326	#aaaab3,
+	"darker" #19191b #FFFFFF,
+	"light"	#F7F9FB	#292D32,
+	"border"	#404046	#292D32,
+	"transparent"	transparent	#292D32,
+);
 
-	@each $name, $color, $oposite in $colors {
-		.ty-color-#{$name} {
-			color: $color;
-			stroke: $color;
-		}
-		.ty-outline-#{$name}, .ty-hover-outline-#{$name}:active, .ty-hover-outline-#{$name}:hover, .ty-hover-outline-#{$name}:focus-within {
-			outline: $color auto 1px;
-		}
-		.ty-bg-#{$name}, .ty-outline-#{$name}.ty-hoverable:not(.disable):hover {
-			background-color: $color;
-			color: $oposite;
-		}
-		.ty-border-color-#{$name} {
-			border-color: $color !important;
-		}
+@each $name, $color, $oposite in $colors {
+	.ty-color-#{$name} {
+		color: $color;
+		stroke: $color;
 	}
-	.ty-shadow {
-		box-shadow: 0px 4px 8px rgba(240,242,246,0.8);
+	.ty-outline-#{$name}, .ty-hover-outline-#{$name}:active, .ty-hover-outline-#{$name}:hover, .ty-hover-outline-#{$name}:focus-within {
+		outline: $color auto 1px;
+	}
+	.ty-bg-#{$name}, .ty-outline-#{$name}.ty-hoverable:not(.disable):hover {
+		background-color: $color;
+		color: $oposite;
+	}
+	.ty-border-color-#{$name} {
+		border-color: $color !important;
 	}
 }
-
-
-// dark theme
-.dark-theme {
-	$colors: (
-		"primary"	#3772FF	#FFFFFF,
-		"secondary"	#B0C4FF	#404040,
-		"success"	#20ce66	#20ce66,
-		"warning"	#FCD300	#F7F9FB,
-		"danger"	#FD3F67	#F7F9FB,
-		"contrast-primary"	#232631	#404040,
-		"contrast-secondary"	#FFF	#FFFFFF,
-		"text"	#FFF	#232631,
-		"gray"	#99A8BC	#434343,
-		"santa-gray"	#9BA0B6	#9BA0B6,
-		"shadow"	rgba(0,0,0,0.1)	#292D32,
-		"dark"	#FFF	#000,
-		"light"	#141A1F	#FFF,
-		"border"	#E8ECED	#FFF,
-		"transparent"	transparent	#FFF,
-	);
-	@each $name, $color, $oposite in $colors {
-		.ty-color-#{$name} {
-			color: $color;
-			stroke: $color;
-		}
-		.ty-outline-#{$name}, .ty-hover-outline-#{$name}:active, .ty-hover-outline-#{$name}:hover, .ty-hover-outline-#{$name}:focus-within {
-			outline: $color auto 1px;
-		}
-		.ty-bg-#{$name}, .ty-outline-#{$name}.ty-hoverable:not(.disable):hover {
-			background-color: $color;
-			color: $oposite;
-		}
-		.ty-border-color-#{$name} {
-			border-color: $color !important;
-		}
-	}
-	.ty-shadow {
-		box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-		// box-shadow: 0.5px 3px 10px 0 rgba(0,0,0,0.1);
-	}
+.ty-shadow {
+	box-shadow: 0px 4px 8px rgba(240,242,246,0.8);
 }
 
 .ty-color-rating {
 	color: #FFA800;
 }
+
 .disabled {
 	opacity: 0.5;
 }

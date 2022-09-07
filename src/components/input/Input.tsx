@@ -12,11 +12,13 @@ export const Input: FC<InputProps> = ({
 	dir,
 	error,
 	suffix,
+	prefix,
 	type,
 	disabled,
 	tag,
 	outlineColor,
 	inputClass,
+	color,
 	passRef,
 	...props
 }) => {
@@ -24,7 +26,7 @@ export const Input: FC<InputProps> = ({
 	const [showPassword, setShowPassword] = useState(false);
 	tyClass = tyClass || '';
 	const wrapper_class = `ty-input-wrapper ty-flex align-items-center ty-justify-center border-radius-${
-		radius || 5
+		radius || 4
 	} \
 ${disabled ? '' : `ty-hover-outline-${outlineColor || 'primary'}`} ${
 	clear ? '--border-clear' : borderBottom ? '--border-bottom' : ''
@@ -46,6 +48,7 @@ ${disabled ? 'disabled' : ''} ${
 				</p>
 			)}
 			<div role="none" className={wrapper_class} style={{ width, height }}>
+				{prefix}
 				<InputTag
 					tabIndex={0}
 					// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -55,7 +58,7 @@ ${disabled ? 'disabled' : ''} ${
 					aria-label={label || props.placeholder}
 					role="textbox"
 					dir={dir}
-					className={`inline-block full-width ty-input px-3 py-2 ${
+					className={`inline-block full-width ty-input px-3 py-2 ty-bg-${color||'input'} ${
 						inputClass || ''
 					}`}
 					type={type == 'password' ? (showPassword ? 'text' : type) : ''}
@@ -85,11 +88,12 @@ ${disabled ? 'disabled' : ''} ${
 					)}
 				</div>
 			</div>
-			{error && (
-				<div role="alert" className="ty-color-danger mt-2">
-					{error}
-				</div>
-			)}
+			<div role="alert" className="ty-color-danger fs-12 mt-1" style={{height: '12px'}}>
+				{error}
+			</div>
+			{/* {error && (
+				
+			)} */}
 		</div>
 	);
 };

@@ -32,12 +32,13 @@ export interface InputProps {
 	autocomplete?: 'on' | 'off';
 	disabled?: boolean;
 	passRef?: any;
-	// color?: Color;
+	color?: Color;
 	// placeholderColor?: Color;
 	outlineColor?: Color;
 	tyClass?: string;
 	inputClass?: string;
 	tag?: 'input' | 'textarea';
+	prefix?: React.ReactNode;
 	suffix?: React.ReactNode;
 	type?: React.HTMLInputTypeAttribute;
 	autoFocus?: boolean;

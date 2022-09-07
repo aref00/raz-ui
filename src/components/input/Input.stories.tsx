@@ -63,6 +63,15 @@ FontSize.args = {
 	placeholder: 'Input Placeholder',
 };
 
+export const Prefix = Template.bind({});
+Prefix.args = {
+	label: 'Label',
+	tyClass: 'fs-16 fw-600',
+	inputClass: 'fs-18 fw-800',
+	prefix: <i className="fs-8 fw-100 pl-3">search</i>,
+	placeholder: 'Input Placeholder',
+};
+
 export const Clear = Template.bind({});
 Clear.args = {
 	clear: true,
@@ -93,6 +102,13 @@ Password.args = {
 	clear: true,
 	inputClass: 'ty-bg-light',
 	placeholder: 'Input Placeholder',
+};
+
+export const Error = Template.bind({});
+Error.args = {
+	label: 'Label',
+	placeholder: 'Input Placeholder',
+	error: 'There is an errro',
 };
 
 export const DarkTheme = DarkTemplate.bind({});

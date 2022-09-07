@@ -6,15 +6,17 @@ export type Color =
 	| 'success'
 	| 'warning'
 	| 'danger'
+	| 'card'
+	| 'input'
+	| 'text'
+	| 'text'
 	| 'gray'
-	| 'border'
+	| 'shadow'
 	| 'dark'
+	| 'darker'
 	| 'light'
-	| 'contrast-primary'
-	| 'contrast-secondary'
-	| 'text-primary'
-	| 'text-secondary'
-	| 'rating';
+	| 'border'
+	| 'transparent';
 
 export type Option = {
 	label: any;

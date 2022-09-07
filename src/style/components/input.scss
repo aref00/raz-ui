@@ -2,7 +2,7 @@
 	display: inline-block;
 	.ty-input-wrapper {
 	  position: relative;
-	  border: solid 1px #e0e0e0;
+	  border: none !important;
 	  overflow: hidden;
 	  &.--border-clear {
 		border: none;
