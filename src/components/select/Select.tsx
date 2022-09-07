@@ -48,7 +48,7 @@ export const Select: FC<SelectProps> = ({
 		<div
 			role="combobox"
 			className={`raz-select ${disabled ? 'disabled' : ''} ${
-				clear ? '' : `raz-border-color-${color || 'gray'}`
+				clear ? '' : `raz-border-color-${color || 'text-opacity'}`
 			} ${className}`}
 		>
 			<div className="raz-select__search">
@@ -77,7 +77,7 @@ export const Select: FC<SelectProps> = ({
 				></Input>
 			</div>
 			<div
-				className="raz-select__dropdown raz-shadow"
+				className="raz-select__dropdown"
 				style={{ width, minHeight: height }}
 			>
 				{state.filteredOptions.map((o, i) => (
