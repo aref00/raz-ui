@@ -7,7 +7,7 @@ function typeCss(
 	outlineColor = 'primary'
 ) {
 	if (type == 'clear') return `clear raz-color-${color}`;
-	if (type == 'outline') return `outline raz-color-${color} ty-border-color-${outlineColor}`;
+	if (type == 'outline') return `outline raz-color-${color} raz-border-color-${outlineColor}`;
 	return `simple raz-bg-${color}`;
 }
 export const Button: FC<PropsWithChildren<ButtonProps>> = ({
@@ -25,7 +25,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
 }) => {
 	return (
 		<button
-			className={`inline-block ty-button ${typeCss(layout, color, outlineColor)} ${
+			className={`inline-block raz-button ${typeCss(layout, color, outlineColor)} ${
 				disabled ? 'disabled' : ''
 			} ${className || ''}`}
 			style={{ width, height, borderRadius: (radius || 5) + 'px' }}
