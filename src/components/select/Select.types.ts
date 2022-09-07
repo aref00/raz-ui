@@ -9,7 +9,7 @@ export interface SelectProps {
 	width?: string;
 	height?: string;
 	autoFocus?: boolean;
-	tyClass?: string;
+	className?: string;
 	label?: string;
 	placeholder?: string;
 	onChange: (value: string | number) => void;

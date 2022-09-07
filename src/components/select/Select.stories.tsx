@@ -19,6 +19,7 @@ Options.args = {
 		{ label: 'test', value: 'test' },
 		{ label: 'test-2', value: 'test-2' },
 		{ label: 'test-3', value: 'test-3' },
+		{ label: 'test-4', value: 'test-4' },
 	],
 	placeholder: 'Select Content',
 };

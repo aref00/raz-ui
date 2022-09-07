@@ -77,6 +77,7 @@ export function handleInputChange(value: string) {
 }
 export function handleSelect(e: MouseEvent) {
 	e.preventDefault();
+	e.stopPropagation();
 	return function (o: Option) {
 		return function (options: Option[]) {
 			return function (state: State, setState: React.Dispatch<State>) {

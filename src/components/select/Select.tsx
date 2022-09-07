@@ -24,7 +24,7 @@ export const Select: FC<SelectProps> = ({
 	disabled,
 	width,
 	height,
-	tyClass,
+	className,
 	onChange,
 	...props
 }) => {
@@ -47,11 +47,11 @@ export const Select: FC<SelectProps> = ({
 	return (
 		<div
 			role="combobox"
-			className={`ty-select ${disabled ? 'disabled' : ''} ${
-				clear ? '' : `ty-border-color-${color || 'gray'}`
-			} ${tyClass}`}
+			className={`raz-select ${disabled ? 'disabled' : ''} ${
+				clear ? '' : `raz-border-color-${color || 'gray'}`
+			} ${className}`}
 		>
-			<div className="ty-select__search">
+			<div className="raz-select__search">
 				<Input
 					passRef={setInput}
 					width={width}
@@ -77,7 +77,7 @@ export const Select: FC<SelectProps> = ({
 				></Input>
 			</div>
 			<div
-				className="ty-select__dropdown ty-shadow"
+				className="raz-select__dropdown raz-shadow"
 				style={{ width, minHeight: height }}
 			>
 				{state.filteredOptions.map((o, i) => (
@@ -90,7 +90,7 @@ export const Select: FC<SelectProps> = ({
 						layout="clear"
 						width={width}
 						height={height}
-						tyClass="text-justify px-3"
+						className="text-justify px-3"
 						color="contrast-secondary"
 					>
 						{o.label}
