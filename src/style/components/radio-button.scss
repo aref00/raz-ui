@@ -1,15 +1,15 @@
-.ty-radio-button {
-	.ty-radio-row {
+.raz-radio-button {
+	.raz-radio-row {
 		cursor: pointer;
 	}
-	.ty-radio-toggle {
+	.raz-radio-toggle {
 		position: relative;
 		border-width: 1.6px;
 		border-style: solid;
 		box-sizing: border-box;
 		border-radius: 100%;
 		overflow: hidden;
-		.ty-radio-fill {
+		.raz-radio-fill {
 			position: absolute;
 			left: 50%;
 			top: 50%;

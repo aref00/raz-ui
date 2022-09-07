@@ -1,4 +1,4 @@
-.ty-button {
+.raz-button {
 	cursor: pointer;
 	transition: background 0;
 	transition: background-color 0.2s;
@@ -16,10 +16,10 @@
 		background-color: transparent;
 	}
   }
-.ty-button.disabled {
+.raz-button.disabled {
 	cursor: default;
 }
-.ty-button:not(.disabled) {
+.raz-button:not(.disabled) {
 	&:focus {
 		opacity: 0.95;
 	}

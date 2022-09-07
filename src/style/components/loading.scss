@@ -1,13 +1,13 @@
-.ty-loading-parent {
+.raz-loading-parent {
     position:relative  !important ;
 	overflow:hidden  !important ;
 	&.active {
 		pointer-events:none;
-		.ty--loading-mask {
+		.raz--loading-mask {
 			pointer-events: none;
 		}
 	}
-	.ty-loading-mask {
+	.raz-loading-mask {
 		z-index:2000;
 		position: absolute;
 		margin: 0;
@@ -20,7 +20,7 @@
 		&.is-fullscreen {
 			position: fixed;
 		}
-		.ty-loading-spinner {
+		.raz-loading-spinner {
 			position: absolute;
 			left: 50%;
 			top: 50%;
@@ -30,7 +30,7 @@
 			width: 20px;
 		}
 	}
-	.ty-circular-loading {
+	.raz-circular-loading {
 		height:42px;
 		width:42px;
 		animation: loading-rotate 2s  linear  infinite;

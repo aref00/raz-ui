@@ -1,60 +1,60 @@
-.ty-row {
+.raz-row {
 	position: relative;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-.ty-row::after,
-.ty-row::before {
+.raz-row::after,
+.raz-row::before {
 	display: table;
 	content: ""
 }
 
-.ty-row::after {
+.raz-row::after {
 	clear: both
 }
 
-.ty-row--flex {
+.raz-row--flex {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex
 }
 
-.ty-row--flex:after,
-.ty-row--flex:before {
+.raz-row--flex:after,
+.raz-row--flex:before {
 	display: none
 }
 
-.ty-row--flex.is-justify-center {
+.raz-row--flex.is-justify-center {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center
 }
 
-.ty-row--flex.is-justify-end {
+.raz-row--flex.is-justify-end {
 	-webkit-box-pack: end;
 	-ms-flex-pack: end;
 	justify-content: flex-end
 }
 
-.ty-row--flex.is-justify-space-between {
+.raz-row--flex.is-justify-space-between {
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between
 }
 
-.ty-row--flex.is-justify-space-around {
+.raz-row--flex.is-justify-space-around {
 	-ms-flex-pack: distribute;
 	justify-content: space-around
 }
 
-.ty-row--flex.is-align-middle {
+.raz-row--flex.is-align-middle {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center
 }
 
-.ty-row--flex.is-align-bottom {
+.raz-row--flex.is-align-bottom {
 	-webkit-box-align: end;
 	-ms-flex-align: end;
 	align-items: flex-end
