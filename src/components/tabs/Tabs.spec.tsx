@@ -5,6 +5,7 @@ import '../../style/index.scss';
 import { Tabs } from './Tabs';
 import { unmountComponentAtNode } from 'react-dom';
 import { Tab } from '../types';
+import { act } from 'react-dom/test-utils';
 
 describe('Running Test for Tayeh Tabs', () => {
 	let container: HTMLDivElement;
@@ -34,7 +35,7 @@ describe('Running Test for Tayeh Tabs', () => {
 		render(<Tabs tabs={tabs} onChange={fn}></Tabs>);
 		const node = screen.getByText('tab-1');
 		expect(node).toBeDefined();
-		node.click();
+		act(() => node.click());
 		expect(fn).toBeCalled();
 	});
 	test('Check Tabs Defaults', () => {

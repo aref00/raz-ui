@@ -40,7 +40,7 @@ export const Tabs: FC<TabProps> = ({
 					>
 						<div
 							style={{ width: borderWidth || '40px' }}
-							className={`border-radius-5 ty-bg-${borderColor || 'primary'}`}
+							className={`border-radius-5 raz-bg-${borderColor || 'primary'}`}
 						/>
 					</div>
 				)}

@@ -15,7 +15,7 @@ const Template: Story<InputProps> = (args) => <Input {...args} />;
 const DarkTemplate: Story<InputProps> = (args) => (
 	<div className="dark-theme">
 		<div
-			className="ty-bg-light p-4"
+			className="raz-bg-light p-4"
 			style={{ width: '500px', height: '500px' }}
 		>
 			<div className="mb-4">
@@ -42,7 +42,7 @@ Suffix.args = {
 export const Background = Template.bind({});
 Background.args = {
 	label: 'Label',
-	inputClass: 'ty-bg-light',
+	inputClass: 'raz-bg-light',
 	placeholder: 'Input Placeholder',
 };
 
@@ -50,7 +50,7 @@ export const OutlineColor = Template.bind({});
 OutlineColor.args = {
 	label: 'Label',
 	outlineColor: 'dark',
-	inputClass: 'ty-bg-light',
+	inputClass: 'raz-bg-light',
 	placeholder: 'Input Placeholder',
 };
 
@@ -75,7 +75,7 @@ Prefix.args = {
 export const Clear = Template.bind({});
 Clear.args = {
 	clear: true,
-	inputClass: 'fs-18 fw-800 ty-bg-light',
+	inputClass: 'fs-18 fw-800 raz-bg-light',
 	suffix: <i className="fs-8 fw-100 pl-3">search</i>,
 	placeholder: 'Input Placeholder',
 };
@@ -91,7 +91,7 @@ Textarea.args = {
 	tag: 'textarea',
 	radius: 15,
 	clear: true,
-	inputClass: 'ty-bg-light',
+	inputClass: 'raz-bg-light',
 	placeholder: 'Input Placeholder',
 };
 
@@ -100,7 +100,7 @@ Password.args = {
 	radius: 15,
 	type: 'password',
 	clear: true,
-	inputClass: 'ty-bg-light',
+	inputClass: 'raz-bg-light',
 	placeholder: 'Input Placeholder',
 };
 

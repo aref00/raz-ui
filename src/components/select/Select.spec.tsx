@@ -5,6 +5,7 @@ import '../../style/index.scss';
 import { Select } from './Select';
 import { handleInputChange, handleSelect } from './Select.utils';
 import { unmountComponentAtNode } from 'react-dom';
+import { act } from 'react-dom/test-utils';
 
 describe('Running Test for Tayeh Select', () => {
 	let container: HTMLDivElement;
@@ -61,15 +62,15 @@ describe('Running Test for Tayeh Select', () => {
 		);
 		const node = screen.getByRole('textbox');
 		expect(node).not.toHaveFocus();
-		node.focus();
+		act(() => node.focus());
 		expect(node).toHaveFocus();
 		fireEvent.keyDown(node, { key: 'Escape' });
 		expect(node).not.toHaveFocus();
-		node.focus();
+		act(() => node.focus());
 		fireEvent.keyDown(node, { key: 'Enter' });
 		expect(node).not.toHaveFocus();
-		node.focus();
-		node.blur();
+		act(() => node.focus());
+		act(() => node.blur());
 		expect(node).not.toHaveFocus();
 	});
 
@@ -120,7 +121,7 @@ describe('Running Test for Tayeh Select', () => {
 		);
 		const node = screen.getByRole('switch');
 		const input_node = screen.getByRole('textbox');
-		node.click();
+		act(() => node.click());
 		expect(input_node).toHaveFocus();
 	});
 
@@ -138,7 +139,7 @@ describe('Running Test for Tayeh Select', () => {
 			/>,
 		);
 		const node = screen.getByRole('option');
-		node.click();
+		act(() => node.click());
 		const input_node = screen.getByRole('textbox');
 		expect(input_node.getAttribute('value')).toBe('test');
 		expect(fn).toBeCalled();
@@ -180,7 +181,7 @@ describe('Running Test for Tayeh Select', () => {
 		);
 		const node = screen.getByRole('textbox');
 		expect(node).not.toHaveFocus();
-		node.focus();
+		act(() => node.focus());
 		expect(node).toHaveFocus();
 		fireEvent.keyDown(node, { key: 'e' });
 		expect(node).toHaveFocus();
@@ -212,6 +213,7 @@ describe('Running Test for Tayeh Select', () => {
 	test('Check handleSelect Util', () => {
 		const base = handleSelect({
 			preventDefault: () => null,
+			stopPropagation: () => null,
 		} as unknown as MouseEvent);
 		const res = base({ label: null, value: null })([])(
 			{

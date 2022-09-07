@@ -6,10 +6,10 @@ function typeCss(
 	color = 'primary',
 	outlineColor = 'primary',
 ) {
-	if (type == 'clear') return `clear ty-color-${color}`;
+	if (type == 'clear') return `clear raz-color-${color}`;
 	if (type == 'outline')
-		return `outline ty-color-${color} ty-border-color-${outlineColor}`;
-	return `simple ty-bg-${color}`;
+		return `outline raz-color-${color} ty-border-color-${outlineColor}`;
+	return `simple raz-bg-${color}`;
 }
 export const Button: FC<PropsWithChildren<ButtonProps>> = ({
 	disabled,

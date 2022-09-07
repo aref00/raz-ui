@@ -4,6 +4,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import '../../style/index.scss';
 import { Modal } from './Modal';
 import { unmountComponentAtNode } from 'react-dom';
+import { act } from 'react-dom/test-utils';
 
 describe('Running Test for Tayeh Modal', () => {
 	let container: HTMLDivElement;
@@ -51,9 +52,9 @@ describe('Running Test for Tayeh Modal', () => {
 		const mask = card?.parentElement;
 		const button = screen.getByText('close');
 		expect(mask).toBeDefined();
-		button?.click();
+		act(() => button?.click());
 		expect(fn).toBeCalled();
-		mask?.click();
+		act(() => mask?.click());
 		expect(fn).toBeCalledTimes(2);
 	});
 
@@ -110,7 +111,7 @@ describe('Running Test for Tayeh Modal', () => {
 			</Modal>,
 		);
 		const button = screen.getByText('close');
-		button.click();
+		act(() => button.click());
 		await waitFor(
 			() => {
 				expect(fn).toBeCalled();

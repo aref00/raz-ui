@@ -4,6 +4,7 @@ import { render, screen } from '@testing-library/react';
 import '../../style/index.scss';
 import { Input } from './Input';
 import { unmountComponentAtNode } from 'react-dom';
+import { act } from 'react-dom/test-utils';
 
 describe('Running Test for Tayeh Input', () => {
 	let container: HTMLDivElement;
@@ -45,9 +46,9 @@ describe('Running Test for Tayeh Input', () => {
 		render(<Input error="error" label="label" placeholder="Tayeh input" />);
 		const node = screen.getByRole('none');
 		const label = screen.getByText('label');
-		expect(node?.className).toContain('ty-color-danger');
+		expect(node?.className).toContain('raz-color-danger');
 		expect(screen.getByRole('alert')).toHaveTextContent('error');
-		expect(label.className).toContain('ty-color-danger');
+		expect(label.className).toContain('raz-color-danger');
 	});
 	test('Check Input Password', () => {
 		render(<Input type="password" placeholder="Tayeh input" />);
@@ -55,7 +56,7 @@ describe('Running Test for Tayeh Input', () => {
 		expect(node).toBeDefined();
 		const input = screen.getByRole('textbox');
 		expect(input.getAttribute('type')).toBe('password');
-		node.click();
+		act(() => node.click());
 		expect(input.getAttribute('type')).toBe('text');
 	});
 	test('Check Input Required', () => {

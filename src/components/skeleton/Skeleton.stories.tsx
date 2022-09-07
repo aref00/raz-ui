@@ -24,7 +24,7 @@ const Template: Story<SkeletonProps> = (args) => (
 
 const DarkTemplate: Story<SkeletonProps> = (args) => (
 	<div className="dark-theme p-5">
-		<div className="full-width full-height ty-bg-contrast-primary">
+		<div className="full-width full-height raz-bg-contrast-primary">
 			<Skeleton {...args} />
 			<Skeleton {...args} />
 			<Skeleton {...args} />

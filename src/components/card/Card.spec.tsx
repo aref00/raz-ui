@@ -23,7 +23,7 @@ describe('Running Test for Tayeh Card', () => {
 		render(<Card>Card Content</Card>);
 		const node = screen.getByText('Card Content');
 		expect(node?.className).toContain('border-radius-15');
-		expect(node?.className).toContain('ty-bg-contrast-primary');
+		expect(node?.className).toContain('raz-bg-contrast-primary');
 	});
 
 	test('Check Card Radius', () => {
@@ -35,6 +35,6 @@ describe('Running Test for Tayeh Card', () => {
 	test('Check Card Color', () => {
 		render(<Card color="primary">Card Content</Card>);
 		const node = screen.getByText('Card Content');
-		expect(node?.className).toContain('ty-bg-primary');
+		expect(node?.className).toContain('raz-bg-primary');
 	});
 });

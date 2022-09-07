@@ -14,7 +14,7 @@ export const RadioButton: FC<RadioButtonProps> = ({
 	width = width || '16px';
 	const inner_width = +width.replace('px', '') - 1.6 + 'px';
 	props.activeColor = props.activeColor || 'primary';
-	const activeColor = `ty-bg-${props.activeColor}`;
+	const activeColor = `raz-bg-${props.activeColor}`;
 	const borderColor = `ty-border-color-${props.activeColor}`;
 	function handleChange(value: string) {
 		onChange(value);

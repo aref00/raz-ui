@@ -10,14 +10,14 @@ export default {
 
 const Template: Story = (args) => (
 	<div {...args}>
-		<div className="ty-color-light">Content</div>
+		<div className="raz-color-light">Content</div>
 		<div
-			className="ty-bg-contrast-primary"
+			className="raz-bg-contrast-primary"
 			style={{ width: '100px', height: '100px' }}
 		>
 			with bg
 		</div>
-		<div className="ty-bg-light" style={{ width: '100px', height: '100px' }}>
+		<div className="raz-bg-light" style={{ width: '100px', height: '100px' }}>
 			with bg
 		</div>
 	</div>

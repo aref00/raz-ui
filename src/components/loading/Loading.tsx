@@ -12,14 +12,14 @@ export const Loading: FC<PropsWithChildren<LoadingProps>> = ({
 		<div className={`ty-loading-parent ${show ? 'active' : ''}`}>
 			{show && (
 				<div
-					className={`ty-loading-mask ty-bg-light ty-opacity-90 ${
+					className={`ty-loading-mask raz-bg-light ty-opacity-90 ${
 						fullscreen ? 'is-fullscreen' : ''
 					}`}
 				>
 					<div className="ty-loading-spinner">
 						<svg className="ty-circular-loading" viewBox="25 25 50 50">
 							<circle
-								className={`circular__path ty-color-${color || 'primary'}`}
+								className={`circular__path raz-color-${color || 'primary'}`}
 								cx="50"
 								cy="50"
 								r="20"

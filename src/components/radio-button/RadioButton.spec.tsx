@@ -4,6 +4,7 @@ import { render, screen } from '@testing-library/react';
 import '../../style/index.scss';
 import { RadioButton } from './RadioButton';
 import { unmountComponentAtNode } from 'react-dom';
+import { act } from 'react-dom/test-utils';
 
 describe('Running Test for Tayeh RadioButton', () => {
 	let container: HTMLDivElement;
@@ -44,7 +45,7 @@ describe('Running Test for Tayeh RadioButton', () => {
 			/>,
 		);
 		const node = screen.getByRole('radio');
-		node.click();
+		act(() => node.click());
 		const button = screen.getByRole('button');
 		expect(button?.className).toContain('ty-border-color-primary');
 		expect(fn).toBeCalled();
