@@ -9,3 +9,5 @@ export * from './components/skeleton/Skeleton';
 export * from './components/button/Button';
 export * from './components/tabs/Tabs';
 export * from './components/loading/Loading';
+export * from './components/checkbox/Checkbox';
+export * from './components/table/Table';
