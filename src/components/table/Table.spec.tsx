@@ -24,7 +24,7 @@ describe('Running Test for Raz Table', () => {
 			<Table
 				data={{
 					headers: [{ title: 'test' }],
-					rows: [{ _id: '4', actions: [], cols: [{ value: '1' }], selected: false }],
+					rows: [{ _id: '4', cols: [{ value: '1' }], selected: false }],
 				}}
 				onSelect={() => {
 					return;
