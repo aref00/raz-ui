@@ -14,7 +14,7 @@ export interface TableData {
 	}[];
 	rows: {
 		_id: string;
-		actions: any;
+		// actions: any;
 		cols: {
 			value: string | number | ReactNode;
 		}[];
