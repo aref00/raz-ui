@@ -1,0 +1,16 @@
+.raz-table-wrapper {
+	tr, th {
+		border: 1px solid #404046;
+		border-collapse: collapse;
+	}
+	border: 1px solid #404046;
+	border-collapse: collapse;
+	background-color: #323236;
+	border-radius: 5px;
+	.selectCheckbox {
+		border-radius: 100%;
+		overflow: hidden;
+		 border: none;
+		 outline: none;
+	}
+}

@@ -11,7 +11,7 @@ export const Skeleton: FC<PropsWithChildren<SkeletonProps>> = ({
 }) => {
 	return (
 		<section
-			className={`ty-skeleton border-radius-${radius || 15} raz-bg-${
+			className={`raz-skeleton border-radius-${radius || 15} raz-bg-${
 				color || 'light'
 			} ${className}`}
 			style={{ width, height }}>
