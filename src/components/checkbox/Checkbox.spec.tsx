@@ -28,7 +28,7 @@ describe('Running Test for Raz Checkbox', () => {
 				value={true}
 			/>
 		);
-		const node = screen.getByText('test');
-		expect(node?.className).toContain('text-left');
+		const node = screen.getByRole('checkbox');
+		expect(node?.nodeValue).toBeFalsy();
 	});
 });
