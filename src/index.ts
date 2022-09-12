@@ -13,3 +13,4 @@ export * from './components/checkbox/Checkbox';
 export * from './components/table/Table';
 export * from './components/confirm/Confirm';
 export * from './components/switch/Switch';
+export * from './components/upload-avatar/UploadAvatar';
