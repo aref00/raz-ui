@@ -40,9 +40,11 @@ export const Select: FC<SelectProps> = ({
 			} ${className}`}>
 			<div className="raz-select__search">
 				<Input
+					inputClass={`raz-bg-${color || 'dark'}`}
 					passRef={setInput}
 					width={width}
 					height={height}
+					color={color}
 					suffix={getSuffix(() => setState({ ...state, open: !state.open }))(state.open)}
 					onKeyDown={(e: KeyboardEvent<HTMLInputElement>) =>
 						handleKeyDown(e)(state)(setState)(onChange)
