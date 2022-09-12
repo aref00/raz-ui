@@ -6,7 +6,7 @@ import { Button } from './Button';
 import { ButtonProps } from './Button.types';
 
 export default {
-	title: 'Tayeh/Button',
+	title: 'Raz/Button',
 	component: Button,
 	argTypes: {},
 } as Meta<typeof Button>;

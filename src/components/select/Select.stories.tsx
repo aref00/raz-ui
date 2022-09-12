@@ -6,7 +6,7 @@ import { SelectProps } from './Select.types';
 import { Select } from './Select';
 
 export default {
-	title: 'Tayeh/Select',
+	title: 'Raz/Select',
 	component: Select,
 	argTypes: {},
 } as Meta<typeof Select>;

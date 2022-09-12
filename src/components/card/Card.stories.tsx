@@ -7,7 +7,7 @@ import { Card } from './Card';
 import { Button } from '../button/Button';
 
 export default {
-	title: 'Tayeh/Card',
+	title: 'Raz/Card',
 	component: Card,
 	argTypes: {},
 } as Meta<typeof Card>;

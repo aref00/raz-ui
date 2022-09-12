@@ -11,3 +11,4 @@ export * from './components/tabs/Tabs';
 export * from './components/loading/Loading';
 export * from './components/checkbox/Checkbox';
 export * from './components/table/Table';
+export * from './components/confirm/Confirm';

@@ -7,7 +7,7 @@ import { Tabs } from './Tabs';
 import { Button } from '../button/Button';
 
 export default {
-	title: 'Tayeh/Tabs',
+	title: 'Raz/Tabs',
 	component: Tabs,
 	argTypes: {},
 } as Meta<typeof Tabs>;

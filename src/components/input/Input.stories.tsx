@@ -6,7 +6,7 @@ import { InputProps } from './Input.types';
 import { Input } from './Input';
 
 export default {
-	title: 'Tayeh/Input',
+	title: 'Raz/Input',
 	component: Input,
 	argTypes: {},
 } as Meta<typeof Input>;

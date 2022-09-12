@@ -6,7 +6,7 @@ import { RadioButtonProps } from './RadioButton.types';
 import { RadioButton } from './RadioButton';
 
 export default {
-	title: 'Tayeh/RadioButton',
+	title: 'Raz/RadioButton',
 	component: RadioButton,
 	argTypes: {},
 } as Meta<typeof RadioButton>;

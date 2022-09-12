@@ -8,7 +8,7 @@ import { Modal } from './Modal';
 import { Card } from '../card/Card';
 
 export default {
-	title: 'Tayeh/Modal',
+	title: 'Raz/Modal',
 	component: Modal,
 	argTypes: {},
 } as Meta<typeof Modal>;

@@ -4,7 +4,7 @@ import { Story } from '@storybook/react';
 import '../../style/index.scss';
 
 export default {
-	title: 'Tayeh/Theme',
+	title: 'Raz/Theme',
 	argTypes: {},
 };
 

@@ -8,7 +8,7 @@ import { Loading } from './Loading';
 import { Button } from '../button/Button';
 
 export default {
-	title: 'Tayeh/Loading',
+	title: 'Raz/Loading',
 	component: Loading,
 	argTypes: {},
 } as Meta<typeof Loading>;

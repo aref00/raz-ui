@@ -6,7 +6,7 @@ import { SkeletonProps } from './Skeleton.types';
 import { Skeleton } from './Skeleton';
 
 export default {
-	title: 'Tayeh/Skeleton',
+	title: 'Raz/Skeleton',
 	component: Skeleton,
 	argTypes: {},
 } as Meta<typeof Skeleton>;

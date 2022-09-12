@@ -7,7 +7,7 @@ import { TableProps } from './Table.types';
 import { Table } from './Table';
 
 export default {
-	title: 'Tayeh/Table',
+	title: 'Raz/Table',
 	component: Table,
 	argTypes: {},
 } as Meta<typeof Table>;

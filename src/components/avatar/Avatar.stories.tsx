@@ -6,7 +6,7 @@ import { AvatarProps } from './Avatar.types';
 import { Avatar } from './Avatar';
 
 export default {
-	title: 'Tayeh/Avatar',
+	title: 'Raz/Avatar',
 	component: Avatar,
 	argTypes: {},
 } as Meta<typeof Avatar>;
