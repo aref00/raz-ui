@@ -62,7 +62,7 @@ export const Modal: FC<PropsWithChildren<ModalProps>> = ({
 						<div className="mr-2">
 							<Button
 								layout="clear"
-								// color="dark"
+								color="text"
 								className="px-2 py-1"
 								onClick={(e) => clickHandler(e)(beforeClose)(state)(setState)}>
 								<i className="ty-icon ty-icon-close-circle-outline fs-12 fs-sm-14 fs-md-16">
