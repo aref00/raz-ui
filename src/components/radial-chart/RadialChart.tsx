@@ -12,12 +12,17 @@ export const RadialChart: FC<RadialChartProps> = ({ series, labels, total, degre
 					chart: {
 						zoom: { enabled: false },
 						toolbar: { show: false },
-						foreColor: '#7f8190',
 					},
 					plotOptions: {
 						radialBar: {
+							// track: {
+							// 	background: '#232326',
+							// 	strokeWidth: '1%',
+							// 	margin: 1,
+							// },
 							startAngle: (degree && -degree) || -130,
 							endAngle: degree || 130,
+							inverseOrder: true,
 							dataLabels: {
 								name: {
 									fontSize: '1em',
@@ -32,6 +37,9 @@ export const RadialChart: FC<RadialChartProps> = ({ series, labels, total, degre
 					},
 					colors: colors || ['#797bf2', '#710193', '#311422'],
 					labels: labels,
+					stroke: {
+						lineCap: 'round',
+					},
 				}}
 			/>
 		</div>
