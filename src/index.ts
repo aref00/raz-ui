@@ -16,3 +16,4 @@ export * from './components/switch/Switch';
 export * from './components/upload-avatar/UploadAvatar';
 export * from './components/area-chart/AreaChart';
 export * from './components/radial-chart/RadialChart';
+export * from './components/bar-chart/BarChart';
