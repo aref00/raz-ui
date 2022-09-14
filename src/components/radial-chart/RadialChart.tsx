@@ -15,11 +15,9 @@ export const RadialChart: FC<RadialChartProps> = ({ series, labels, total, degre
 					},
 					plotOptions: {
 						radialBar: {
-							// track: {
-							// 	background: '#232326',
-							// 	strokeWidth: '1%',
-							// 	margin: 1,
-							// },
+							track: {
+								background: '#232326',
+							},
 							startAngle: (degree && -degree) || -130,
 							endAngle: degree || 130,
 							inverseOrder: true,
