@@ -19,12 +19,19 @@ export const BarChart: FC<BarChartProps> = ({ series, labels, colors, legend }) 
 							distributed: true,
 						},
 					},
+					dataLabels: { enabled: false },
 					grid: {
 						show: false,
 					},
 					legend: { show: legend },
 					colors: colors || ['#797bf2', '#710193', '#311422'],
-					xaxis: { categories: labels },
+					xaxis: {
+						categories: labels,
+						crosshairs: { show: false },
+						axisBorder: { color: '#232326' },
+						axisTicks: { show: false },
+						labels: { style: { colors: '#aaaab3' } },
+					},
 					yaxis: {
 						show: false,
 					},
